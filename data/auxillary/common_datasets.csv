@@ -1,0 +1,9 @@
+dataset_id;dataset_type;dataset_language;dataset_contains_synthetic_data;dataset_is_public;dataset_user_psychopathology_status;dataset_responder_type
+alexander_street_press;Psychotherapy -- speech transcripts;English;No;No;Unknown;Trained professionals
+amod;Internet data -- mental health Q&A;English;No;Yes;Unknown;Unknown
+counsel_chat;Internet data -- mental health Q&A;English;No;Yes;Unselected;Trained professionals
+empathetic_dialogues;Emotional support dialogue -- chat logs;English;No;Yes;Unselected;Lay people
+hope;Emotional support dialogue -- speech transcripts;English;No;No;Unknown;Unknown
+perez_rosa_motivational_interviewing;Psychotherapy -- speech transcripts;English;No;No;Other: mixed;Other: mixed
+psy_qa;Internet data -- mental health Q&A;Chinese;No;Yes;Unselected;Trained professionals
+jigsaw_toxic_comments;Labeled online comments;English;No;Yes;Unselected;Lay people

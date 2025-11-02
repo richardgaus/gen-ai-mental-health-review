@@ -1,0 +1,321 @@
+dataset_id,dataset_source,dataset_notes,dataset_type,dataset_language,dataset_contains_synthetic_data,dataset_is_public,dataset_user_psychopathology_status,dataset_responder_type,references,reference_count,row_ids,dataset_type_high_level
+alexander_street_press,External data set,Alexander Street Press therapy transcripts,Psychotherapy -- speech transcripts,English,No,No,Unknown,Trained professionals,"Domain-Specific Improvement on Psychotherapy Chatbot Using Assistant; AI-Enhanced Virtual Reality Self-Talk for Psychological Counseling: Formative Qualitative Study; Expressing stigma and inappropriate responses prevents LLMs from safely replacing mental health providers.; Emotion-Aware Embedding Fusion in Large Language Models (Flan-T5, Llama 2, DeepSeek-R1, and ChatGPT 4) for Intelligent Response Generation; Das 2022 Conversational Bots for Psychotherapy; Shen 2020 Counseling-Style Reflection Generation",6,34; 47; 52; 70; 102; 108,Psychotherapy dialogue\nrecords (multi-turn)
+amod,External data set,"Amod Mental health counseling conversations https://huggingface.co/datasets/Amod/mental_health_counseling_conversations From Huggingface description: This dataset is a collection of real counselling question-and-answer pairs taken from two public mental-health platforms. It is intended for training and evaluating language models that provide safer, context-aware mental-health responses.",Internet data -- mental health Q&A,English,No,Yes,Unknown,Unknown,Personalized Mental Health Assistance: Integrating Emotion Prediction with GPT-Based Chatbot; SentimentCareBot: Retrieval-augmented generation chatbot for mental health support with sentiment analysis; Artificial Intelligence in Mental Health Care: The T5 Chatbot Project; A Comprehensive RAG-Based LLM for AI-Driven Mental Health Chatbot; Maurya 2025 Exploring the potential of lightweight,5,42; 51; 76; 80; 89,Mental health Q&A\nrecords (single-turn)
+counsel_chat,External data set,CounselChat https://github.com/nbertagnolli/counsel-chat,Internet data -- mental health Q&A,English,No,Yes,Unselected,Trained professionals,Generative AI in Psychological Therapy: Perspectives on Computational Linguistics and Large Language Models in Written Behaviour Monitoring - Proceedings of the 17th International Conference on PErvasive Technologies Related to Assistive Environments; Investigating the interpretability of ChatGPT in mental health counseling: An analysis of artificial intelligence generated content differentiation; Mello: A Large Language Model for Mental Health Counselling Conversations; Expert Patient Interaction Language Model (EPILM); Maurya 2025 Exploring the potential of lightweight; Taiwo 2025 Emotion‐aware psychological first; Gumilang 2024 Development of a Mental Health; Shayaninasab 2024 Enhancing Patient Intake; Bird 2023 Generative Transformer Chatbots,9,3; 40; 43; 71; 88; 97; 98; 99; 101,Mental health Q&A\nrecords (single-turn)
+dataset_1,Self-collected data,"Initially, we collected transcriptions of CBT patient-therapist
+interactions performed by an expert psychotherapist to improve
+the program’s adherence to the style and cadence of an
+experienced human therapist. From these, we discerned recurring
+exchanges and encoded these patterns into GPT-4’s system
+prompts. For instance, a rule was established: “Show empathy and
+understanding to validate [first name]’s feelings.”",Psychotherapy -- speech transcripts,English,No,No,Unknown,Trained professionals,Feasibility of combining spatial computing and AI for mental health support in anxiety and depression,1,1,Psychotherapy dialogue\nrecords (multi-turn)
+dataset_10,Self-collected data,Some PDFs for configuring a custom GPT (type of PDFs not further specified),Other: unknown,,,,,,Future of ADHD Care: Evaluating the Efficacy of ChatGPT in Therapy Enhancement,1,13,Unspecified
+dataset_11,External data set,"Dataset was used for evaluation only.
+
+50 conversations were randomly selected from the MIBot version5.1 experiment data (Brown A, Kumar AT, Melamed O, et al. A motivational-interviewing chatbot with generative reflections for increasing readiness to quit among smokers. JMIR Ment Health. Oct 17, 2023;10:e49132. [doi: 10.2196/49132] [Medline: 37847539])",Emotional support dialogue -- chat logs,English,Yes,No,Psychopathology,Other: not applicable,Generation of Backward-Looking Complex Reflections for a Motivational Interviewing-Based Smoking Cessation Chatbot Using GPT-4: Algorithm Development and Validation,1,14,Non-specific supportive\ndialogue records (multi-turn)
+dataset_12,Self-collected data but derived from external data set,"external: MEMO (Mental Health Summarization, itselfderived from HOPE), derived: MentalCLOUDS
+
+To evaluate the performance of diverse summarization systems
+across various aspects of counseling interactions, we expanded
+upon the Mental Health Summarization (MEMO) data set [47].
+Comprising 11,543 utterances extracted from 191 counseling
+sessions involving therapists and patients, this data set draws
+from publicly accessible platforms such as YouTube",Psychotherapy -- speech transcripts,English,No,No,Unknown,Unknown,Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study,1,15,Psychotherapy dialogue\nrecords (multi-turn)
+dataset_13,Self-collected data,"self-created ""Empathic Conversation dataset""",Emotional support dialogue -- chat logs,English,Other: Yes; human actors,No,Unselected,Unknown,Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,1,16,Non-specific supportive\ndialogue records (multi-turn)
+dataset_14,External data set,"Open Up is a free24/7 web-based, text-based counseling service in Hong Kong that enables people aged between 11 and 35 years to anonymously chat with paid staff (staff counselors or social workers) or trained volunteers. 5240 sessions with 533,609 messages (Figure 3). We stratified the 5240 sessions based on the number of messages in each session. There were a total of 131 unique message count groups among the 5240 sessions.",Emotional support dialogue -- chat logs,Chinese,No,No,Unselected,Trained professionals,Efficacy of ChatGPT in Cantonese Sentiment Analysis: Comparative Study,1,17,Non-specific supportive\ndialogue records (multi-turn)
+dataset_15,External data set,FLATT dataset (Fun to Learn to Act and Think through Technology),Thought records,Japanese,No,No,Psychopathology,Other: not applicable,Harnessing AI to Optimize Thought Records and Facilitate Cognitive Restructuring in Smartphone CBT: An Exploratory Study,1,18,Automatic thought records
+dataset_16,Self-collected data,"42 tinitus patients as raw data + augmented dataset as test samples
+
+The study was carried out on a cohost of 42 tinnitus patients who visited the Department of Otorhinolaryngology, Korea University Medical Center in Seoul, Republic of Korea, between 2022 and 2023. We conducted a retrospective analysis of medical records documenting tinnitus treatment in those patients",Other: cbt diary entries,English,No,No,Psychopathology,Other: not applicable,Advancing Tinnitus Therapeutics: GPT-2 Driven Clustering Analysis of Cognitive Behavioral Therapy Sessions and Google T5-Based Predictive Modeling for THI Score Assessment,1,20,Other
+dataset_17,External data set,"MotiVAte
+
+This dataset comprises of 4k dyadic conversations between the depressed support seekers and the VA imparting appropriate suggestion, hope and motivation resulting in a total of 14,809 utterances. The conversations of the MotiVAte dataset are collected from peer-to-peer support forum and modified to represent dyadic conversations for an end-to-end online mental health support system.",Emotional support dialogue -- chat logs,English,No,No,Unselected,Lay people,Towards Motivational and Empathetic Response Generation in Online Mental Health Support,1,21,Non-specific supportive\ndialogue records (multi-turn)
+dataset_18,Self-collected data,"In version 1 of the generator, the fine-tuning question-and-response data set came from 2 sources: the first was our prior work [40,41], and the second data source was from earlier deployments of MIBot, before the creation of MIBot v4.7. The reflections used came from a variety of sources: from previous versions of this chatbot that were deemed to be acceptable MI reflections by MI-literate researchers or actual reflections produced by MI-literate researchers or MI-expert clinicians.
+
+To address the rate of poor reflections, we developed version 2 of the generator with 2 significant enhancements. First, a larger set of 301 fine-tuning triplets were collected over approximately 10 months of deploying the chatbot, making use of the various responses from smokers who had been recruited in a similar manner, as described in the Participant Recruitment and Screening subsection. This second data set did not include any of the data from the earlier chatbot version [40,41]. Only MI-consistent reflections were used, which were sourced from MI clinicians, MI-literate researchers, or version 1 of the generator. The labeling and selection of the MI-consistent reflections were improved by using multiple human raters and a carefully controlled decision tree to determine the validity of the reflections. The new rating scheme itself was stricter than the one used in version 1, which caused the hit rate to go down—not because the generation was worse but because of the stricter rating. The hit rate of the new generator was measured to be 55.1% (166/301) on a set of reflections.",Motivational interviewing reflections,English,Yes,No,Psychopathology,Trained professionals,A Motivational Interviewing Chatbot With Generative Reflections for Increasing Readiness to Quit Smoking: Iterative Development Study,1,22,Other
+dataset_19,External data set,"We use the GPT-3 model [19] finetuned over a dataset of thinking traps by Sharma et al. [81].
+
+4.1 Curated Situations & Negative Thoughts
+ We start by curating data sources for situations and negative thoughts.
+ Thought Records Dataset (Burger et al., 2021).
+ This dataset contains hypothetical and real-world situations, thoughts and emotional processes reported by crowdworkers on Amazon Mechanical Turk. We manually curate 180 pairs of diverse situations with negative thoughts from this dataset.
+ Mental Health America (MHA). Situations and thoughts from crowdworkers may not reflect the broad range of mental health challenges that people face in real-life. To incorporate more real-world situations and thoughts, we ran a survey on the MHA website (screening.mhanational.org). MHA visitors (who typically use the website for screening of mental illnesses) were asked to describe any negative thoughts and the associated situations they were struggling with. We manually curate 120 pairs of self-reported situations and thoughts to ensure broad coverage of relevant topics based on high diversity and manual filtering.
+
+https://github.com/behavioral-data/Cognitive-Reframing",Thought records,English,No,Yes,Unselected,Other: not applicable,Facilitating Self-Guided Mental Health Interventions Through Human-Language Model Interaction: A Case Study of Cognitive Restructuring,1,23,Automatic thought records
+dataset_2,External data set,"We used real-world therapy transcript documents from websites and 
+converted the HTML conversation texts between patients and therapists into feature format for processing (see data example in Figure 2).
+
+http://www.thetherapist.com/
+
+These transcripts are fictional, though: ""This site is fiction and all the characters are fictional.""",Other: not applicable,English,Other: synthetic; human-generated (fictional),No,Other: not applicable,Other: not applicable,An experimental study of integrating fine-tuned LLMs and prompts for enhancing mental health support chatbot system,1,2,Other
+dataset_20,External data set,"Due to this, data from the Brain & Behaviour Research Foundation2, the NHS34, Wellness
+in Mind5 and White Swan Foundation6 were selected. Questions
+and answers are extracted, and questions are manually generated
+dependent on the information available, e.g. for the NHS definition
+of depression, questions such as “what is depression?"" are imputed.",Internet data -- mental health Q&A,English,No,No,Other: not applicable,Trained professionals,Generative Transformer Chatbots for Mental Health Support: A Study on Depression and Anxiety,1,24,Mental health Q&A\nrecords (single-turn)
+dataset_21,External data set,data sourced from Xinli001.com. Counsellor responses were included in the dataset. ChatGPT responses were generated by the authors.,Internet data -- mental health Q&A,Chinese,Yes,No,Unselected,Trained professionals,Leveraging ChatGPT to optimize depression intervention through explainable deep learning,1,25,Mental health Q&A\nrecords (single-turn)
+dataset_22,Self-collected data but derived from external data set,"TalkLife (talklife.co) is the largest online peer-to-peer support platform for mental health support. It enables conversations between people seeking support (support seekers) and people providing support (peer supporters) in a thread-like setting. We call the post authored by a support seeker as seeker post, and the response by a peer supporter as response post. Table 1 describes the statistics of conversational threads on the TalkLife platform.
+
+Curating mental health-related conversations. As noted by
+Sharma et al. [59], the TalkLife platform hosts a significant number of common social media interactions (e.g., Happy mother’s day).
+Here, we focus our analyses on mental health-related conversa-
+tions and filter out such posts. We manually annotate ∼3k posts
+with answers to the question ""Is the seeker talking about a mental health related issue or situation in his/her post?"". Using this annotated dataset, we train a standard text classifier based on BERT [15] (achieving an accuracy of ∼85%). We apply this classifier to the
+entire TalkLife dataset and create a filtered dataset of mental health-related conversations. This dataset contains 3.33M interactions from 1.48M seeker posts.
+
+Non-public: For accessing the TalkLife portion of our dataset for non-commercial use, please contact the TalkLife team here.",Internet data -- mental health forum,English,No,No,Unselected,Lay people,Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,1,26,Internet forum threads
+dataset_23,Self-collected data,"oth ChatGPT-4 and Bard responded to 20 tasks at each
+stage of the study --> no new dataset created ",Thought records,English,Other: synthetic: human generated,No,Other: not applicable,Other: not applicable,Can Large Language Models Replace Therapists? Evaluating Performance at Simple Cognitive Behavioral Therapy Tasks.,1,27,Automatic thought records
+dataset_24,External data set,"Kaggle mental health conversational dataset https://www.kaggle.com/datasets/elvis23/mental-health-conversational-data
+
+Kaggle (n.d.)  This dataset encompasses 80 distinct tags, each containing numerous conversational prompts and corresponding responses",Internet data -- mental health Q&A,English,Other: unknown,Yes,Unknown,Unknown,Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,1,28,Mental health Q&A\nrecords (single-turn)
+dataset_25,"External data set, modified","HealMe dataset
+https://github.com/elsa66666/HealMe
+
+In this study, we leverage an existing raw dataset
+focused on cognitive reframing and expand it to
+include multiple rounds of dialogue. Specifically,
+we conduct a manual review of the selected raw
+dataset and select 1,000 well-composed pairs of
+(thinking trap, client’s thought) from it.
+The raw dataset we utilize in this study is intro-
+duced by Maddela et al. (2023). 
+https://aclanthology.org/2023.acl-long.763.pdf
+
+Creation of HealMe dataset ",Emotional support dialogue -- chat logs,English,Yes,Yes,Other: not applicable,Other: not applicable,Healme: Harnessing cognitive reframing in large language models for psychotherapy,1,29,Non-specific supportive\ndialogue records (multi-turn)
+dataset_26,External data set,"We conduct extensive experiments on datasets derived from
+real-world MI sessions addressing alcohol usage disorder. We
+examine three prompting baselines and experiment with four
+state-of-the-art auto-regressive LLMs, including Llama2 [12],
+Falcon [20], Mistral [21], and ChatGPT [22]. 
+
+Motivational interviewing session transcripts from Borsari et al., “In-session processes of brief motivational interventions in two trials with mandated college students.” Journal of consulting and clinical psychology, vol. 83, pp. 56–67, 2 2015",Psychotherapy -- speech transcripts,English,No,No,Unselected,Trained professionals,Chain-of-Interaction: Enhancing Large Language Models for Psychiatric Behavior Understanding by Dyadic Contexts,1,30,Psychotherapy dialogue\nrecords (multi-turn)
+dataset_27,"External data set, modified","The study uses the PsyQA dataset and creates a new one called SMILECHAT.
+
+https://github.com/qiuhuachuan/smile",Emotional support dialogue -- chat logs,Chinese,Yes,Yes,Other: not applicable,Other: not applicable,Smile: Single-turn to multi-turn inclusive language expansion via chatgpt for mental health support,1,32,Non-specific supportive\ndialogue records (multi-turn)
+dataset_28,External data set,"We experiment on the cognitive distortion detection
+dataset proposed by Shreevastava and Foltz (2021),
+which is annotated by experts based on the Ther-
+apist QA dataset
+
+Dataset from Shreevastava 2021 -- Detecting Cognitive Distortions from Patient-Therapist Interactions.
+
+https://www.kaggle.com/datasets/sagarikashreevastava/cognitive-distortion-detetction-dataset",Cognitive distortion records,English,No,Yes,Unknown,Other: not applicable,Empowering Psychotherapy with Large Language Models: Cognitive Distortion Detection through Diagnosis of Thought Prompting,1,33,Automatic thought records
+dataset_29,"External data set, modified","Data sourced from single-turn QA psychology platforms, multi-turn dialogue synthetically generated using the single-turn data, and psychological knowledge QA
+
+we collect question-answer pairs from open platforms… Yixinli… Zhihu… We crawl books related to psychology from the web and then use Qwen-72B to extract knowledge-based QA… After-school exercises from several books
+
+There are several publicly accessible websites committed to
+establishing a psychology platform and offering online solu-
+tions for individuals seeking psychological assistance, such as
+Yixinli3, Zhihu4, and so on. The data from these platforms
+can be regarded as real-world inquiries and the solutions pro-
+vided by professionals in response to these inquiries.
+ubse-
+quently, professional or experienced individuals offer detailed
+solutions or advice in response to these questions. We collect
+over 267 000 pairs of data from websites.
+To accurately evaluate the model performance in the psy-
+chology domain, we introduce a benchmark that psychological
+professional individuals need to master. The data is sourced
+from publicly available examination questions. We follow a standardized data preprocessing procedure. For some data, we
+first need to perform optical character recognition (OCR) to
+convert images into text. After that, we invite several students to
+manually review the collected data to ensure its quality and con-
+sistency with the original document. This process involves rec-
+tifying formatting errors, eliminating duplicate questions, and
+rectifying any instances of garbled characters. Our proposed
+psychological benchmark draws inspiration from the format of
+the most authoritative psychological counseling examination in
+China, comprising two primary components: objective ques-
+tions and subjective questions.",Other: mixed: multi-turn and QA,Chinese,Yes,No,Unselected,Other: mixed,PsycoLLM: Enhancing LLM for Psychological Understanding and Evaluation,1,35,Other
+dataset_3,External data set,"training: 2.85 GB psychology corpus data crawled from psychology platforms like Yinxinli and Tianya (they crawled this data themselves). Description: The second dataset was obtained by crawling various Chinese social media platforms, such as Tianya, Zhihu, and Yixinli. These platforms allow users to post topics or questions about mental and emotional issues, while other users can offer support and assistance to help-seeking individuals. The Yixinli website specifically focuses on professional mental health support, but only provides approximately 10,000 samples. Other types of datasets collected from these platforms included articles and conversations, which we converted into a question-and-answer format. However, we excluded the articles from our fine- tuning training due to the model’s input limitations and the fact that our predictions focused on mental health support answers. The articles were often lengthy, and many of them were in PDF format, requiring additional time for conversion into a usable text format. Consequently, we only obtained around 5000 article samples. In order to address the lack of emotional expression in the text of these articles, we incorporated text data from oral expressions. We crawled audio and video data from platforms like Qingting FM and Ximalaya, popular audio and video-sharing forums in China. However, converting audio and video data into text format was time-consuming, resulting in a limited amount of data in our dataset. We utilised the dataset obtained from websites for fine-tuning training. Ultimately, our entire dataset consisted of 400,000 samples, each separated by a blank line, i.e., “\n\ n”. Table 2 shows the time spent on data crawling from different websites. It is evident that most of the samples in this dataset were obtained from Tianya, resulting in a data size of approximately 2 GB. The datasets from Zhihu and Yixinli were 500 MB and 200 MB, respectively. Overall, we spent approximately 70 h on data collection. Although the data collected from the internet were abundant and authentic, the cleaning process could have been smoother due to inconsistencies in the online data.",Other: mixed,Chinese,No,No,Unselected,Unknown,Supporting the Demand on Mental Health Services with AI-Based Conversational Large Language Models (LLMs),1,4,Other
+dataset_30,"External data set, modified","The videos of therapists’ CBT sessions with patients utilized
+in this paper are sourced from public social media. Our dataset
+comprises 46 Chinese conversation videos and 150 English
+conversation videos, amounting to a total of 6386 dialogue
+turns. And some of the conversations within the dataset even
+reach up to hundreds of turns.",Emotional support dialogue -- speech transcripts,Other: English and Chinese,"Other: mix of ""authentic"" and role-played",No,Unknown,Unknown,Are Large Language Models Possible to Conduct Cognitive Behavioral Therapy?,1,36,Non-specific supportive\ndialogue records (multi-turn)
+dataset_31,"External data set, modified","""Mentioned previously, we use transcripts
+from the smoking cessation MI chatbot created by
+the authors (Brown et al., 2023). ""
+
+Only questions and answers from MI chatbot reflections by Brown 2023 -- A Motivational Interviewing Chatbot With Generative Reflections for Increasing Readiness to Quit Smoking: Iterative Development Study.
+The authors generate reflections based on these question-answer pairs using GPT-4",Other: MI reflections,English,Yes,No,Psychopathology,Other: not applicable,"Generation, Distillation and Evaluation of Motivational Interviewing-Style Reflections with a Foundational Language Model",1,37,Other
+dataset_32,"External data set, modified"," For example, it uses conversational 
+data gained in previous interactions with the user as well as 
+datasets having labeled expressions of sentiment (""emo.txt"" 
+and ""Sentiments1.txt"")",Other: unknown,English,Other: unspecified,Other: unspecified,Unknown,Unknown,Design and Evaluation of an AI-Powered Conversational Agent for Personalized Mental Health Support and Intervention (MindBot),1,39,Unspecified
+dataset_33,"Other: External data set, but completely unknown","The fine-tuning process involves the 
+calibration of the pre-trained Transformer model with 
+specific datasets relevant to cognitive therapy. This 
+includes dialogues from CBT sessions, therapeutic 
+interventions, and stress management conversations.
+
+The GPT-2 model is fine-tuned using a specialized 
+therapeutic dialogue dataset where the process involves 
+supervised learning and the openly available trained 
+model is adapted for a wide range of therapeutic 
+contexts. The goal is to improve the ability of the model 
+to provide relevant and empathetic responses during 
+therapy sessions. The fine-tuning dataset includes a 
+variety of therapeutic dialogues which ensures the 
+model can handle different therapeutic scenarios 
+effectively.",Other: unknown,Other: unknown,Other: unknown,No,Unknown,Unknown,AI-Enhanced Cognitive Therapy: Personalized Guidance via Adaptive Agents with Voice Analysis and Stress Detection,1,41,Unspecified
+dataset_34,"External data set, modified","Books: 
+E. J. Bourne, The Anxiety and Phobia Workbook, 5th ed. Oakland, CA:
+New Harbinger Publications, 2015. + D. D. D. Burns, Feeling Good: The New Mood Therapy. New York,
+NY: Plume, 2009. + B. McDonagh, Dare: The New Way to End Anxiety and Stop Panic
+Attacks. Carlsbad, CA: Hay House, 2014. 
+
+To make sure it was appropriate for entering into the model, the data taken from the books went through a number of preparation steps
+in this research: Extraction and cleaning.",Other: Book data,English,No,No,Unknown,Unknown,AI-Driven Mental Health Chatbot: Empowering Well-Being with Conversational AI and Retrieval-Augmented Generation,1,45,Other
+dataset_35,External data set,Aditya Mental Health Counseling https://huggingface.co/datasets/Aditya149/Mental_Health_Counselling_Dataset,Internet data -- mental health Q&A,English,Other: Unknown,Yes,Unknown,Unknown,Exploring the potential of lightweight large language models for AI-based mental health counselling task: a novel comparative study,1,48,Mental health Q&A\nrecords (single-turn)
+dataset_36,Self-collected data,"Using a dataset of Woebot questions and user responses (pulled from the Gen-W-MA internal testing data) labeled as being on or off topic, we fine-tuned an instance of the text-embedding-ada-002 model using the Azure OpenAI service",Emotional support dialogue -- chat logs,English,No,No,Unknown,Other: Woebot chatbot,Safety and User Experience of a Generative Artificial Intelligence Digital Mental Health Intervention: Exploratory Randomized Controlled Trial,1,49,Non-specific supportive\ndialogue records (multi-turn)
+dataset_37,"External data set, modified","PsyAdv Corp consisting out of Efaqa, CpsyCounD, SMILECHAT, PsyQA",Emotional support dialogue -- chat logs,Chinese,Yes,Yes,Unknown,Unknown,PIRTRE-C: A Two-Stage Retrieval and Reranking Enhanced Framework for Improving Chinese Psychological Counseling,1,50,Non-specific supportive\ndialogue records (multi-turn)
+dataset_38,Self-collected data,cognitive distortion identification dataset,Cognitive distortion records,Other: unknown,Yes,No,Unknown,Other: not applicable,Implementing Cognitive Behavioral Therapy in Chatbots to Reduce Students’ Exam Stress using ChatGPT,1,53,Automatic thought records
+dataset_39,Other: unclear,,Other: unknown,,,,,,Design and Implementation of an AI-Driven Mental Health Chatbot: A Generative AI Model,1,54,Unspecified
+dataset_4,External data set,Mental health conversations and question-answer pairs-related datasets on Kaggle and sample Medical Summary Reports available for informational use from SOAR providers on the Substance Abuse and Mental Health Services Administration website,Other: mixed,Other: unknown,Other: unknown,No,Other: unknown,Other: unknown,"Mental Healthcare Chatbot Based on Custom Diagnosis Documents Using a Quantized Large Language Model - 2024 11th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions)(ICRITO)",1,5,Other
+dataset_40,External data set,Primate2022 https://github.com/primate-mh/Primate2022 (but only for evaluation),Internet data -- mental health forum,English,No,Yes,Unselected,"Other: not applicable (only initial posts, no responses)",Enhancing Patient Intake Process in Mental Health Consultations Using RAG-Driven Chatbot,1,55,Internet forum threads
+dataset_41,Self-collected data,"The chatbot’s corpus comprises 200 manually curated context-response pairs that cover themes like stress, anxiety, depression, and motivation","Other: unclear (authors call it ""context-response pairs""",Other: unknown,Other: unknown,No,Unknown,Unknown,Mental Health Support Using Gen-AI Shot Prompting Technique and Vector Embeddings,1,56,Other
+dataset_42,External data set,"Additionally, local data from Indonesian mental health articles and discussion forums fine-tuned the model.","Other: ""mental health articles and discussion forums""",Other: Indonesian,No,No,Unknown,Unknown,Development of a Mental Health Chatbot Using Large Language Models for Indonesian Undergraduates,1,58,Other
+dataset_43,Self-collected data,"collected a substantial dataset comprising 21,924 records
+Fig. 2. Volunteer Screening Chart
+through five distinct avenues: instances, media, literature,
+guidelines, and databases. To ensure the integrity and rele-
+vance of our data, we undertook a meticulous cleaning pro-
+cess spearheaded by three experienced quality controllers.
+Each controller boasts broad expertise in mental health
+counseling. Initially, we eliminated duplicates and linguistic
+inaccuracies. Subsequently, we focused on screening data
+for key terms such as “sleep”, “dream”, “evening”, “night”,
+“bed” and related expressions. This step aimed to sift out
+conversational data irrelevant to our study’s objectives, en-
+suring that the textual content was pertinent to the context
+of potential sleep disorders. We further conducted dialog
+integrity screening. Finally, through manual inspection on a
+case-by-case basis, we excluded dialogue data that contra-
+dicted universal core values. This rigorous curation process
+resulted in the selection of 764 dialogues",Other: Mixed,Other: unknown,No,No,Unknown,Unknown,A Conversational Application for Insomnia Treatment: Leveraging the ChatGLM-LoRA Model for Cognitive Behavioral Therapy,1,59,Other
+dataset_44,Self-collected data,"First, we introduce a novel, golden standard dataset, comprising panel 
+data with 1495 instances of quantitative stress, anxiety, and depression (SAD) symptom scores from diagnostic-level questionnaires 
+and qualitative daily diary entries. ",Other:  Psychotherapy-related (diagnostic questionnaires + daily diaries) ,Other: unknown,No,No,Unknown,Other: n.a.,Computational Psychotherapy System for Mental Health Prediction and Behavior Change with a Conversational Agent,1,60,Other
+dataset_45,External data set,"epsilon3/cbt-cognitive-distortions-analysis dataset
+https://huggingface.co/datasets/epsilon3/cbt-cognitive-distortions-analysis
+",Internet data -- mental health Q&A,English,Yes,Yes,Unknown,Other: not applicable,Early Detection and Personalized Intervention in Mental Health,1,61,Mental health Q&A\nrecords (single-turn)
+dataset_46,External data set,ArmanEmo,Internet data -- mental health forum,Other: Persian,No,Yes,Unknown,Lay people,"Psychological Health Chatbot, Detecting and Assisting Patients in their Path to Recovery",1,62,Internet forum threads
+dataset_47,External data set,"No specific name: ""We use the Reddit API to collect
+a new dataset of 12,513 posts with 70,429 peer re-
+sponses from 26 mental health related subreddits.""
+
+Available under https://github.com/skgabriel/mh-eval",Internet data -- mental health forum,English,No,Yes,Unselected,Lay people,Can AI relate: Testing large language model response for mental health support,1,64,Internet forum threads
+dataset_48,Self-collected data,"In this study, 200 real counseling ses
+sions were recorded and transcribed to capture authentic 
+client interactions. From these, 50 client statements were 
+identified that best represented a range of emotions such as 
+sadness, guilt, anxiety, determination, and anger, based on 
+the PANAS Scale, along with helplessness, love, trust, lone
+liness, and doubt from existing literature, aiming to ensure
+
+emotional expressions from psychological counseling sessions",Psychotherapy -- speech transcripts,Other: unknown,No,No,Other: unknown,Trained professionals,Rational AIs with emotional deficits: ChatGPT vs. counselors in providing emotional reflections,1,65,Psychotherapy dialogue\nrecords (multi-turn)
+dataset_49,External data set,"a corpus of documents about Suicide Prevention curated by psychologists and psychiatrists
+
+The basis of our system was a curated corpus of 300 Spanish documents intended for the general public. The corpus was collected by psychologists, and was organised and categorised in different topics (including information for survivals of suicide attempts, for relatives, or for schools).
+
+for RAG",Other: a corpus of documents about Suicide Prevention curated by psychologists and psychiatrists,Other: Spanish,No,No,Other: not applicable,Other: not applicable,Towards a Retrieval Augmented Generation System for Information on Suicide Prevention*,1,66,Other
+dataset_5,Self-collected data,"The data collection for this labeled dataset was gathered by a combination of examples from CBT literature and anonymous submissions made by the principal investigator and university psychology students who got access to the document by a link that was shared in student group chats. This sample was chosen due to them both being part of the population that will go through the experiment and study the CBT concepts, thus, knowing how to label data. They were asked to write 10 cognitive distortions in total. After the completion of a dataset, the whole dataset was checked and edited by a principal investigator, the project’s supervisor, and a practicing CBT psychologist. In total, 240 examples of cognitive distortions were accumulated and divided into training and test sets in a ratio of 3 to 1.",Cognitive distortion records,Other: unknown,"Other: synthetic, human created",No,Other: not applicable,Other: not applicable,Application of Artificial Intelligence in Mental Healthcare: Generative Pre-trained Transformer 3 (GPT-3) and Cognitive Distortions - Proceedings of the Future Technologies Conference,1,6,Automatic thought records
+dataset_50,"External data set, modified","Data Preparation: The sentiment analysis model is
+trained on an annotated text classification dataset after
+undergoing extensive cleaning, normalization, and tok-
+enization processes to ensure the quality and integrity of
+the data. The datasets used are compiled from a multitude
+of sources, including a text classification repository of so-
+cial media tweets, restaurant reviews, and airline reviews.
+Data was also extracted from the Reddit API across vari-
+ous forums such as those focused on CBT, mental health,
+therapy, anxiety, depression, and CPTSD. Initially, the
+dataset comprised 3,000 data points, with a text column
+serving as the input and a target column providing labeled
+sentiment. Recognizing the importance of data volume
+in enhancing the accuracy and robustness of machine
+learning models, we expand the dataset (TABLE I) to encompass 12,221 data points
+
+for RAG","Other: Other: statements, labeled with sentiments (sentiment analysis data)",English,No,No,Other: n.a.,Other: n.a.,Komorebi: Enhancing Mental Wellness with Sentiment Analysis and Cognitive Behavior Therapy,1,67,Other
+dataset_51,External data set,"The conversational dataset is published by the American Mental Health 
+Association [25] and is associated with government agencies. The dataset consists of FAQ about Mental Health that are conversations between users and experts in the field
+of psychology about mental health and its relationship to Alzheimer's disease (Alzheimer's chat dataset, Alzhimer_chat_Leader, Mental_Health_FAQ.csv, NLP 
+Mental Health Conversations). 
+
+Note: The source is not cited appropriately!
+
+But user has other dataset that fits description: https://www.kaggle.com/datasets/ahmedashrafahmed/alzhemers-chat-dataset",Internet data -- mental health Q&A,English,No,Yes,Unknown,Unknown,Chatbot in the E-Service of Mental Health Using the Reprogramming of the GPT-2 Model,1,72,Mental health Q&A\nrecords (single-turn)
+dataset_52,Self-collected data,"The research begins by curating a specialized User and
+Counsellor Interaction CSV dataset by querying an autism
+counsellor. This data encapsulates nuanced responses and
+intricacies of user-counselor interactions, offering a rich source
+for reducing bias and adding a human touch. Alongside the
+primary dataset, the additional data points ensure a compre-
+hensive understanding of the domain.",Other: unclear,"Other: unknown, probably english or hindi",Other: unknown,No,Unknown,Unknown,"Multimodal Integration, Fine Tuning of Large Language Model for Autism Support",1,73,Unspecified
+dataset_53,"External data set, modified","selected cases from single_turn_dataset of Baidu's EmoLLM  + entiment-labeled Weibo data.
+
+EmoLLM single_turn_dataset; Weibo data; CEA dataset (constructed)","Other: test cases for ""psychological counseling scenarios"" involving extreme behaviors",Chinese,No,No,Unselected,Unknown,Adversarial Evaluation Algorithm for Detecting Extreme Behaviors of LLMs in Psychological Counseling Scenarios,1,74,Other
+dataset_54,Self-collected data,"The intervention utilizes a generative large language model (LLM) fine-tuned on expert-curated mental health dialogues. The dialogues were developed by our research team, including a board-certified psychiatrist and a clinical psychologist, and peer-reviewed using evidence-based (primarily CBT) modalities.",Psychotherapy -- chat logs,English,Yes,No,Unknown,Trained professionals,Randomized trial of a generative AI chatbot for mental health treatment,1,75,Psychotherapy dialogue\nrecords (multi-turn)
+dataset_55,"External data set, modified","Emotional Support Conversation dataset. Comprises 1,053 multi-turn dialogues, amounting to 31,410 utterances. ""We have augmented the dataset with additional annotations to signify the current state of the dialogue.""",Emotional support dialogue -- chat logs,English,No,Yes,Unselected,Lay people,Enhancing Emotional Support Capabilities of Large Language Models through Cascaded Neural Networks,1,77,Non-specific supportive\ndialogue records (multi-turn)
+dataset_56,"Other: some dataset was used, but completely unknown characteristics",,Other: unknown,,,,,,SOCRATES. Developing and Evaluating a Fine-Tuned ChatGPT Model for Accessible Mental Health Intervention,1,78,Unspecified
+dataset_57,"External data set, modified","Web-scraped data from diverse sources
+
+Bilingual (English & Arabic) mental health text corpus, origin not found","Other: Internet data, various types and sources (mixed)",Other: Arabic,No,No,"Other: Not applicable, data is not on users","Other: Not applicable, no interaction data",Bridging Gender Disparities in Mental Health: A Bilingual Large Language Model for Multilingual Therapeutic Chatbots,1,79,Other
+dataset_58,"External data set, modified","mental health and healthcare-related texts; sources not fully specified, combined domain corpora and simulated patient records","Other: different types (books, articles, etc.), not further specified",Other: unknown,No,No,Unknown,Unknown,LLM-Therapist: A RAG-Based Multimodal Behavioral Therapist as Healthcare Assistant,1,81,Other
+dataset_59,External data set,"Responses by expert suicidologists on a previously-published standardized scale: the Suicide Intervention Response Inventory (SIRI-2)
+[15].",Other: Standardized clinical instrument with hypothetical scenarios and predefined responses,English,Other: Yes (hypothetical cases created by experts),Yes,Other: n.a.,Trained professionals,Competency of Large Language Models in Evaluating Appropriate Responses to Suicidal Ideation: Comparative Study,1,82,Other
+dataset_6,External data set,"from the text and chat channel of The Childhelp National Child Abuse Hotline. had access to deidentified transcripts and metadata that anonymized and normalized all names and street addresses.
+
+Counseling/chat conversations annotated for utterance‐level features; session-level features and summaries also produced (some via prompts). Annotation: Human annotators used a codebook of counseling strategy features",Emotional support dialogue -- chat logs,English,No,No,Unknown,Trained professionals,Towards Understanding Counseling Conversations: Domain Knowledge and Large Language Models,1,7,Non-specific supportive\ndialogue records (multi-turn)
+dataset_60,Self-collected data,see Generating Data for Evaluation,Emotional support dialogue -- chat logs,English,Yes,No,Other: not applicable,Other: not applicable,Generative AI-Derived Information About Opioid Use Disorder Treatment During Pregnancy: An exploratory evaluation of GPT-4's steerability for provision of trustworthy person-centered information.,1,83,Non-specific supportive\ndialogue records (multi-turn)
+dataset_61,External data set,"The study uses data from YiXinli Community, a major Chinese online counseling platform (https://www.xinli001.com) frequented by nearly 40 million users worldwide for psychological support. On this platform, 
+users can confidentially express their psychological concerns and receive advice from human counselors in the open Q&A section (https://www.xinli001.com/qa). We utilized a web data crawler called houyicaiji (https://www.houyicaiji.com/) to gather this Q&A data, which encompasses 10,903 distinct questions and 19,682 human counselor responses collected from November 3, 2022, to 
+March 30, 2023.",Internet data -- mental health Q&A,Chinese,No,No,Unselected,Unknown,Integrative modeling enables ChatGPT to achieve average level of human counselors performance in mental health Q&A,1,84,Mental health Q&A\nrecords (single-turn)
+dataset_62,Self-collected data,zhang 2024 dataset,Other: Descriptions of mental disorders in the DSM-5,Other: unknown,Other: unknown,No,Other: n.a.,Other: n.a.,VCounselor: a psychological intervention chat agent based on a knowledge-enhanced large language model,1,85,Other
+dataset_63,External data set,"https://huggingface.co/datasets/jkhedri/psychology-dataset; Only questions embedded, not answers.",Internet data -- mental health Q&A,English,No,Yes,Unknown,Unknown,Enhancing AI Chatbots for Mental Health Support: A Comprehensive Approach,1,86,Mental health Q&A\nrecords (single-turn)
+dataset_64,Self-collected data,intent classification dataset: examples of therapy intents,Other: Labeled examples of therapeutic intentions,Other: unknown,No,No,Unknown,not applicable,Indumini 2024 Implementing cognitive behavioral,1,87,Other
+dataset_65,Self-collected data,"Finally, in order to evaluate the different alternatives ofour system, a dataset of 150 question-answer pairs havebeen generate",Internet data -- mental health Q&A,Spanish,Unknown,No,Unknown,Unknown,Ascorbe 2023 Towards a Retrieval Augmented,1,90,Mental health Q&A\nrecords (single-turn)
+dataset_66,External data set,Mental illness case vignettes https://github.com/jlcmoore/llms-as-therapists/blob/main/data/questions.jsonl,Other: Psychiatric case vignettes,English,Yes,Yes,n.a.,not applicable,Moore 2025 Expressing stigma and inappropriate,1,91,Other
+dataset_67,External data set,Marmikpandya/mental-health https://huggingface.co/datasets/marmikpandya/mental-health,Internet data -- mental health Q&A,English,Unknown,Yes,Unknown,Unknown,Alathamneh 2024 Artificial Intelligence in Mental,1,92,Mental health Q&A\nrecords (single-turn)
+dataset_68,External data set,alexandreteles/mental-health-conversational-data https://huggingface.co/datasets/alexandreteles/mental-health-conversational-data,Internet data -- mental health Q&A,English,Unknown,Yes,Unknown,Unknown,Alathamneh 2024 Artificial Intelligence in Mental,1,93,Mental health Q&A\nrecords (single-turn)
+dataset_69,External data set,PrinceAyush/Mental_Health_conv https://huggingface.co/datasets/PrinceAyush/Mental_Health_conv,Internet data -- mental health Q&A,English,Unknown,Yes,Unknown,Unknown,Alathamneh 2024 Artificial Intelligence in Mental,1,94,Mental health Q&A\nrecords (single-turn)
+dataset_7,Self-collected data but derived from external data set,"PsyQA dataset (Sun et al., 2021) -> (was used to generate) -> CBT QA Dataset 
+CBT QA dataset. Derived from: PsyQA → CBT QA (ChatGPT-generated via CBT prompt). Short description: Chinese mental-health Q&A where responses are generated with a structured CBT prompt and used to fine-tune CBT-LLM.
+
+",Internet data -- mental health Q&A,Chinese,Yes,No,Unselected,Other: not applicable,CBT-LLM: A Chinese Large Language Model for Cognitive Behavioral Therapy-based Mental Health Question Answering,1,8,Mental health Q&A\nrecords (single-turn)
+dataset_70,External data set,heliosbrahma/mental_health_chatbot_dataset https://huggingface.co/datasets/heliosbrahma/mental_health_chatbot_dataset,Internet data -- mental health Q&A,English,No,Yes,Unselected,Unknown,Alathamneh 2024 Artificial Intelligence in Mental,1,95,Mental health Q&A\nrecords (single-turn)
+dataset_71,External data set,tolu07/Mental_Health_FAQ https://huggingface.co/datasets/tolu07/Mental_Health_FAQ,Internet data -- mental health Q&A,English,Unknown,Yes,Unknown,Unknown,Alathamneh 2024 Artificial Intelligence in Mental,1,96,Mental health Q&A\nrecords (single-turn)
+dataset_72,External data set,"Rojas-Barahona corpus from https://aclanthology.org/W18-5606/ Contains problem statements with cognitive distortions, labeled with different labels. Source is Koko platform (https://itskoko.com/).",Cognitive distortion records,English,No,No,Unselected,not applicable,Naresh Kumar 2025 Early Detection and Personalized,1,100,Automatic thought records
+dataset_73,External data set,data from Reddit mental health subreddits,Internet data -- mental health forum,English,No,No,Unselected,Lay people,Das 2022 Conversational Bots for Psychotherapy,1,103,Internet forum threads
+dataset_74,External data set,HCT dataset (Healthy Campus Trial),Thought records,Japanese,No,No,Unselected,not applicable,Furukawa 2023 Harnessing AI to Optimize,1,104,Automatic thought records
+dataset_75,External data set,"we crawl 2,000 blog titles from Yixinli’s QA column https://github.com/qiuhuachuan/DialogueSafety",Internet data -- mental health Q&A,Chinese,No,Yes,Unselected,Trained professionals,Qiu 2023 A Benchmark for Understanding Dialogue,1,106,Mental health Q&A\nrecords (single-turn)
+dataset_76,Self-collected data,"PsyTest: was collected by the study authors for evaluation. It consists of 50 real-life, anonymized counseling dialogues conducted on an online platform they developed.",Psychotherapy -- chat logs,Chinese,No,No,Unknown,Trained professionals,Qiu 2024 SMILE: Single-turn to Multi-turn,1,109,Psychotherapy dialogue\nrecords (multi-turn)
+dataset_77,External data set,thus we crawled 50K articles (0.1Btokens in total) related to psychology and mentalhealth support from Yixinli (xinli001.com/info),Other: mental health related internet blog posts,Chinese,No,No,n.a.,not applicable,Sun 2021 PsyQA: A Chinese Dataset,1,110,Other
+dataset_78,Self-collected data,", new collection curated by authors based on DSM (for RAG)",Other: Mental disorder dataset (from DSM),Chinese,No,No,n.a.,Trained professionals,Wang 2024 PIRTRE-C: A Two-Stage Retrieval,1,112,Other
+dataset_79,External data set,CPsyCounE (external test set for automatic evaluation),Emotional support dialogue -- chat logs,Chinese,Yes,Yes,Unselected,Unknown,Wang 2024 PIRTRE-C: A Two-Stage Retrieval,1,113,Non-specific supportive\ndialogue records (multi-turn)
+dataset_8,Self-collected data but derived from external data set,"MMESConv dataset (1599 dialogues, each utterance has the three modalities audio, video, text, crawled from YouTube)
+
+Large-scale multi-modal emotional-support dialogues with utterance-level emotion annotations and strategy labels; used for Emotion/Strategy/Response tasks.",Other: Emotional support dialogue -- multimodal data,Other: unknown,No,No,Unselected,Unknown,"Multi-modal Multi-emotion Emotional Support Conversation - Advanced Data Mining and Applications: 19th International Conference, ADMA 2023, Shenyang, China, August 21–23, 2023, Proceedings, Part I",1,10,Other
+dataset_80,Self-collected data,"""a dataset of user messages with the system"", Collected messages from users interacting with the chatbot system developed in this study",Emotional support dialogue -- chat logs,Other: Persian,No,No,Unselected,not applicable,Jafari 2025 Psychological Health Chatbot,1,115,Non-specific supportive\ndialogue records (multi-turn)
+dataset_81,External data set,"Not explicitly named, but sourced from Reddit and Twitter data described in a prior study",Internet data -- mental health forum,English,No,Yes,Unselected,Lay people,Jafari 2025 Psychological Health Chatbot,1,116,Internet forum threads
+dataset_82,External data set,Bad Bad Words dataset,Other: list of words considered offensive,English,No,Yes,n.a.,not applicable,Kolenik 2024 Computational Psychotherapy System,1,117,Other
+dataset_9,Self-collected data,"We develop an online Chinese text-based counseling platform that provides free counseling services. Each counseling session between the help-seeker and experienced supporter lasts approximately 50 min, following the standard practice in psychological counseling. Through this platform, we have collected a total of 2382 multi-turn dialogues
+
+Multi-turn real counseling chat sessions collected on a Chinese online text-based free counseling platform",Emotional support dialogue -- chat logs,Chinese,No,No,Unknown,Unknown,"A Benchmark for Understanding Dialogue Safety in Mental Health Support - Natural Language Processing and Chinese Computing: 12th National CCF Conference, NLPCC 2023, Foshan, China, October 12–15, 2023, Proceedings, Part II",1,12,Non-specific supportive\ndialogue records (multi-turn)
+empathetic_dialogues,External data set,"EmpatheticDialogues https://github.com/facebookresearch/EmpatheticDialogues
+
+From Rashkin et al. [52], containing around 25,000 conversations rooted in emotional situations, with labels for various emotions like sadness, anxiety, and anger.",Emotional support dialogue -- chat logs,English,No,Yes,Unselected,Lay people,Emotion-aware psychological first aid: Integrating BERT-based emotional distress detection with Psychological First Aid-Generative Pre-Trained Transformer chatbot for mental health support; Saha 2022 Towards Motivational and Empathetic,2,69; 107,Non-specific supportive\ndialogue records (multi-turn)
+hope,External data set,"HOPE
+212 multi-turn English psychotherapy sessions (≈ 12.9 K utterances) between therapist and patient, transcribed from YouTube videos
+
+HOPE;
+Switchboard Dialogue-act Corpus; (also mentions a “Dialog-act corpus”). Description: Counseling conversations with dialogue-act labels (HOPE) and a general telephone dialogue-act corpus (Switchboard) used for evaluation/generalizability. Derived: Not indicated.",Emotional support dialogue -- speech transcripts,English,No,No,Unknown,Unknown,"Response-act Guided Reinforced Dialogue Generation for Mental Health Counseling - Proceedings of the ACM Web Conference 2023; Introducing CounseLLMe: A dataset of simulated mental health dialogues for comparing LLMs like Haiku, LLaMAntino and ChatGPT against humans; Addressing the Challenges of Mental Health Conversations with Large Language Models",3,11; 31; 57,Non-specific supportive\ndialogue records (multi-turn)
+jigsaw_toxic_comments,"External data set, modified",Jigsaw Toxic Comment Classification Dataset,Labeled online comments,English,No,Yes,Unselected,Lay people,Jafari 2025 Psychological Health Chatbot; Kolenik 2024 Computational Psychotherapy System,2,114; 118,Other
+perez_rosa_motivational_interviewing,External data set,"Motivational Interviewing counseling dataset (Perez-Rosas 2016)
+
+The dataset contains a total of 22,719 counselor utterances extracted from 277 motivational interviewing sessions that are annotated with 10 counselor behavioral codes. The dataset is derived from a collection of 284 video recordings of counseling encounters using MI. The recordings were collected from various sources, including two clinical trials, students’ counseling sessions from a graduate level MI course, wellness coaching phone calls, and demonstrations of MI strategies in brief medical encounters.",Psychotherapy -- speech transcripts,English,No,No,Other: mixed,Other: mixed,Counseling-Style Reflection Generation Using Generative Pretrained Transformers with Augmented Context; Evaluating Language Models for Assessing Counselor Reflections,2,19; 63,Psychotherapy dialogue\nrecords (multi-turn)
+psy_qa,External data set,PsyQA,Internet data -- mental health Q&A,Chinese,No,Yes,Unselected,Trained professionals,"Research on the Construction of Psychological Crisis Intervention Strategy Service System - Health Information Science: 11th International Conference, HIS 2022, Virtual Event, October 28–30, 2022, Proceedings; Psyqa: A chinese dataset for generating long counseling text for mental health support; MENTALER: Toward Professional Mental Health Support with LLMs via Multi-Role Collaboration; MindScape Continuum: Advancing Online Counseling with Bert-Based Strategy Classification and Professional Helping Skills; Mentalblend: Enhancing online mental health support through the integration of llms with psychological counseling theories; Lai 2023 Supporting the Demand on Mental; Wang 2024 PIRTRE-C: A Two-Stage Retrieval",7,9; 38; 44; 46; 68; 105; 111,Mental health Q&A\nrecords (single-turn)

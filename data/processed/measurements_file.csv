@@ -1,0 +1,264 @@
+reference_title,metric_name,metric_category,metric_supercategory,benchmark_quality,performance_vs_benchmark,benchmark_notes
+Generative AI in Psychological Therapy: Perspectives on Computational Linguistics and Large Language Models in Written Behaviour Monitoring - Proceedings of the 17th International Conference on PErvasive Technologies Related to Assistive Environments,lexical diversity and richness,lexical_diversity,linguistic_analysis,h,w,human psychologist responses in the CounselChat transcripts
+Generative AI in Psychological Therapy: Perspectives on Computational Linguistics and Large Language Models in Written Behaviour Monitoring - Proceedings of the 17th International Conference on PErvasive Technologies Related to Assistive Environments,linguistic features as mentioned under 3.3,linguistic_analysis,linguistic_analysis,h,unclear,it's only stated whether the difference is significant. it's not stated whether human or AI have higher scores.
+Supporting the Demand on Mental Health Services with AI-Based Conversational Large Language Models (LLMs),lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,ROUGE-L - PanGu better than WenZhong
+Supporting the Demand on Mental Health Services with AI-Based Conversational Large Language Models (LLMs),expert_rating,expert_rating,human_rating,h,w,"psychology students rated helpfulness, fluency, relevance, logic. benchmark: human answers to questions from the data set
+
+Helpfulness, Fluency, relevance and logic - human evaluators generally considered the PanGu model’s
+generated responses more helpful, fluent, relevant, and logical than the WenZhong model"
+Supporting the Demand on Mental Health Services with AI-Based Conversational Large Language Models (LLMs),perplexity,perplexity,linguistic_analysis,no benchmark,no benchmark,no benchmark
+Supporting the Demand on Mental Health Services with AI-Based Conversational Large Language Models (LLMs),distinct 1,lexical_diversity,linguistic_analysis,no benchmark,no benchmark,no benchmark
+Supporting the Demand on Mental Health Services with AI-Based Conversational Large Language Models (LLMs),distinct 2,lexical_diversity,linguistic_analysis,no benchmark,no benchmark,no benchmark
+"Mental Healthcare Chatbot Based on Custom Diagnosis Documents Using a Quantized Large Language Model - 2024 11th International Conference on Reliability, Infocom Technologies and Optimization (Trends and Future Directions)(ICRITO)","human rating, not sure by whom",non_expert_rating,human_rating,no benchmark,no benchmark,different models were rated by human non-experts. no comparison with any benchmark.
+Towards Understanding Counseling Conversations: Domain Knowledge and Large Language Models,classification,classification,reference_similarity,l,w,"Table 4: Benchmark is fine-tuned DistilBERT model. ChatGPT is compared against this and performs worse.
+Table 2: Prompted GPT-3 model (text-davinci-003) is compared against DistilBERT.
+
+1. Utterance level feature prediction F1 score, comparing only models that they trained themselves.
+2. Conversation outcome prediction performance of different models they created themselves (DistilBERT, ChatGPT, AdaBoost), using F1 and Recall. Task: predict conversation outcome prediction (i.e. whether help seeker will feel more positive after conversation or not)"
+CBT-LLM: A Chinese Large Language Model for Cognitive Behavioral Therapy-based Mental Health Question Answering,lexical_overlap,lexical_overlap,reference_similarity,l,b,"Lots of problems here. Base dataset (CBT QA) of CBT responses is generated via ChatGPT-3.5, so another language model. Then the completions by CBT-LLM (model based on Baichuan-7B) are compared to the responses in CBT QA via BLEU, METEOR, CHRF. In the same way, BLEU, METEOR, CHRF values are generated for other baseline models (LLaMA-Chinese-7B, etc). The latter is the benchmark of comparison."
+CBT-LLM: A Chinese Large Language Model for Cognitive Behavioral Therapy-based Mental Health Question Answering,embedding_similarity,embedding_similarity,reference_similarity,l,b,"Lots of problems here. Base dataset (CBT QA) of CBT responses is generated via ChatGPT-3.5, so another language model. Then the completions by CBT-LLM (model based on Baichuan-7B) are compared to the responses in CBT QA via BLEURT, BERTSCORE. In the same way, BLEURT, BERTSCORE values are generated for other baseline models (LLaMA-Chinese-7B, etc). The latter is the benchmark of comparison."
+CBT-LLM: A Chinese Large Language Model for Cognitive Behavioral Therapy-based Mental Health Question Answering,classification,classification,reference_similarity,no benchmark,no benchmark,"accuracy, recall, f1 for detecting cognitive distortions in client questions. ground truth are psychotherapist-annotated labels. there is no benchmark in the sense of a second psychotherapist or another model doing the detection. Task: Cognitive distortion detection in client questions."
+CBT-LLM: A Chinese Large Language Model for Cognitive Behavioral Therapy-based Mental Health Question Answering,expert_rating,expert_rating,human_rating,l,b,"Problems: Benchmark are CBT responses by another LLM (Alpaca-Chinese-7B). The main CBT-LLM ist only marginally better. There are no p-values and confidence intervals to see whether the difference is even significant.
+
+Measures: Relevance, CBT structure, helpfulness"
+"Multi-modal Multi-emotion Emotional Support Conversation - Advanced Data Mining and Applications: 19th International Conference, ADMA 2023, Shenyang, China, August 21–23, 2023, Proceedings, Part I",lexical_overlap,lexical_overlap,reference_similarity,l,b,benchmark: other conversation systems
+"Multi-modal Multi-emotion Emotional Support Conversation - Advanced Data Mining and Applications: 19th International Conference, ADMA 2023, Shenyang, China, August 21–23, 2023, Proceedings, Part I",classification,classification,reference_similarity,l,b,benchmark: other conversation systems. Task: emotion classification in current utterance of help-seeker
+"Multi-modal Multi-emotion Emotional Support Conversation - Advanced Data Mining and Applications: 19th International Conference, ADMA 2023, Shenyang, China, August 21–23, 2023, Proceedings, Part I",perplexity,perplexity,linguistic_analysis,l,b,benchmark: other conversation systems
+Response-act Guided Reinforced Dialogue Generation for Mental Health Counseling - Proceedings of the ACM Web Conference 2023,lexical_overlap,lexical_overlap,reference_similarity,l,b,"metrics: ROUGE, METEOR. benchmarks: DialoGPT, GPT-2, DialogVED, ProphNet-Dialog, HRED, HRED Speaker/Utterance Encoder, VHCR"
+Response-act Guided Reinforced Dialogue Generation for Mental Health Counseling - Proceedings of the ACM Web Conference 2023,embedding_similarity,embedding_similarity,reference_similarity,l,b,"metrics: ROUGE, METEOR. benchmarks: DialoGPT, GPT-2, DialogVED, ProphNet-Dialog, HRED, HRED Speaker/Utterance Encoder, VHCR"
+Response-act Guided Reinforced Dialogue Generation for Mental Health Counseling - Proceedings of the ACM Web Conference 2023,expert_rating,expert_rating,human_rating,l,b,"metrics: likert-rated relevance, consistency, fluency, coherence. benchmark: DialoGPT, GPT-2"
+"A Benchmark for Understanding Dialogue Safety in Mental Health Support - Natural Language Processing and Chinese Computing: 12th National CCF Conference, NLPCC 2023, Foshan, China, October 12–15, 2023, Proceedings, Part II",classification,classification,reference_similarity,l,w,"accuracy, precision, recall, F1 for classifying utterances. Task: classification of mental health dialogue turns into safe/various types of unsafe responses. benchmark: fine-tuned BERT-base and RoBERTa-large"
+Future of ADHD Care: Evaluating the Efficacy of ChatGPT in Therapy Enhancement,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"no benchmark. metrics: likert scale expert rating across several dimensions (emotional understanding and empathy, communication and language, therapeutic effectiveness and suitability, etc.)"
+Generation of Backward-Looking Complex Reflections for a Motivational Interviewing-Based Smoking Cessation Chatbot Using GPT-4: Algorithm Development and Validation,human rating (unclear if expert or not),non_expert_rating,human_rating,no benchmark,no benchmark,rating scale to determine quality of backward looking reflections (Textbox 5).
+Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,"no benchmark. metric: ROUGE-1, -2, -L"
+Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study,embedding_similarity,embedding_similarity,reference_similarity,no benchmark,no benchmark,BERTScore
+Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"no benchmark. metrics: affective attitude, burden, ethicality, coherence, opportunity costs, perceived effectiveness, extent of hallucination"
+Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,lexical_overlap,lexical_overlap,reference_similarity,l,b,benchmark are human responses
+Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,embedding_similarity,embedding_similarity,reference_similarity,l,w,benchmark are human responses.
+Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,expert_rating,expert_rating,human_rating,,no benchmark,
+Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,lexical diversity,lexical_diversity,linguistic_analysis,l,w,
+Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,average length,linguistic_analysis,linguistic_analysis,l,unclear,
+Efficacy of ChatGPT in Cantonese Sentiment Analysis: Comparative Study,classification,classification,reference_similarity,l,b,"benchmark are other NLP classifiers (LR, SVM, LSTM). metric is sentiment classification accuracy and F1 score. ground truth are human scores. better benchmark would have been other human rater. Task: Classify sentiment into positive/neutral/negative"
+Harnessing AI to Optimize Thought Records and Facilitate Cognitive Restructuring in Smartphone CBT: An Exploratory Study,classification,classification,reference_similarity,no benchmark,no benchmark,"accuracy, F1, precision, recall for prediction of feeling based on automatic thought (feeling-thought pairs)"
+Counseling-Style Reflection Generation Using Generative Pretrained Transformers with Augmented Context,lexical_overlap,lexical_overlap,reference_similarity,l,b,seq2seq
+Counseling-Style Reflection Generation Using Generative Pretrained Transformers with Augmented Context,embedding_similarity,embedding_similarity,reference_similarity,l,b,seq2seq
+Counseling-Style Reflection Generation Using Generative Pretrained Transformers with Augmented Context,expert_rating,expert_rating,human_rating,h,s,benchmark is ground truth (human created reflections) and output of simple seq2seq model
+Counseling-Style Reflection Generation Using Generative Pretrained Transformers with Augmented Context,diversity,lexical_diversity,linguistic_analysis,l,s,seq2seq
+Towards Motivational and Empathetic Response Generation in Online Mental Health Support,lexical_overlap,lexical_overlap,reference_similarity,l,b,"ML models (HRED, SEQ2SEQ)"
+Towards Motivational and Empathetic Response Generation in Online Mental Health Support,embedding_similarity,embedding_similarity,reference_similarity,l,b,"ML models (HRED, SEQ2SEQ)"
+Towards Motivational and Empathetic Response Generation in Online Mental Health Support,expert_rating,expert_rating,human_rating,l,b,"ML models (HRED, SEQ2SEQ)"
+Towards Motivational and Empathetic Response Generation in Online Mental Health Support,sentiment polarity,sentiment_analysis,automatic_rating_empathy_or_sentiment,l,s,Benchmark is other NLP model
+Towards Motivational and Empathetic Response Generation in Online Mental Health Support,change of empathy scores for the erf module,automatic_empathy_rating,automatic_rating_empathy_or_sentiment,no benchmark,no benchmark,no benchmark
+Generative Transformer Chatbots for Mental Health Support: A Study on Depression and Anxiety,classification,classification,reference_similarity,no benchmark,no benchmark,"no benchmark. top-1, top-5, and top-10 accuracy of predicting the next token"
+Generative Transformer Chatbots for Mental Health Support: A Study on Depression and Anxiety,continuous_metrics,continuous_metrics,reference_similarity,no benchmark,no benckmark,no benchmark. loss value
+Leveraging ChatGPT to optimize depression intervention through explainable deep learning,part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis,part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis,part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis,h,unclear,benchmark: human psychologist responses from transcripts
+Leveraging ChatGPT to optimize depression intervention through explainable deep learning,shap values of words in classifier that classifies human vs. chatgpt responses,linguistic_analysis,linguistic_analysis,h,unclear,benchmark: human psychologist responses from transcripts
+Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,lexical_overlap,lexical_overlap,reference_similarity,l,b,BLEU against expert empathic rewritings. Benchmarks are other LLMs and ablations
+Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,embedding_similarity,embedding_similarity,reference_similarity,l,b,specificity is an embedding similarity metric here
+Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,expert_rating,expert_rating,human_rating,h,w,Expert judgment against human expert empathetic rewritings. human rewritings are preferred in 80-90% of cases.
+Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,empathy classification (sharma et al),automatic_empathy_rating,automatic_rating_empathy_or_sentiment,l,b,Other LLMs
+Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,"perplexity, diversity, sentence coherence, edit rate","perplexity, diversity, sentence coherence, edit rate","perplexity, diversity, sentence coherence, edit rate",l,w,Other LLMs
+Towards Facilitating Empathic Conversations in Online Mental Health Support: A Reinforcement Learning Approach,expert rating 2,expert rating 2,expert rating 2,l,b,"Expert judgments of empathy, fluency, specificity of PARTNER against other LLMs."
+Can Large Language Models Replace Therapists? Evaluating Performance at Simple Cognitive Behavioral Therapy Tasks.,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,no benchmark.
+Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,sentiment analysis score,sentiment_analysis,automatic_rating_empathy_or_sentiment,h,b,benchmark are responses in the kaggle dataset
+Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,response quality rated by non experts,non_expert_rating,human_rating,h,b,"benchmark are responses in the kaggle dataset, but author rated himself (vested interests???)"
+Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,word analysis/ count,linguistic_analysis,linguistic_analysis,h,more words,
+Safety of Large Language Models in Addressing Depression.,safety (number of conversations turns until initial referral/shutdown of chatbot),safety_or_bias_testing,automatic_rating_safety_or_bias,,,no benchmark
+Chain-of-Interaction: Enhancing Large Language Models for Psychiatric Behavior Understanding by Dyadic Contexts,classification,classification,reference_similarity,l,b,"Metric: Micro- and macro-F1. Benchmark: zero- and few-shot prompting with the same LLMs.
+
+Quantitative F1 decrease in ablation study shows impact of each stage.
+"
+"Introducing CounseLLMe: A dataset of simulated mental health dialogues for comparing LLMs like Haiku, LLaMAntino and ChatGPT against humans",various text analyses,various text analyses,various text analyses,h,unclear,benchmark: human therapist responses
+"Introducing CounseLLMe: A dataset of simulated mental health dialogues for comparing LLMs like Haiku, LLaMAntino and ChatGPT against humans",network centrality (distance from depression terms),network centrality (distance from depression terms),network centrality (distance from depression terms),h,s,Network centrality and average distance values reported (Table 1 and 2).
+Smile: Single-turn to multi-turn inclusive language expansion via chatgpt for mental health support,lexical_overlap,lexical_overlap,reference_similarity,l,b,"BLEU-1/2/3, ROUGE-L improved after fine-tuning
+
+benchmark is some baseline model"
+Smile: Single-turn to multi-turn inclusive language expansion via chatgpt for mental health support,embedding_similarity,embedding_similarity,reference_similarity,l,b,"BERTScore used and increased; also pairwise cosine similarity for semantic diversity analysis
+
+benchmark is some baseline model"
+Smile: Single-turn to multi-turn inclusive language expansion via chatgpt for mental health support,expert_rating,expert_rating,human_rating,h,w,benchmark are responses of human counselors in PsyTest
+Smile: Single-turn to multi-turn inclusive language expansion via chatgpt for mental health support,lexical_diversity,lexical_diversity,linguistic_analysis,l,b,"Tab. 5
+
+Distinct-1/2/3… Fine-tuned 82.08/95.74/97.81 vs Baseline 52.95/80.74/90.17… §5.1–5.3"
+Assessing the use of ChatGPT as a psychoeducational tool for mental health practice,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"“reviewers assessed ChatGPT’s psychoeducational responses …” 
+"
+Empowering Psychotherapy with Large Language Models: Cognitive Distortion Detection through Diagnosis of Thought Prompting,classification,classification,reference_similarity,l,b,f1 for distortion assessment and distortion classification. benchmark: models without special prompting and results from old publication. their best method is better than the results from old publication.
+Empowering Psychotherapy with Large Language Models: Cognitive Distortion Detection through Diagnosis of Thought Prompting,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,4.3 Human Evaluation Results
+Domain-Specific Improvement on Psychotherapy Chatbot Using Assistant,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,"Rouge comparison to Alexander Street Press reference. No benchmark.
+
+only the inhibited LoRA Finetuning"
+Domain-Specific Improvement on Psychotherapy Chatbot Using Assistant,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"human rating (read, prof, match)"
+Domain-Specific Improvement on Psychotherapy Chatbot Using Assistant,fluency,fluency,fluency,no benchmark,no benchmark,Not clear what fluency is. The reference paper measures fluency via human rating but the authors of this paper state this is an automatic assessment.
+PsycoLLM: Enhancing LLM for Psychological Understanding and Evaluation,lexical_overlap,lexical_overlap,reference_similarity,l,b,"Metrics: Rouge-1, Rouge-L, BLEU-4. Benchmarks: Various other LLMs
+ROUGE-1 and BLEU-4 highest for PsycoLLM; ROUGE-L slightly lower than EmoLLM"
+PsycoLLM: Enhancing LLM for Psychological Understanding and Evaluation,embedding_similarity,embedding_similarity,reference_similarity,l,b,"Metrics: BERTScore. Benchmarks: Various other LLMs
+Highest BERTScore among compared models."
+PsycoLLM: Enhancing LLM for Psychological Understanding and Evaluation,classification,classification,reference_similarity,l,b,"""Elastic accuracy"" on their QA dataset.
+Highest average standard accuracy; >60% pass; elastic accuracy also strong"
+Are Large Language Models Possible to Conduct Cognitive Behavioral Therapy?,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,no benchmark
+Are Large Language Models Possible to Conduct Cognitive Behavioral Therapy?,embedding_similarity,embedding_similarity,reference_similarity,no benchmark,no benchmark,no benchmark
+Are Large Language Models Possible to Conduct Cognitive Behavioral Therapy?,lexical_diversity,lexical_diversity,linguistic_analysis,no benchmark,no benchmark,DISTINCT score. no benchmark
+Are Large Language Models Possible to Conduct Cognitive Behavioral Therapy?,bartscore,bartscore,bartscore,no benchmark,no benchmark,no benchmark
+Are Large Language Models Possible to Conduct Cognitive Behavioral Therapy?,bleurt,bleurt,bleurt,no benchmark,no benchmark,no benchmark
+"Generation, Distillation and Evaluation of Motivational Interviewing-Style Reflections with a Foundational Language Model",expert_rating,expert_rating,human_rating,no benchmark,no benchmark,no benchmark
+"Generation, Distillation and Evaluation of Motivational Interviewing-Style Reflections with a Foundational Language Model",llm-as-a-judge mi_adherence,automatic_response_quality,automatic_rating_other_response_quality,no benchmark,no benchmark,no benchmark
+Psyqa: A chinese dataset for generating long counseling text for mental health support,lexical_overlap,lexical_overlap,reference_similarity,l,b,S2S-Model (without strategy) as benchmark
+Psyqa: A chinese dataset for generating long counseling text for mental health support,classification,classification,reference_similarity,l,w,"""controllability"", i.e. match between predicted and actual strategy tokens"
+Psyqa: A chinese dataset for generating long counseling text for mental health support,expert_rating,expert_rating,human_rating,h,w,"rating of fluency, coherence, relevance, helpfulness. benchmark: human responses from the dataset."
+Psyqa: A chinese dataset for generating long counseling text for mental health support,perplexity,perplexity,linguistic_analysis,l,b,benchmark: simple seq2seq model
+Psyqa: A chinese dataset for generating long counseling text for mental health support,lexical_diversity,lexical_diversity,linguistic_analysis,l,b,benchmark: simple seq2seq model
+Personalized Mental Health Assistance: Integrating Emotion Prediction with GPT-Based Chatbot,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,BLEU SCORE
+Personalized Mental Health Assistance: Integrating Emotion Prediction with GPT-Based Chatbot,embedding_similarity,embedding_similarity,reference_similarity,no benchmark,no benchmark,Semantic Similarity via cosine distance (see Eq. 4)
+Mello: A Large Language Model for Mental Health Counselling Conversations,psychobench empathy scale,automatic_empathy_rating,automatic_rating_empathy_or_sentiment,l,b,"PsychoBench is a framework for testing psychological instruments like Big Five and other scales on LLMs. Benchmark here: human reference population (not therapists, just average humans). Also compared to other LLMs (Llama 2, Falcon)"
+Mello: A Large Language Model for Mental Health Counselling Conversations,psychobench emotional intelligence scale,automatic_empathy_rating,automatic_rating_empathy_or_sentiment,l,b,"PsychoBench is a framework for testing psychological instruments like Big Five and other scales on LLMs. Benchmark here: human reference population (not therapists, just average humans). Also compared to other LLMs (Llama 2, Falcon)"
+MENTALER: Toward Professional Mental Health Support with LLMs via Multi-Role Collaboration,lexical_overlap,lexical_overlap,reference_similarity,l,b,"“We use BLEU.Avg (the average of BLEU-1, 2, 3, 4)… measures similarity between generated text and reference text”"
+MENTALER: Toward Professional Mental Health Support with LLMs via Multi-Role Collaboration,classification,classification,reference_similarity,l,b,"The F1 score… evaluates the quality of generated answers by calculating the degree of n-gram matching” (Position: Metrics, p. 1978"
+MENTALER: Toward Professional Mental Health Support with LLMs via Multi-Role Collaboration,expert_rating,expert_rating,human_rating,,,"Human evaluation sample = 60 questions, rated by 12 evaluators (pairs); metrics included fluency, relevance, helpfulness, empathy, professionalism. — Quote: “randomly select sixty questions… evaluators… five criteria… 5-star rating scale” . The ratings are done using a 5-star rating scale"
+MENTALER: Toward Professional Mental Health Support with LLMs via Multi-Role Collaboration,lexical_diversity,lexical_diversity,linguistic_analysis,l,b,D1 (Distinct-1) measures the richness of vocabulary in the responses
+AI-Driven Mental Health Chatbot: Empowering Well-Being with Conversational AI and Retrieval-Augmented Generation,embedding_similarity,embedding_similarity,reference_similarity,l,b,Best model of authors compared to models of other works. 
+AI-Driven Mental Health Chatbot: Empowering Well-Being with Conversational AI and Retrieval-Augmented Generation,perplexity,perplexity,linguistic_analysis,l,w,Best model of authors compared to models of other works. 
+MindScape Continuum: Advancing Online Counseling with Bert-Based Strategy Classification and Professional Helping Skills,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,"BLEU-4, ROUGE-1, ROUGE-2, ROUGE-L"
+MindScape Continuum: Advancing Online Counseling with Bert-Based Strategy Classification and Professional Helping Skills,classification,classification,reference_similarity,no benchmark,no benchmark,Accuracy of the BERT helping skill classification model
+Exploring the potential of lightweight large language models for AI-based mental health counselling task: a novel comparative study,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,"evaluates the effectiveness of the four four open-source lightweight LLMs (T5-small, 
+FLAN-T5-small, BART-base, and GODEL-base) fine-tuned on curated mental health counseling conversation 
+datasets
+
+Comparison against reference responses in dataset"
+Exploring the potential of lightweight large language models for AI-based mental health counselling task: a novel comparative study,perplexity,perplexity,linguistic_analysis,no benchmark,no benchmark,"evaluates the effectiveness of the four four open-source lightweight LLMs (T5-small, 
+FLAN-T5-small, BART-base, and GODEL-base) fine-tuned on curated mental health counseling conversation 
+datasets
+
+Perplexity of reference responses in dataset"
+Multi-Tiered RAG-Based Chatbot for Mental Health Support,automatic response quality,automatic_response_quality,automatic_rating_other_response_quality,no benchmark,no benchmark,llm as a judge: The DeepEval framework + MQG-RAG Evaluation
+PIRTRE-C: A Two-Stage Retrieval and Reranking Enhanced Framework for Improving Chinese Psychological Counseling,automatic safety rating,safety_or_bias_testing,automatic_rating_safety_or_bias,l,b,ChatGPT and GLM-4
+PIRTRE-C: A Two-Stage Retrieval and Reranking Enhanced Framework for Improving Chinese Psychological Counseling,automatic response quality,automatic_response_quality,automatic_rating_other_response_quality,l,b,ChatGPT and GLM-4
+SentimentCareBot: Retrieval-augmented generation chatbot for mental health support with sentiment analysis,automatic response quality,automatic_response_quality,automatic_rating_other_response_quality,no benchmark,no benchmark,Ragas is LLM-as-a-judge. OpenAI against Mistral with RAG modules and sentiment analysis
+Integrating AI into ADHD Therapy: Insights from ChatGPT-4o and Robotic Assistants: S. Berrezueta-Guzman et al.,expert_rating,expert_rating,human_rating,h,b,"To assess the relative effectiveness of ChatGPT-4o-based 
+ADHD therapy, we compared its performance against three 
+baseline approaches: traditional therapist-led interventions, 
+game-based cognitive training (such as EndeavorRx), and 
+reinforcement learning-based AI models. Table 2 compares 
+key therapeutic factors across these models."
+Integrating AI into ADHD Therapy: Insights from ChatGPT-4o and Robotic Assistants: S. Berrezueta-Guzman et al.,stress test metrics,safety_or_bias_testing,automatic_rating_safety_or_bias,no benchmark,no benchmark,no benchmark
+Expressing stigma and inappropriate responses prevents LLMs from safely replacing mental health providers.,avg. of stigma questions,safety_or_bias_testing,automatic_rating_safety_or_bias,no benchmark,no benchmark,"Compared to the other models, but not clear indexmodel, so not necessarly a benchmark. "
+Expressing stigma and inappropriate responses prevents LLMs from safely replacing mental health providers.,automatic safety rating,safety_or_bias_testing,automatic_rating_safety_or_bias,h,w,LLM-based classification of whether LLM responses are appropriate or not. Benchmark: Responses of n = 16 human therapist participants.
+Exploring the Efficacy of Robotic Assistants with ChatGPT and Claude in Enhancing ADHD Therapy: Innovating Treatment Paradigms,expert_rating,expert_rating,human_rating,l,s,benchmark: chatgpt without robot integration
+Can AI Technologies Support Clinical Supervision? Assessing the Potential of ChatGPT,expert_rating,expert_rating,human_rating,h,b,valuated by Gestalt psychotherapy trainees
+Implementing Cognitive Behavioral Therapy in Chatbots to Reduce Students’ Exam Stress using ChatGPT,classification,classification,reference_similarity,no benchmark,no benchmark,"Accuracy, precision, recall, F1 for the cognitive distortion identifier. No benchmark."
+Implementing Cognitive Behavioral Therapy in Chatbots to Reduce Students’ Exam Stress using ChatGPT,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,Rating by experienced student counselors of 3 chat conversations between students and the proposed chatbot.
+Design and Implementation of an AI-Driven Mental Health Chatbot: A Generative AI Model,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,BLEU comparison with reference responses from some given conversations. No information provided on what these reference conversations are. No comparison to other benchmark method.
+Enhancing Patient Intake Process in Mental Health Consultations Using RAG-Driven Chatbot,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,"BLEU, ROUGE with counselor responses as reference (CounselChat)"
+Enhancing Patient Intake Process in Mental Health Consultations Using RAG-Driven Chatbot,embedding_similarity,embedding_similarity,reference_similarity,no benchmark,no benchmark,"on average 0.93 (±0.03) similarity in the embedding space.
+
+Wonky measurement: embedding similarity between chatbot responses and patient inputs"
+Enhancing Patient Intake Process in Mental Health Consultations Using RAG-Driven Chatbot,continuous_metrics,continuous_metrics,reference_similarity,no benchmark,no benchmark,Comparison of chatbot-inferred PHQ-9 scores with human scorers via ICC and Cohen's kappa
+Mental Health Support Using Gen-AI Shot Prompting Technique and Vector Embeddings,classification,classification,reference_similarity,no benchmark,no benchmark,"Classification Accuracy Tests (to distinguish relevant vs. 
+irrelevant queries)
+
+Classification into relevant/irrelevant via all-MiniLM-L6-v2"
+Addressing the Challenges of Mental Health Conversations with Large Language Models,lexical_overlap,lexical_overlap,reference_similarity,l,b,"METEOR and ROUGE tested, but Strawman models"
+Addressing the Challenges of Mental Health Conversations with Large Language Models,embedding_similarity,embedding_similarity,reference_similarity,l,b,
+Addressing the Challenges of Mental Health Conversations with Large Language Models,classification,classification,reference_similarity,l,b,
+Feasibility of Using ChatGPT to Generate Exposure Hierarchies for Treating Obsessive-Compulsive Disorder,expert_rating,expert_rating,human_rating,h,w,benchmark: human-generated exposure hierarchies. measure: overall blinded expert rating
+The Goldilocks Zone: Finding the right balance of user and institutional risk for suicide-related generative AI queries,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,7 different safety questions
+Early Detection and Personalized Intervention in Mental Health,lexical_overlap,lexical_overlap,reference_similarity,l,b,BLEU against human responses. Benchmark: non fine-tuned GPT-2
+Early Detection and Personalized Intervention in Mental Health,classification,classification,reference_similarity,no benchmark,no benchmark,Performance of cognitive distortion classification of non-generative BERT model is given (but it's non-generative)
+Early Detection and Personalized Intervention in Mental Health,perplexity,perplexity,linguistic_analysis,l,b,Benchmark: non fine-tuned GPT-2
+Early Detection and Personalized Intervention in Mental Health,user rating,non_expert_rating,human_rating,l,b,"User scores of ""helpfulness"" and ""empathy"". Benchmark: non fine-tuned GPT-2."
+Evaluating the Quality of Psychotherapy Conversational Agents: Framework Development and Cross-Sectional Study,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"CAPE category ratings, no benchmark"
+Empowerment of Large Language Models in Psychological Counseling through Prompt Engineering,llm-as-a-judge emotional resonance and understanding,automatic_empathy_rating,automatic_rating_empathy_or_sentiment,l,b,Qianwen to automatically evaluate the counseling dialogue (esction: C. )
+Empowerment of Large Language Models in Psychological Counseling through Prompt Engineering,llm-as-a-judge professionalism etc.,automatic_response_quality,automatic_rating_other_response_quality,l,b,Qianwen to automatically evaluate the counseling dialogue (esction: C. )
+Evaluating Language Models for Assessing Counselor Reflections,classification,classification,reference_similarity,l,w,Recall@1 (Tables 3 and 4)
+Evaluating Language Models for Assessing Counselor Reflections,continuous_metrics,continuous_metrics,reference_similarity,l,w,"Pearson, Spearman, Kendall’s Tau. Comparing Flan, Mistral, GPT-3.5 performance against naive classifier (benchmark)"
+Can AI relate: Testing large language model response for mental health support,expert_rating,expert_rating,human_rating,h,b,"Measures: Likert empathy rating, MITI global score. Benchmark: human peer supporter from Reddit post."
+Can AI relate: Testing large language model response for mental health support,empathy rating unequality,non_expert_rating,human_rating,l,unknown,"Table 1: mechanical turk worker ratings (""Human"") vs. GPT-4"
+Rational AIs with emotional deficits: ChatGPT vs. counselors in providing emotional reflections,expert_rating,expert_rating,human_rating,h,w,likert-scale appropriateness rating of emotional reflection responses. compared GPT-4 against human counselor responses.
+Comparative Study on the Performance of LLM-based Psychological Counseling Chatbots via Prompt Engineering Techniques,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"We introduced human evaluation to assess the performance 
+of our chatbot. To ensure consistency and reliability of human 
+evaluation, we composed a panel of five experts with varying 
+levels of experience to assess the chatbot's performance
+
+Psychologist rating of empathy, accuracy of responses, interaction continuity, fluency, understanding. No benchmark."
+Towards a Retrieval Augmented Generation System for Information on Suicide Prevention*,embedding_similarity,embedding_similarity,reference_similarity,no benchmark,no benchmark,Distance between embeddings of reference and output.
+Towards a Retrieval Augmented Generation System for Information on Suicide Prevention*,classification,classification,reference_similarity,no benchmark,no benchmark,"F1 score, not quiet clear what of."
+Exploring the potential of ChatGPT as a digital advisor in acute psychiatric crises: a feasibility study,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,no benchmark
+Mentalblend: Enhancing online mental health support through the integration of llms with psychological counseling theories,lexical_overlap,lexical_overlap,reference_similarity,l,b,"Various metrics (average of BLEU-1, BLEU-2, BLEU-3, and BLEU-4). Benchmark are other LLM-based methods.
+
+Initially,
+we benchmark against classic methods for this task, includ-
+ing: 1) GPTft+strategy – utilizing GPT2 to generate re-
+sponses with support strategies aimed at providing mental
+health support and assistance. We then turn our attention
+to comparisons with other LLM-based approaches, such as:
+(2) CoT – a method that encourages the generation of rea-
+sonable responses through the prompting “Let’s think step
+by step.” Additionally, we compare with other typical LLM-
+based methods, including: (3) ReAct(Yao et al., 2022), (4)
+Chameleon(Lu et al., 2023), and (5) Cue-CoT(Wang et al.,
+2023)."
+Mentalblend: Enhancing online mental health support through the integration of llms with psychological counseling theories,embedding_similarity,embedding_similarity,reference_similarity,l,b,"PBERT, RBERT, FBERT. Benchmark are other LLM-based methods.
+
+Initially,
+we benchmark against classic methods for this task, includ-
+ing: 1) GPTft+strategy – utilizing GPT2 to generate re-
+sponses with support strategies aimed at providing mental
+health support and assistance. We then turn our attention
+to comparisons with other LLM-based approaches, such as:
+(2) CoT – a method that encourages the generation of rea-
+sonable responses through the prompting “Let’s think step
+by step.” Additionally, we compare with other typical LLM-
+based methods, including: (3) ReAct(Yao et al., 2022), (4)
+Chameleon(Lu et al., 2023), and (5) Cue-CoT(Wang et al.,
+2023)."
+Mentalblend: Enhancing online mental health support through the integration of llms with psychological counseling theories,expert_rating,expert_rating,human_rating,l,b,"Fluency, helpfulness, relevance, empathy, professionalism, evaluated by psychology graduate students on a 5-Likert scale. Benchmark are other LLM-based methods."
+Mentalblend: Enhancing online mental health support through the integration of llms with psychological counseling theories,lexical_diversity,lexical_diversity,linguistic_analysis,l,s,"Dist-2. Benchmark are other LLM-based methods.
+
+Initially,
+we benchmark against classic methods for this task, includ-
+ing: 1) GPTft+strategy – utilizing GPT2 to generate re-
+sponses with support strategies aimed at providing mental
+health support and assistance. We then turn our attention
+to comparisons with other LLM-based approaches, such as:
+(2) CoT – a method that encourages the generation of rea-
+sonable responses through the prompting “Let’s think step
+by step.” Additionally, we compare with other typical LLM-
+based methods, including: (3) ReAct(Yao et al., 2022), (4)
+Chameleon(Lu et al., 2023), and (5) Cue-CoT(Wang et al.,
+2023)."
+Evaluating for Evidence of Sociodemographic Bias in Conversational AI for Mental Health Support,liwc score domains and linguistic marker scores,safety_or_bias_testing,automatic_rating_safety_or_bias,no benchmark,no benchmark,no benchmark
+Evaluating for Evidence of Sociodemographic Bias in Conversational AI for Mental Health Support,average tone (sentiment score),sentiment_analysis,automatic_rating_empathy_or_sentiment,no benchmark,no benchmark,no benchmark
+Emotion-aware psychological first aid: Integrating BERT-based emotional distress detection with Psychological First Aid-Generative Pre-Trained Transformer chatbot for mental health support,lexical_overlap,lexical_overlap,reference_similarity,l,s,"BLEU, ROUGE against reference responses in dataset. Benchmark: GPT-3.5 out-of-the-box."
+Emotion-aware psychological first aid: Integrating BERT-based emotional distress detection with Psychological First Aid-Generative Pre-Trained Transformer chatbot for mental health support,embedding_similarity,embedding_similarity,reference_similarity,l,s,BERTScore against reference responses in dataset. Benchmark: GPT-3.5 out-of-the-box.
+Emotion-aware psychological first aid: Integrating BERT-based emotional distress detection with Psychological First Aid-Generative Pre-Trained Transformer chatbot for mental health support,classification,classification,reference_similarity,l,b,Various classification metrics of BERT emotional distress detection. Benchmark: Bi-LSTM
+"Emotion-Aware Embedding Fusion in Large Language Models (Flan-T5, Llama 2, DeepSeek-R1, and ChatGPT 4) for Intelligent Response Generation",automatic empathy rating,automatic_empathy_rating,automatic_rating_empathy_or_sentiment,l,b,they study integration of empathy lexicon into different LLMs. benchmark are those LLMs without empathy lexicon integration.
+"Emotion-Aware Embedding Fusion in Large Language Models (Flan-T5, Llama 2, DeepSeek-R1, and ChatGPT 4) for Intelligent Response Generation","coherence, informativeness, fluency",linguistic_analysis,linguistic_analysis,l,w,they study integration of empathy lexicon into different LLMs. benchmark are those LLMs without empathy lexicon integration.
+Expert Patient Interaction Language Model (EPILM),embedding_similarity,embedding_similarity,reference_similarity,l,b,benchmark is GPT-3.5. measure is BERTScore and sentence transformer score with dataset expert responses as reference
+Chatbot in the E-Service of Mental Health Using the Reprogramming of the GPT-2 Model,lexical_overlap,lexical_overlap,reference_similarity,no benchmark,no benchmark,BLEU with reference
+Chatbot in the E-Service of Mental Health Using the Reprogramming of the GPT-2 Model,continuous_metrics,continuous_metrics,reference_similarity,no benchmark,no benchmark,Train loss
+Adversarial Evaluation Algorithm for Detecting Extreme Behaviors of LLMs in Psychological Counseling Scenarios,classification,classification,reference_similarity,l,b,Models classified cases requiring intervention; BSI>1 and higher CR indicate better behavior sensitivity/consistency; DeepSeek/Wenxin/Claude > GPT-4. — Quote: “BSI and CR … DeepSeek 1.0662 / 0.8985 … GPT-4 1.0415 / 0.8250
+Adversarial Evaluation Algorithm for Detecting Extreme Behaviors of LLMs in Psychological Counseling Scenarios,behavior sensitivity index,behavior sensitivity index,behavior sensitivity index,no benchmark,no benchmark,No Indexmodel; comparison of multiple LLMs
+Adversarial Evaluation Algorithm for Detecting Extreme Behaviors of LLMs in Psychological Counseling Scenarios,consistency ratio,consistency ratio,consistency ratio,no benchmark,no benchmark,No Indexmodel; comparison of multiple LLMs
+Artificial Intelligence in Mental Health Care: The T5 Chatbot Project,continuous_metrics,continuous_metrics,reference_similarity,no benchmark,no benchmark,Metric: training loss. No benchmark
+Artificial Intelligence in Mental Health Care: The T5 Chatbot Project,lexical_diversity,lexical_diversity,linguistic_analysis,no benchmark,no benchmark,Metrics: Dist-1 and Dist-2 on chatbot responses. No benchmark
+Assessing the Adherence of ChatGPT Chatbots to Public Health Guidelines for Smoking Cessation: Content Analysis,embedding_similarity,embedding_similarity,reference_similarity,l,s,Models developed compared to each other and to Sarah (from WHO); Use Sarah as Benchmark here (?).
+Assessing the Adherence of ChatGPT Chatbots to Public Health Guidelines for Smoking Cessation: Content Analysis,classification,classification,reference_similarity,h,w,"Models developed compared to each other and to Sarah (from WHO); Use Sarah as Benchmark here (?).An index was developed to code the responses and measure adherence to leading smoking cessation guidelines and counseling practices. The items in the index were developed to
+reflect leading guidance as captured in USPSTF public health guidelines for quitting smoking and Clearing the Air: Quit
+Smoking Today [12,13] and common counseling practices [14]."
+Assessing the Adherence of ChatGPT Chatbots to Public Health Guidelines for Smoking Cessation: Content Analysis,expert_rating,expert_rating,human_rating,h,w,"Each chatbot response was independently categorized by 2
+coders for their adherence on each item of the index."
+Enhancing Emotional Support Capabilities of Large Language Models through Cascaded Neural Networks,lexical_overlap,lexical_overlap,reference_similarity,l,b,"BLEU, ROUGE, METEOR. Benchmarks are other models (DialoGPT, BlenderBot, LLaMA2, GPT-3.5)"
+Enhancing Emotional Support Capabilities of Large Language Models through Cascaded Neural Networks,expert_rating,expert_rating,human_rating,l,b,"Human interactive evaluation (fluency, comforting, etc.), comparison with other models. Benchmarks are other models (DialoGPT, BlenderBot, LLaMA2, GPT-3.5)."
+Enhancing Emotional Support Capabilities of Large Language Models through Cascaded Neural Networks,perplexity,perplexity,linguistic_analysis,l,b,"Benchmarks are other models (DialoGPT, BlenderBot, LLaMA2, GPT-3.5)"
+Bridging Gender Disparities in Mental Health: A Bilingual Large Language Model for Multilingual Therapeutic Chatbots,cross-entropy loss,classification,reference_similarity,no benchmark,no benchmark,compared to data set 70.58 %
+A Comprehensive RAG-Based LLM for AI-Driven Mental Health Chatbot,"unclear metrics: relevance, empathy, conciseness, context","unclear metrics: relevance, empathy, conciseness, context","unclear metrics: relevance, empathy, conciseness, context",no benchmark,no benchmark,Unclear what these metrics are (human ratings? automatic?). No benchmarks used.
+LLM-Therapist: A RAG-Based Multimodal Behavioral Therapist as Healthcare Assistant,embedding_similarity,embedding_similarity,reference_similarity,l,b,"relevancy score. Benchmarks: GPT-3, GPT-3.5, GPT-4, Gemini"
+LLM-Therapist: A RAG-Based Multimodal Behavioral Therapist as Healthcare Assistant,user satisfaction score,non_expert_rating,human_rating,l,b,"Unclear what this metric is, never explained. Benchmarks: GPT-3, GPT-3.5, GPT-4, Gemini"
+Competency of Large Language Models in Evaluating Appropriate Responses to Suicidal Ideation: Comparative Study,continuous_metrics,continuous_metrics,reference_similarity,no benchmark,no benchmark,Correlation between LLM suicide response ratings and expert ratings
+Competency of Large Language Models in Evaluating Appropriate Responses to Suicidal Ideation: Comparative Study,siri-2 z-score,safety_or_bias_testing,automatic_rating_safety_or_bias,no benchmark,no benchmark,"Compared to the ratings of expert suicidologist.
+"
+Generative AI-Derived Information About Opioid Use Disorder Treatment During Pregnancy: An exploratory evaluation of GPT-4's steerability for provision of trustworthy person-centered information.,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,Binary scoring rubrics for GPT-4 responses (see Table 4)
+Integrative modeling enables ChatGPT to achieve average level of human counselors performance in mental health Q&A,lexical_diversity,lexical_diversity,linguistic_analysis,h,w,
+Integrative modeling enables ChatGPT to achieve average level of human counselors performance in mental health Q&A,"automatic ""perceived information quality"" (piq) rating via ml model (prompted chatgpt)",automatic_response_quality,automatic_rating_other_response_quality,h,b,benchmark are real human responses from the Q&A dataset
+Integrative modeling enables ChatGPT to achieve average level of human counselors performance in mental health Q&A,various linguistic factors,linguistic_analysis,linguistic_analysis,h,mixed (table 9),benchmark are real human responses from the Q&A dataset
+Enhancing AI Chatbots for Mental Health Support: A Comprehensive Approach,llm-as-a-judge approval and reassurance,automatic_empathy_rating,automatic_rating_empathy_or_sentiment,no benchmark,no benchmark,no benchmark
+Enhancing AI Chatbots for Mental Health Support: A Comprehensive Approach,llm-as-a-judge general response quality,automatic_response_quality,automatic_rating_other_response_quality,no benchmark,no benchmark,no benchmark

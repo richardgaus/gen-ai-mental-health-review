@@ -213,22 +213,18 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Data files (you may want to adjust these based on your needs)
-*.csv
-*.xlsx
-*.xls
-*.json
-*.pickle
-*.pkl
-*.h5
-*.hdf5
+# Large temporary data files (uncomment if you want to exclude specific patterns)
+# *.pickle
+# *.pkl
+# *.h5
+# *.hdf5
 
-# Large result files
-*.pdf
-*.png
-*.jpg
-*.jpeg
-*.svg
+# Large result files (keeping research outputs)
+# *.pdf
+# *.png
+# *.jpg
+# *.jpeg
+# *.svg
 
 # Temporary PowerPoint files
 ~$*.pptx
