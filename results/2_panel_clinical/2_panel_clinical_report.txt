@@ -1,0 +1,180 @@
+================================================================================
+CLINICAL PANEL REPORT
+Human Participation in Empirical LLM Studies with Client-Facing Applications
+================================================================================
+
+Dataset Overview:
+  Total studies matching criteria: 114
+    (study_type == 'Empirical research involving an LLM' AND
+     application_type == 'Client-facing application')
+
+--------------------------------------------------------------------------------
+HUMAN PARTICIPATION ANALYSIS
+--------------------------------------------------------------------------------
+
+Studies involving human participants:
+  Yes: 36 (31.6%)
+  No:  78 (68.4%)
+
+Note: 'Human participants' means client_type is not 'No clients/patients involved'
+
+Sample Size Statistics (for studies with human participants):
+  Studies with numeric sample sizes: 35
+  Total participants across all studies: 18,776
+  Sample size range: 1 - 15531
+  Mean sample size: 536.5
+  Median sample size: 42.0
+
+Individual Study Sample Sizes:
+  Study 2nd_search_248 (Komorebi: Enhancing Mental Wellness with Sentiment Analysis ...): unknown participants (Other: unknown)
+  Study 1st_search_105: 15,531 participants (General population)
+  Study 2nd_search_314: 830 participants (General population)
+  Study 1st_search_138: 399 participants (Patients recruited in hospital or outpatient treat...)
+  Study 1st_search_96: 349 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_323: 244 participants (Patients recruited in hospital or outpatient treat...)
+  Study 1st_search_78: 236 participants (General population)
+  Study 2nd_search_305: 210 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_131: 160 participants (General population)
+  Study 2nd_search_200: 159 participants (General population)
+  Study 2nd_search_161: 70 participants (General population)
+  Study 1st_search_24: 68 participants (General population)
+  Study 2nd_search_191: 58 participants (General population)
+  Study 2nd_search_116: 50 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_59: 50 participants (General population)
+  Study 2nd_search_365: 49 participants (General population)
+  Study 2nd_search_362: 48 participants (General population)
+  Study 2nd_search_98: 45 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_197: 42 participants (General population)
+  Study 1st_search_147: 24 participants (Patients recruited in hospital or outpatient treat...)
+  Study 2nd_search_353: 21 participants (General population)
+  Study 2nd_search_350: 20 participants (General population)
+  Study 2nd_search_194: 16 participants (General population)
+  Study 1st_search_9: 14 participants (People with some symptoms but not disorder (determ...)
+  Study 1st_search_6: 12 participants (Patients recruited in hospital or outpatient treat...)
+  Study 1st_search_120: 11 participants (General population)
+  Study 2nd_search_113: 11 participants (General population)
+  Study 1st_search_12: 10 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_212: 9 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_320: 8 participants (General population)
+  Study 2nd_search_6: 8 participants (General population)
+  Study 2nd_search_44: 6 participants (General population)
+  Study 2nd_search_257: 5 participants (Patients recruited in hospital or outpatient treat...)
+  Study 2nd_search_125: 1 participants (General population)
+  Study 2nd_search_218: 1 participants (People with some symptoms but not disorder (determ...)
+  Study 2nd_search_293: 1 participants (Other: unknown)
+
+--------------------------------------------------------------------------------
+CLIENT TYPE BREAKDOWN
+--------------------------------------------------------------------------------
+
+Total responses: 114
+Null/empty responses: 0
+Total individual choices: 115
+Unique choice options: 6
+
+Individual Choice Counts:
+  No clients/patients involved: 78 (67.8%)
+  General population: 21 (18.3%)
+  People with some symptoms but not disorder (determined by symptom scales or questionnaires): 8 (7.0%)
+  Patients recruited in hospital or outpatient treatment facility: 5 (4.3%)
+  Other: unknown: 2 (1.7%)
+  Patients with disorder explicitly based on ICD or DSM: 1 (0.9%)
+
+--------------------------------------------------------------------------------
+UNIQUE CLIENT TYPE COMBINATIONS
+--------------------------------------------------------------------------------
+
+All unique combinations:
+  "No clients/patients involved": 78 (68.4%)
+  "General population": 21 (18.4%)
+  "People with some symptoms but not disorder (determined by symptom scales or questionnaires)": 8 (7.0%)
+  "Patients recruited in hospital or outpatient treatment facility": 4 (3.5%)
+  "Other: unknown": 2 (1.8%)
+  "Patients recruited in hospital or outpatient treatment facility; Patients with disorder explicitly based on ICD or DSM": 1 (0.9%)
+
+--------------------------------------------------------------------------------
+DETAILED CLIENT TYPE COMBINATIONS (FOR DATA REVIEW)
+--------------------------------------------------------------------------------
+
+Combination: "No clients/patients involved" - 78 studies (68.4%)
+  - 1st_search_15: "No clients/patients involved"
+  - 1st_search_18: "No clients/patients involved"
+  - 1st_search_21: "No clients/patients involved"
+  - 1st_search_30: "No clients/patients involved"
+  - 1st_search_36: "No clients/patients involved"
+  - 1st_search_39: "No clients/patients involved"
+  - 1st_search_42: "No clients/patients involved"
+  - 1st_search_51: "No clients/patients involved"
+  - 1st_search_54: "No clients/patients involved"
+  - 1st_search_69: "No clients/patients involved"
+  - ... and 68 more studies
+
+Combination: "General population" - 21 studies (18.4%)
+  - 1st_search_24: "General population"
+  - 1st_search_78: "General population"
+  - 1st_search_105: "General population"
+  - 1st_search_120: "General population"
+  - 2nd_search_6: "General population"
+  - 2nd_search_44: "General population"
+  - 2nd_search_59: "General population"
+  - 2nd_search_113: "General population"
+  - 2nd_search_125: "General population"
+  - 2nd_search_131: "General population"
+  - ... and 11 more studies
+
+Combination: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)" - 8 studies (7.0%)
+  - 1st_search_9: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 1st_search_12: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 1st_search_96: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 2nd_search_98: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 2nd_search_116: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 2nd_search_212: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 2nd_search_218: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+  - 2nd_search_305: "People with some symptoms but not disorder (determined by symptom scales or questionnaires)"
+
+Combination: "Patients recruited in hospital or outpatient treatment facility" - 4 studies (3.5%)
+  - 1st_search_138: "Patients recruited in hospital or outpatient treatment facility"
+  - 1st_search_147: "Patients recruited in hospital or outpatient treatment facility"
+  - 2nd_search_257: "Patients recruited in hospital or outpatient treatment facility"
+  - 2nd_search_323: "Patients recruited in hospital or outpatient treatment facility"
+
+Combination: "Other: unknown" - 2 studies (1.8%)
+  - 2nd_search_248: "Other: unknown"
+  - 2nd_search_293: "Other: unknown"
+
+Combination: "Patients recruited in hospital or outpatient treatment facility; Patients with disorder explicitly based on ICD or DSM" - 1 studies (0.9%)
+  - 1st_search_6: "Patients recruited in hospital or outpatient treatment facility; Patients with disorder explicitly based on ICD or DSM"
+
+--------------------------------------------------------------------------------
+COMBINATIONS INVOLVING HUMAN PARTICIPANTS
+--------------------------------------------------------------------------------
+
+  "General population": 21 (18.4%)
+  "People with some symptoms but not disorder (determined by symptom scales or questionnaires)": 8 (7.0%)
+  "Patients recruited in hospital or outpatient treatment facility": 4 (3.5%)
+  "Other: unknown": 2 (1.8%)
+  "Patients recruited in hospital or outpatient treatment facility; Patients with disorder explicitly based on ICD or DSM": 1 (0.9%)
+
+--------------------------------------------------------------------------------
+VALIDATION AND ASSESSMENT ANALYSIS
+--------------------------------------------------------------------------------
+
+Studies with human participants using validated outcomes:
+  Count: 12 out of 36 (33.3%)
+
+Studies without validated outcomes that have UX assessment:
+  Count: 23 out of 24 remaining studies (95.8% of remaining)
+
+Studies with NEITHER validated outcomes NOR UX assessment:
+  Count: 1 out of 36 total (2.8%)
+
+Details of studies with neither validation method:
+  Study 2nd_search_314:
+    Title: When ELIZA meets therapists: A Turing test for the heart and...
+    Metric 1: sentiment and part-of-speech
+    Metric 2: difference between responses (detection)
+    Metric 3: n
+
+================================================================================
+END OF REPORT
+================================================================================

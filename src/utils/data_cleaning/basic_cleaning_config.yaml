@@ -1,0 +1,294 @@
+column_order:
+  - covidence_id
+  - study_id
+  - title
+  - reviewer_name
+  - outlet_type
+  - outlet_field
+  - day
+  - month
+  - year
+  - author_country
+  - study_type
+  - application_type
+  - application_subtype_client_facing
+  - client_type
+  - client_count
+  - application_subtype_therapist_facing
+  - dataset_source
+  - dataset_notes
+  - dataset_type
+  - dataset_language
+  - dataset_contains_synthetic_data
+  - dataset_is_public
+  - dataset_user_psychopathology_status
+  - dataset_responder_type
+  - llm_development_approach
+  - llm_development_approach_notes
+  - intervention_type
+  - models_employed
+  - num_gen_models
+  - num_nongen_models
+  - nongen_only
+  - ux_assessment_is_present
+  - ux_uses_standard_instrument
+  - ux_uses_qualitative_assessment
+  - ux_uses_quantitative_assessment
+  - ux_results_reported
+  - ux_assessment_instrument
+  - ux_assessment_notes
+  - lexical_overlap_used
+  - lexical_overlap_vs_benchmark
+  - lexical_overlap_benchmark_quality
+  - lexical_overlap_notes
+  - embedding_similarity_used
+  - embedding_similarity_vs_benchmark
+  - embedding_similarity_benchmark_quality
+  - embedding_similarity_notes
+  - classification_used
+  - classification_vs_benchmark
+  - classification_benchmark_quality
+  - classification_notes
+  - continuous_metrics_used
+  - continuous_metrics_vs_benchmark
+  - continuous_metrics_benchmark_quality
+  - continuous_metrics_notes
+  - expert_rating_used
+  - expert_rating_vs_benchmark
+  - expert_rating_benchmark_quality
+  - expert_rating_notes
+  - llm_judge_used
+  - llm_judge_vs_benchmark
+  - llm_judge_benchmark_quality
+  - llm_judge_notes
+  - perplexity_used
+  - perplexity_vs_benchmark
+  - perplexity_benchmark_quality
+  - perplexity_notes
+  - lexical_diversity_used
+  - lexical_diversity_vs_benchmark
+  - lexical_diversity_benchmark_quality
+  - lexical_diversity_notes
+  - metric1_name
+  - metric1_vs_benchmark
+  - metric1_benchmark_quality
+  - metric1_notes
+  - metric2_name
+  - metric2_vs_benchmark
+  - metric2_benchmark_quality
+  - metric2_notes
+  - metric3_name
+  - metric3_vs_benchmark
+  - metric3_benchmark_quality
+  - metric3_notes
+  - s1_risk_detection_considered
+  - s1_risk_detection_notes
+  - s2_content_safety_considered
+  - s2_content_safety_notes
+  - p1_on_premise_model_considered
+  - p1_on_premise_model_notes
+  - p2_privacy_awareness_considered
+  - p2_privacy_awareness_notes
+  - e1_demographics_reporting_considered
+  - e1_demographics_reporting_notes
+  - e2_outcomes_by_demographics_considered
+  - e2_outcomes_by_demographics_notes
+  - g1_early_discontinuation_considered
+  - g1_early_discontinuation_notes
+  - g2_overuse_considered
+  - g2_overuse_notes
+  - f1_validated_outcomes_considered
+  - f1_validated_outcomes_notes
+  - f2_control_condition_considered
+  - f2_control_condition_notes
+  - i1_multilevel_feasibility_considered
+  - i1_multilevel_feasibility_notes
+  - i2_healthcare_integration_considered
+  - i2_healthcare_integration_notes
+  - general_notes
+
+fill_with_n_if_empty:
+  - ux_uses_standard_instrument
+  - ux_uses_qualitative_assessment
+  - ux_uses_quantitative_assessment
+  - ux_results_reported
+  - lexical_overlap_used
+  - embedding_similarity_used
+  - classification_used
+  - continuous_metrics_used
+  - expert_rating_used
+  - llm_judge_used
+  - perplexity_used
+  - lexical_diversity_used
+  - metric1_name
+  - metric2_name
+  - metric3_name
+  - s1_risk_detection_considered
+  - s2_content_safety_considered
+  - p1_on_premise_model_considered
+  - p2_privacy_awareness_considered
+  - e1_demographics_reporting_considered
+  - e2_outcomes_by_demographics_considered
+  - g1_early_discontinuation_considered
+  - g2_overuse_considered
+  - f1_validated_outcomes_considered
+  - f2_control_condition_considered
+  - i1_multilevel_feasibility_considered
+  - i2_healthcare_integration_considered
+
+disregard_case:
+  - ux_uses_standard_instrument
+  - ux_uses_qualitative_assessment
+  - ux_uses_quantitative_assessment
+  - ux_results_reported
+  - lexical_overlap_used
+  - lexical_overlap_vs_benchmark
+  - lexical_overlap_benchmark_quality
+  - embedding_similarity_used
+  - embedding_similarity_vs_benchmark
+  - embedding_similarity_benchmark_quality
+  - classification_used
+  - classification_vs_benchmark
+  - classification_benchmark_quality
+  - continuous_metrics_used
+  - continuous_metrics_vs_benchmark
+  - continuous_metrics_benchmark_quality
+  - expert_rating_used
+  - expert_rating_vs_benchmark
+  - expert_rating_benchmark_quality
+  - llm_judge_used
+  - llm_judge_vs_benchmark
+  - llm_judge_benchmark_quality
+  - perplexity_used
+  - perplexity_vs_benchmark
+  - perplexity_benchmark_quality
+  - lexical_diversity_used
+  - lexical_diversity_vs_benchmark
+  - lexical_diversity_benchmark_quality
+  - metric1_name
+  - metric1_vs_benchmark
+  - metric1_benchmark_quality
+  - metric2_name
+  - metric2_vs_benchmark
+  - metric2_benchmark_quality
+  - metric3_name
+  - metric3_vs_benchmark
+  - metric3_benchmark_quality
+  - s1_risk_detection_considered
+  - s2_content_safety_considered
+  - p1_on_premise_model_considered
+  - p2_privacy_awareness_considered
+  - e1_demographics_reporting_considered
+  - e2_outcomes_by_demographics_considered
+  - g1_early_discontinuation_considered
+  - g2_overuse_considered
+  - f1_validated_outcomes_considered
+  - f2_control_condition_considered
+  - i1_multilevel_feasibility_considered
+  - i2_healthcare_integration_considered
+
+rename_columns:
+  covidence_id: covidence_id
+  study_id: study_id
+  Title: title
+  Reviewer Name: reviewer_name
+  Publication Outlet Type: outlet_type
+  Field of Publication Outlet: outlet_field
+  Day (1-31): day
+  Month (1-12): month
+  Year (2017-2025): year
+  Country of first first author affiliation: author_country
+  Study Type: study_type
+  Application Type: application_type
+  Application Subtype: application_subtype_client_facing
+  Type of Clients or Patients: client_type
+  Number of Clients or Patients Included: client_count
+  Application Subtype.1: application_subtype_therapist_facing
+  Data Set Source: dataset_source
+  Notes on data set: dataset_notes
+  Type of data set: dataset_type
+  Language of data set: dataset_language
+  Does data set contain synthetic data?: dataset_contains_synthetic_data
+  Is data set public?: dataset_is_public
+  Did users have actual psychopathology or were they unselected/people without mental health conditions?: dataset_user_psychopathology_status
+  Were responders trained professionals or lay people/unknown?: dataset_responder_type
+  "If Study Type == Empirical research involving an LLM: Development Approach": llm_development_approach
+  Notes on development approach: llm_development_approach_notes
+  Intervention Type: intervention_type
+  Models Employed: models_employed
+  User Experience Assessment: ux_assessment_is_present
+  Uses some standard, established user experience instrument Y/N: ux_uses_standard_instrument
+  Uses qualitative assessment Y/N: ux_uses_qualitative_assessment
+  Uses quantitative assessment Y/N: ux_uses_quantitative_assessment
+  Were results of user experience assessment reported? Y/N: ux_results_reported
+  User Experience Assessment Instrument: ux_assessment_instrument
+  Other User Experience Assessment Notes: ux_assessment_notes
+  Lexical Overlap Used (Y/N): lexical_overlap_used
+  Lexical Overlap How it compares against benchmark (B/S/W): lexical_overlap_vs_benchmark
+  Lexical Overlap Benchmark quality (H/L): lexical_overlap_benchmark_quality
+  Lexical Overlap Notes on benchmark quality: lexical_overlap_notes
+  Embedding Similarity Used (Y/N): embedding_similarity_used
+  Embedding Similarity How it compares against benchmark (B/S/W): embedding_similarity_vs_benchmark
+  Embedding Similarity Benchmark quality (H/L): embedding_similarity_benchmark_quality
+  Embedding Similarity Notes on benchmark quality: embedding_similarity_notes
+  Classification Used (Y/N): classification_used
+  Classification How it compares against benchmark (B/S/W): classification_vs_benchmark
+  Classification Benchmark quality (H/L): classification_benchmark_quality
+  Classification Notes on benchmark quality: classification_notes
+  Continuous Value Metrics Used (Y/N): continuous_metrics_used
+  Continuous Value Metrics How it compares against benchmark (B/S/W): continuous_metrics_vs_benchmark
+  Continuous Value Metrics Benchmark quality (H/L): continuous_metrics_benchmark_quality
+  Continuous Value Metrics Notes on benchmark quality: continuous_metrics_notes
+  Expert Rating Used (Y/N): expert_rating_used
+  Expert Rating How it compares against benchmark (B/S/W): expert_rating_vs_benchmark
+  Expert Rating Benchmark quality (H/L): expert_rating_benchmark_quality
+  Expert Rating Notes on benchmark quality: expert_rating_notes
+  LLM as a judge Used (Y/N): llm_judge_used
+  LLM as a judge How it compares against benchmark (B/S/W): llm_judge_vs_benchmark
+  LLM as a judge Benchmark quality (H/L): llm_judge_benchmark_quality
+  LLM as a judge Notes on benchmark quality: llm_judge_notes
+  Perplexity Used (Y/N): perplexity_used
+  Perplexity How it compares against benchmark (B/S/W): perplexity_vs_benchmark
+  Perplexity Benchmark quality (H/L): perplexity_benchmark_quality
+  Perplexity Notes on benchmark quality: perplexity_notes
+  Lexical diversity Used (Y/N): lexical_diversity_used
+  Lexical diversity How it compares against benchmark (B/S/W): lexical_diversity_vs_benchmark
+  Lexical diversity Benchmark quality (H/L): lexical_diversity_benchmark_quality
+  Lexical diversity Notes on benchmark quality: lexical_diversity_notes
+  Metric 1 Name of metric: metric1_name
+  Metric 1 How it compares against benchmark (B/S/W): metric1_vs_benchmark
+  Metric 1 Benchmark quality (H/L): metric1_benchmark_quality
+  Metric 1 Notes on benchmark quality: metric1_notes
+  Metric 2 Name of metric: metric2_name
+  Metric 2 How it compares against benchmark (B/S/W): metric2_vs_benchmark
+  Metric 2 Benchmark quality (H/L): metric2_benchmark_quality
+  Metric 2 Notes on benchmark quality: metric2_notes
+  Metric 3 Name of metric: metric3_name
+  Metric 3 How it compares against benchmark (B/S/W): metric3_vs_benchmark
+  Metric 3 Benchmark quality (H/L): metric3_benchmark_quality
+  Metric 3 Notes on benchmark quality: metric3_notes
+  "S-1 Risk-detection Considered in tool design? (Y/N)": s1_risk_detection_considered
+  "S-1 Risk-detection if YES: Notes (paste text passage)": s1_risk_detection_notes
+  "S-2 Content-safety evaluation conducted Considered in tool design? (Y/N)": s2_content_safety_considered
+  "S-2 Content-safety evaluation conducted if YES: Notes (paste text passage)": s2_content_safety_notes
+  "P-1 On-premise-capable model Considered in tool design? (Y/N)": p1_on_premise_model_considered
+  "P-1 On-premise-capable model if YES: Notes (paste text passage)": p1_on_premise_model_notes
+  "P-2 Privacy/confidentiality awareness Considered in tool design? (Y/N)": p2_privacy_awareness_considered
+  "P-2 Privacy/confidentiality awareness if YES: Notes (paste text passage)": p2_privacy_awareness_notes
+  "E-1 Reporting of demographic information Considered in tool design? (Y/N)": e1_demographics_reporting_considered
+  "E-1 Reporting of demographic information if YES: Notes (paste text passage)": e1_demographics_reporting_notes
+  "E-2 Outcomes reported by demographic subgroup Considered in tool design? (Y/N)": e2_outcomes_by_demographics_considered
+  "E-2 Outcomes reported by demographic subgroup if YES: Notes (paste text passage)": e2_outcomes_by_demographics_notes
+  "G-1 Early-discontinuation data reported Considered in tool design? (Y/N)": g1_early_discontinuation_considered
+  "G-1 Early-discontinuation data reported if YES: Notes (paste text passage)": g1_early_discontinuation_notes
+  "G-2 Over-use reported or prevented Considered in tool design? (Y/N)": g2_overuse_considered
+  "G-2 Over-use reported or prevented if YES: Notes (paste text passage)": g2_overuse_notes
+  "F-1 Validated clinical outcome measures used Considered in tool design? (Y/N)": f1_validated_outcomes_considered
+  "F-1 Validated clinical outcome measures used if YES: Notes (paste text passage)": f1_validated_outcomes_notes
+  "F-2 Control condition present Considered in tool design? (Y/N)": f2_control_condition_considered
+  "F-2 Control condition present if YES: Notes (paste text passage)": f2_control_condition_notes
+  "I-1 Multilevel feasibility/acceptability data collected Considered in tool design? (Y/N)": i1_multilevel_feasibility_considered
+  "I-1 Multilevel feasibility/acceptability data collected if YES: Notes (paste text passage)": i1_multilevel_feasibility_notes
+  "I-2 Healthcare-integration considerations addressed Considered in tool design? (Y/N)": i2_healthcare_integration_considered
+  "I-2 Healthcare-integration considerations addressed if YES: Notes (paste text passage)": i2_healthcare_integration_notes
+  Notes: general_notes

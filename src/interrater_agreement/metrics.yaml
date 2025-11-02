@@ -1,0 +1,105 @@
+categorical_single_choice:
+  - outlet_type
+  - outlet_field
+  - author_country
+  - study_type
+  - application_type
+  - application_subtype_client_facing
+  - application_subtype_therapist_facing
+  - dataset_source
+  - dataset_type
+  - dataset_language
+  - dataset_contains_synthetic_data
+  - dataset_is_public
+  - dataset_user_psychopathology_status
+  - dataset_responder_type
+  - ux_assessment_is_present
+  - ux_uses_standard_instrument
+  - ux_uses_qualitative_assessment
+  - ux_uses_quantitative_assessment
+  - ux_results_reported
+  - lexical_overlap_used
+  - lexical_overlap_vs_benchmark
+  - lexical_overlap_benchmark_quality
+  - embedding_similarity_used
+  - embedding_similarity_vs_benchmark
+  - embedding_similarity_benchmark_quality
+  - classification_used
+  - classification_vs_benchmark
+  - classification_benchmark_quality
+  - continuous_metrics_used
+  - continuous_metrics_vs_benchmark
+  - continuous_metrics_benchmark_quality
+  - expert_rating_used
+  - expert_rating_vs_benchmark
+  - expert_rating_benchmark_quality
+  - llm_judge_used
+  - llm_judge_vs_benchmark
+  - llm_judge_benchmark_quality
+  - perplexity_used
+  - perplexity_vs_benchmark
+  - perplexity_benchmark_quality
+  - lexical_diversity_used
+  - lexical_diversity_vs_benchmark
+  - lexical_diversity_benchmark_quality
+  - s1_risk_detection_considered
+  - s2_content_safety_considered
+  - p1_on_premise_model_considered
+  - p2_privacy_awareness_considered
+  - e1_demographics_reporting_considered
+  - e2_outcomes_by_demographics_considered
+  - g1_early_discontinuation_considered
+  - g2_overuse_considered
+  - f1_validated_outcomes_considered
+  - f2_control_condition_considered
+  - i1_multilevel_feasibility_considered
+  - i2_healthcare_integration_considered
+
+
+categorical_multi_choice:
+  client_type:
+    - No clients/patients involved
+    - Patients recruited in hospital or outpatient treatment facility
+    - Patients with disorder explicitly based on ICD or DSM
+    - People with some symptoms but not disorder (determined by symptom scales or questionnaires)
+    - General population 
+  llm_development_approach:
+    - Only fine-tuning
+    - Fine-tuning + other modules
+    - Only prompting
+    - Prompting + other modules
+    - Any reinforcement learning
+  intervention_type:
+    - "CBT: Motivational interviewing"
+    - "CBT: Cognitive restructuring"
+    - Other CBT techniques
+    - Psychodynamic psychotherapy
+    - Psychoanalysis
+    - Systemic therapy
+    - Peer support conversation
+    - Informal counseling (e.g., emotional support conversation)
+    - Mix of formal therapy methods
+    - Unspecified, might include formal therapy methods
+  models_employed:
+    - BERT family
+    - BART family
+    - T5 family
+    - GPT-2 family
+    - GPT-3 family
+    - GPT-3.5 family
+    - GPT-4 / GPT-4o family
+    - GPT o1 family
+    - ChatGPT, model unspecified
+    - Llama 2 family
+    - Llama 3 family
+    - Llama 3.1 family
+    - Gemini / Bard family
+    - Claude family
+    - Mistral family
+    - Qwen family
+
+numerical:
+  - day
+  - month
+  - year
+  - client_count

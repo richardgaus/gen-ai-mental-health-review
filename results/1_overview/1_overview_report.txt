@@ -1,0 +1,83 @@
+================================================================================
+LLM APPLICATIONS IN PSYCHOTHERAPY RESEARCH - OVERVIEW REPORT
+Application Types and Subtypes Distribution Analysis
+================================================================================
+
+Report generated: 2025-10-31 01:29:10
+
+DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Total studies analyzed: 132
+Original dataset size: 132
+Population surveys excluded: 0
+
+Filtering criteria:
+  ✗ Excluded: study_type == 'Population survey'
+  ✓ Included: All other study types
+
+APPLICATION TYPE DISTRIBUTION
+--------------------------------------------------------------------------------
+Client-facing application: 114 studies (86.4%)
+Text-based prediction: 10 studies (7.6%)
+Therapist guidance application: 8 studies (6.1%)
+
+CLIENT-FACING APPLICATION SUBTYPES
+--------------------------------------------------------------------------------
+Total client-facing applications: 114
+
+Subtype breakdown:
+  • Multi-turn chatbot: 87 studies (76.3%)
+  • One-turn chatbot (usually Q&A): 17 studies (14.9%)
+  • Multi-modal dialogue system: 3 studies (2.6%)
+  • Spoken dialogue system: 2 studies (1.8%)
+  • Reframed thought generation: 2 studies (1.8%)
+  • Other: 1 studies (0.9%)
+  • Reflection generation: 1 studies (0.9%)
+  • [Missing/Unspecified]: 1 studies (0.9%)
+
+Client-facing application characteristics:
+  Study types:
+    - Empirical research involving an LLM: 114 (100.0%)
+
+THERAPIST GUIDANCE APPLICATION SUBTYPES
+--------------------------------------------------------------------------------
+Total therapist guidance applications: 8
+
+Subtype breakdown:
+  • Treatment fidelity feedback: 3 studies (37.5%)
+  • Utterance suggestions: 2 studies (25.0%)
+  • Patient simulations: 1 studies (12.5%)
+  • Therapy reflection tool: 1 studies (12.5%)
+  • Therapy material generation: 1 studies (12.5%)
+
+Therapist guidance application characteristics:
+  Study types:
+    - Empirical research involving an LLM: 8 (100.0%)
+
+OTHER APPLICATION TYPES
+--------------------------------------------------------------------------------
+Text-based prediction: 10 studies (7.6%)
+
+CROSS-TABULATION: APPLICATION TYPE vs STUDY TYPE
+--------------------------------------------------------------------------------
+Application Type \ Study Type:
+
+Application Type                     Empirical research i                 Total
+-------------------------------------------------------------------------------
+Client-facing application                            114                   114
+Text-based prediction                                 10                    10
+Therapist guidance application                         8                     8
+-------------------------------------------------------------------------------
+TOTAL                                                132                   132
+
+SUMMARY INSIGHTS
+--------------------------------------------------------------------------------
+• Most common application type: Client-facing application
+  (114 studies, 86.4% of total)
+• Client-facing to therapist guidance ratio: 14.2:1
+  (114 client-facing vs 8 therapist guidance)
+• Empirical LLM research: 132 studies (100.0% of total)
+
+================================================================================
+END OF REPORT
+================================================================================

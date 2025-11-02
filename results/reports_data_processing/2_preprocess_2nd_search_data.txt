@@ -1,0 +1,35 @@
+================================================================================
+DATA PROCESSING REPORT: 2_preprocess_2nd_search_data.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:25.441096
+  Execution Time: 0.02 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/unprocessed/covidence_export_2nd_search_20251030.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/2nd_search_data_preprocessed.csv
+
+PROCESSING STEPS:
+  step_1_data_loading:
+    - Loaded raw Covidence export data from 2nd search with 371 rows and 110 columns
+  step_2_id_assignment:
+    - Assigned unique study IDs and cleaned ID columns (renamed 'Covidence #' to 'covidence_id', removed 'Study ID' column)
+  step_3_data_retention:
+    - Retained all data after ID management - no filtering applied. Kept 125 studies with 371 total rows (including all reviewer entries)
+
+SUMMARY STATISTICS:
+  input_studies: 371
+  input_rows: 371
+  input_columns: 110
+  output_studies: 125
+  output_rows: 371
+  output_columns: 110
+  studies_removed: 0
+  rows_removed: 0
+  columns_added: 0
+  execution_time_seconds: 0.023962974548339844
+
+================================================================================
+End of Report
+================================================================================

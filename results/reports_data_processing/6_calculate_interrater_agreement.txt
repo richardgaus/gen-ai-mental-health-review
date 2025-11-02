@@ -1,0 +1,295 @@
+================================================================================
+DATA PROCESSING REPORT: 6_calculate_interrater_agreement.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:30.331392
+  Execution Time: 0.32 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data_cleaned_generative_only.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/results/reports_data_processing/6_calculate_interrater_agreement.txt
+
+PROCESSING STEPS:
+  step_1_data_loading:
+    - Loaded dataset with reviewer information - 432 rows and 105 columns
+  step_2_configuration_loading:
+    - Loaded Cohen's kappa configuration identifying 55 single-choice, 4 multi-choice, and 4 numerical columns
+  step_3_dual_reviewer_filtering:
+    - Filtered to keep only studies with both 'Richard Gaus' and 'Reviewer Two' reviewers - removed 0 studies (0 rows), keeping 144 studies (432 rows). Removed studies: None
+  step_4_kappa_calculation:
+    - Calculated Cohen's kappa for 55 single-choice categorical columns using scikit-learn implementation
+  step_5_multi_choice_analysis:
+    - Analyzed 4 multi-choice categorical columns using specialized multi-label kappa calculation
+  step_6_report_generation:
+    - Generated detailed interrater agreement report with kappa scores, AC1 coefficients, and agreement rates for all analyzed columns
+
+SUMMARY STATISTICS:
+  input_studies: 144
+  input_rows: 432
+  input_columns: 105
+  output_studies: 144
+  output_rows: 432
+  output_columns: 105
+  studies_removed: 0
+  rows_removed: 0
+  reviewers_analyzed: 2
+  single_choice_columns_analyzed: 55
+  multi_choice_columns_analyzed: 4
+  numerical_columns_identified: 4
+  valid_kappa_results: 55
+  valid_multi_choice_results: 4
+  overall_agreement_rate: 0.8513308807617399
+  execution_time_seconds: 0.32064104080200195
+
+ADDITIONAL INFORMATION:
+  interrater_agreement_analysis: ================================================================================
+COHEN'S KAPPA INTERRATER AGREEMENT REPORT
+Generated: 2025-10-31 01:28:30
+================================================================================
+
+METHODOLOGY AND CALCULATIONS
+========================================
+
+COLUMN TYPES ANALYZED:
+  • Single-choice categorical columns: 55
+  • Multi-choice categorical columns: 4
+  • Numerical columns: 4 (identified but not analyzed)
+
+STEP-BY-STEP ANALYSIS PROCESS:
+
+1. DATA PREPARATION:
+   • Loaded data with covidence_id as index
+   • Identified non-consensus reviewers for comparison
+   • Applied conditional logic for dependent fields
+
+2. SINGLE-CHOICE CATEGORICAL ANALYSIS:
+   • Excluded pairs where both reviewers selected 'Other:' responses
+   • Applied conditional filtering (e.g., subtype fields only when main type agreed)
+   • Calculated three agreement metrics for each field:
+     - Percent Agreement: Simple observed agreement rate
+     - Cohen's Kappa: Chance-corrected agreement coefficient
+     - Gwet's AC1: Robust agreement coefficient less affected by prevalence
+
+3. MULTI-CHOICE CATEGORICAL ANALYSIS:
+   • Parsed semicolon-separated responses (e.g., 'Option A; Option B')
+   • Filtered out all 'Other: xxx' responses during parsing
+   • Created one-hot encoding matrices (1 = selected, 0 = not selected)
+   • Pooled all binary decisions across options and studies
+   • Calculated single Cohen's kappa on pooled data
+   • Example: 100 studies × 5 options = 500 pooled binary decisions
+
+4. CONDITIONAL LOGIC APPLIED:
+   • application_subtype_* fields: Only when application_type agreed
+   • dataset_* fields: Only when dataset_source agreed
+   • ux_* fields: Only when ux_assessment_is_present agreed
+   • *_vs_benchmark & *_benchmark_quality: Only when *_used agreed
+
+5. EXCLUSION CRITERIA:
+   • Pairs where both reviewers selected any 'Other:' response
+   • Studies not meeting conditional requirements
+   • Missing or invalid data entries
+
+6. OVERALL METRICS CALCULATION:
+   • Pooled all valid field comparisons across studies
+   • Calculated overall agreement rate, AC1, and Cohen's kappa
+   • Applied same exclusion rules as individual fields
+
+================================================================================
+
+ANALYSIS SUMMARY
+----------------------------------------
+Single-choice categorical columns analyzed: 55
+Columns with valid kappa: 53
+Columns with valid AC1: 55
+Columns with valid agreement rates: 55
+Multi-choice categorical columns analyzed: 4
+Multi-choice columns with valid kappa: 4
+
+OVERALL AGREEMENT ACROSS ALL FIELDS:
+  Reviewers compared: Reviewer Two vs Richard Gaus
+  Total field comparisons: 4,621
+  Total agreements: 3,934
+  Overall agreement rate: 85.1%
+  Overall Gwet's AC1: 0.850
+  Overall Cohen's kappa: 0.755
+  Fields contributing: 55/55
+  Excluded 'Other:' pairs: 63
+
+FIELD-BY-FIELD KAPPA STATISTICS:
+  Mean kappa per field: 0.361
+  Median kappa per field: 0.367
+  Min kappa per field: -0.143
+  Max kappa per field: 0.945
+
+FIELD-BY-FIELD AC1 STATISTICS:
+  Mean AC1 per field: 0.646
+  Median AC1 per field: 0.797
+  Min AC1 per field: -0.500
+  Max AC1 per field: 1.000
+
+FIELD-BY-FIELD AGREEMENT STATISTICS:
+  Mean agreement per field: 74.1%
+  Median agreement per field: 82.0%
+  Min agreement per field: 0.0%
+  Max agreement per field: 100.0%
+
+
+MULTI-CHOICE CATEGORICAL RESULTS
+----------------------------------------
+Column                                   Overall  Options  Pairs  Excl  Conditional  Status
+-------------------------------------------------------------------------------------------------
+client_type                              0.750    5        109    1                  success
+models_employed                          0.743    16       125    11                 success
+llm_development_approach                 0.489    5        118    4                  success
+intervention_type                        0.472    10       135                       success
+
+MULTI-CHOICE KAPPA STATISTICS:
+  Mean overall kappa: 0.613
+  Median overall kappa: 0.616
+  Min overall kappa: 0.472
+  Max overall kappa: 0.750
+
+DETAILED RESULTS
+----------------------------------------
+Column                                   Agree%   AC1      Kappa    Pairs  Excl  Conditional  Status
+---------------------------------------------------------------------------------------------------------
+continuous_metrics_benchmark_quality     100.0%   1.000    N/A      2            →continuous  success
+lexical_diversity_benchmark_quality      100.0%   1.000    N/A      3            →lexical_di  success
+perplexity_used                          99.3%    0.986    0.885    144                       success
+e2_outcomes_by_demographics_considered   96.5%    0.948    0.155    144                       success
+i1_multilevel_feasibility_considered     96.5%    0.948    0.433    144                       success
+author_country                           96.0%    0.955    0.945    99     45                 success
+lexical_diversity_used                   95.8%    0.937    0.480    144                       success
+g1_early_discontinuation_considered      95.8%    0.917    0.234    144                       success
+g2_overuse_considered                    95.8%    0.917    -0.012   144                       success
+ux_uses_qualitative_assessment           95.6%    0.933    0.879    90           →ux_assessm  success
+embedding_similarity_used                94.4%    0.917    0.753    144                       success
+outlet_type                              94.3%    0.924    0.887    140                       success
+lexical_overlap_used                     93.8%    0.906    0.809    144                       success
+llm_judge_used                           93.8%    0.875    0.367    144                       success
+continuous_metrics_used                  92.4%    0.898    0.277    144                       success
+ux_uses_quantitative_assessment          92.2%    0.883    0.784    90           →ux_assessm  success
+f2_control_condition_considered          91.7%    0.833    0.409    144                       success
+ux_uses_standard_instrument              91.1%    0.867    0.573    90           →ux_assessm  success
+ux_results_reported                      91.1%    0.822    0.808    90           →ux_assessm  success
+f1_validated_outcomes_considered         88.9%    0.833    0.280    144                       success
+expert_rating_used                       88.2%    0.852    0.687    144                       success
+i2_healthcare_integration_considered     87.5%    0.854    0.174    144                       success
+study_type                               86.4%    0.855    0.438    140    1                  success
+s1_risk_detection_considered             86.1%    0.815    0.388    144                       success
+classification_used                      84.7%    0.809    0.459    144                       success
+s2_content_safety_considered             84.7%    0.796    0.415    144                       success
+e1_demographics_reporting_considered     84.7%    0.809    0.263    144                       success
+application_type                         82.0%    0.790    0.432    128                       success
+p2_privacy_awareness_considered          81.9%    0.797    0.157    144                       success
+application_subtype_client_facing        81.7%    0.799    0.524    82           →applicatio  success
+dataset_language                         81.6%    0.770    0.577    38     2     →dataset_so  success
+perplexity_benchmark_quality             75.0%    0.500    0.000    4            →perplexity  success
+p1_on_premise_model_considered           73.6%    0.707    0.301    144                       success
+expert_rating_benchmark_quality          70.0%    0.550    0.542    20           →expert_rat  success
+outlet_field                             69.5%    0.644    0.603    141                       success
+dataset_contains_synthetic_data          68.3%    0.604    0.274    41     1     →dataset_so  success
+ux_assessment_is_present                 67.7%    0.569    0.485    133                       success
+lexical_diversity_vs_benchmark           66.7%    0.500    0.400    3            →lexical_di  success
+dataset_is_public                        61.9%    0.524    0.337    42           →dataset_so  success
+expert_rating_vs_benchmark               59.1%    0.489    0.411    22           →expert_rat  success
+embedding_similarity_vs_benchmark        58.3%    0.375    0.063    12           →embedding_  success
+embedding_similarity_benchmark_quality   58.3%    0.375    -0.071   12           →embedding_  success
+lexical_overlap_benchmark_quality        57.1%    0.429    0.021    21           →lexical_ov  success
+dataset_source                           55.9%    0.527    0.416    136    1                  success
+classification_benchmark_quality         55.6%    0.111    0.000    9            →classifica  success
+lexical_overlap_vs_benchmark             52.4%    0.429    0.067    21           →lexical_ov  success
+continuous_metrics_vs_benchmark          50.0%    0.250    0.333    2            →continuous  success
+perplexity_vs_benchmark                  50.0%    0.250    -0.143   4            →perplexity  success
+classification_vs_benchmark              44.4%    0.167    -0.098   9            →classifica  success
+dataset_type                             42.4%    0.383    0.299    33     8     →dataset_so  success
+application_subtype_therapist_facing     40.0%    0.280    0.250    5      1     →applicatio  success
+dataset_user_psychopathology_status      40.0%    0.340    0.077    40     1     →dataset_so  success
+dataset_responder_type                   37.1%    0.309    0.122    35     3     →dataset_so  success
+llm_judge_vs_benchmark                   0.0%     -0.500   0.000    2            →llm_judge_  success
+llm_judge_benchmark_quality              0.0%     -0.500   0.000    2            →llm_judge_  success
+
+CONDITIONAL LOGIC APPLIED
+----------------------------------------
+Some columns were analyzed with conditional logic:
+Only pairs where reviewers agreed on the parent column were included.
+
+  application_type → 2 dependent columns:
+    • application_subtype_client_facing
+    • application_subtype_therapist_facing
+  dataset_source → 6 dependent columns:
+    • dataset_type
+    • dataset_language
+    • dataset_contains_synthetic_data
+    • dataset_is_public
+    • dataset_user_psychopathology_status
+    • dataset_responder_type
+  ux_assessment_is_present → 4 dependent columns:
+    • ux_uses_standard_instrument
+    • ux_uses_qualitative_assessment
+    • ux_uses_quantitative_assessment
+    • ux_results_reported
+  lexical_overlap_used → 2 dependent columns:
+    • lexical_overlap_vs_benchmark
+    • lexical_overlap_benchmark_quality
+  embedding_similarity_used → 2 dependent columns:
+    • embedding_similarity_vs_benchmark
+    • embedding_similarity_benchmark_quality
+  classification_used → 2 dependent columns:
+    • classification_vs_benchmark
+    • classification_benchmark_quality
+  continuous_metrics_used → 2 dependent columns:
+    • continuous_metrics_vs_benchmark
+    • continuous_metrics_benchmark_quality
+  expert_rating_used → 2 dependent columns:
+    • expert_rating_vs_benchmark
+    • expert_rating_benchmark_quality
+  llm_judge_used → 2 dependent columns:
+    • llm_judge_vs_benchmark
+    • llm_judge_benchmark_quality
+  perplexity_used → 2 dependent columns:
+    • perplexity_vs_benchmark
+    • perplexity_benchmark_quality
+  lexical_diversity_used → 2 dependent columns:
+    • lexical_diversity_vs_benchmark
+    • lexical_diversity_benchmark_quality
+
+INTERPRETATION GUIDE
+----------------------------------------
+Percent Agreement Interpretation:
+  < 70%: Poor agreement
+  70-79%: Fair agreement
+  80-89%: Good agreement
+  90-95%: Very good agreement
+  > 95%: Excellent agreement
+
+Gwet's AC1 Interpretation:
+  < 0.00: Poor agreement
+  0.00-0.20: Slight agreement
+  0.21-0.40: Fair agreement
+  0.41-0.60: Moderate agreement
+  0.61-0.80: Substantial agreement
+  0.81-1.00: Almost perfect agreement
+
+Cohen's Kappa Interpretation:
+  < 0.00: Poor agreement
+  0.00-0.20: Slight agreement
+  0.21-0.40: Fair agreement
+  0.41-0.60: Moderate agreement
+  0.61-0.80: Substantial agreement
+  0.81-1.00: Almost perfect agreement
+
+Notes:
+- Percent agreement is often more intuitive and represents raw agreement.
+- Gwet's AC1 is generally preferred over Cohen's kappa as it's less affected
+  by trait prevalence and marginal probability imbalances.
+- Cohen's kappa adjusts for chance agreement based on marginal probabilities.
+- Gwet's AC1 adjusts for chance agreement assuming uniform distribution.
+- Pairs where both reviewers selected 'Other:' responses are excluded
+  from agreement calculations (shown in 'Excl' column).
+- Conditional columns only include pairs where reviewers agreed on parent column.
+
+================================================================================
+End of Report
+================================================================================

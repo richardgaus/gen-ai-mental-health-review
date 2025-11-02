@@ -1,0 +1,50 @@
+================================================================================
+DATA PROCESSING REPORT: 4_perform_basic_cleaning.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:27.319998
+  Execution Time: 0.11 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data_cleaned.csv
+
+PROCESSING STEPS:
+  step_1_data_loading:
+    - Loaded fused dataset with 517 rows and 111 columns
+  step_2_consensus_filtering:
+    - Removed 1 studies that have no consensus reviewer (removed all 1 rows for these studies). Studies with consensus: 172 (down from 173)
+  step_3_unicode_normalization:
+    - Normalized Unicode characters in column names to ensure consistent encoding
+  step_4_column_renaming:
+    - Renamed columns according to configuration mapping (e.g., standardized field names)
+  step_5_column_reordering:
+    - Reordered columns according to configuration to match expected schema
+  step_6_column_filtering:
+    - Dropped 7 columns not specified in configuration: Automatic metrics:, Contentual judgment:, Other metrics:, READI P-1/2:, READI categories:, Reference-based metrics:, User Experience Assessment Methods:
+  step_7_other_field_cleaning:
+    - Cleaned 'Other: ' fields by setting them to empty strings for consistency
+  step_8_index_setting:
+    - Set covidence_id as index column for efficient data access
+  step_9_empty_value_filling:
+    - Filled specified fields with 'n' if empty (reviewers usually mean 'no' if they don't fill a field). Columns processed: ux_uses_standard_instrument, ux_uses_qualitative_assessment, ux_uses_quantitative_assessment, ux_results_reported, lexical_overlap_used, embedding_similarity_used, classification_used, continuous_metrics_used, expert_rating_used, llm_judge_used, perplexity_used, lexical_diversity_used, metric1_name, metric2_name, metric3_name, s1_risk_detection_considered, s2_content_safety_considered, p1_on_premise_model_considered, p2_privacy_awareness_considered, e1_demographics_reporting_considered, e2_outcomes_by_demographics_considered, g1_early_discontinuation_considered, g2_overuse_considered, f1_validated_outcomes_considered, f2_control_condition_considered, i1_multilevel_feasibility_considered, i2_healthcare_integration_considered
+  step_10_case_normalization:
+    - Converted specified fields to lowercase for consistency. Columns processed: ux_uses_standard_instrument, ux_uses_qualitative_assessment, ux_uses_quantitative_assessment, ux_results_reported, lexical_overlap_used, lexical_overlap_vs_benchmark, lexical_overlap_benchmark_quality, embedding_similarity_used, embedding_similarity_vs_benchmark, embedding_similarity_benchmark_quality, classification_used, classification_vs_benchmark, classification_benchmark_quality, continuous_metrics_used, continuous_metrics_vs_benchmark, continuous_metrics_benchmark_quality, expert_rating_used, expert_rating_vs_benchmark, expert_rating_benchmark_quality, llm_judge_used, llm_judge_vs_benchmark, llm_judge_benchmark_quality, perplexity_used, perplexity_vs_benchmark, perplexity_benchmark_quality, lexical_diversity_used, lexical_diversity_vs_benchmark, lexical_diversity_benchmark_quality, metric1_name, metric1_vs_benchmark, metric1_benchmark_quality, metric2_name, metric2_vs_benchmark, metric2_benchmark_quality, metric3_name, metric3_vs_benchmark, metric3_benchmark_quality, s1_risk_detection_considered, s2_content_safety_considered, p1_on_premise_model_considered, p2_privacy_awareness_considered, e1_demographics_reporting_considered, e2_outcomes_by_demographics_considered, g1_early_discontinuation_considered, g2_overuse_considered, f1_validated_outcomes_considered, f2_control_condition_considered, i1_multilevel_feasibility_considered, i2_healthcare_integration_considered. Final dataset: 172 studies with 516 rows and 103 columns
+
+SUMMARY STATISTICS:
+  input_studies: 173
+  input_rows: 517
+  input_columns: 111
+  output_studies: 172
+  output_rows: 516
+  output_columns: 103
+  studies_removed: 1
+  rows_removed: 1
+  columns_removed: 8
+  index_column_set: covidence_id
+  execution_time_seconds: 0.1137540340423584
+
+================================================================================
+End of Report
+================================================================================

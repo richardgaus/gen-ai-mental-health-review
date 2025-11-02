@@ -1,0 +1,51 @@
+================================================================================
+DATA PROCESSING REPORT: 5_remove_non_generative_studies.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:28.326642
+  Execution Time: 0.11 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data_cleaned.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data_cleaned_generative_only.csv
+
+PROCESSING STEPS:
+  step_1_data_loading:
+    - Loaded cleaned dataset with 516 rows and 103 columns representing 172 unique studies
+  step_2_consensus_identification:
+    - Identified 172 consensus rows representing 172 studies with consensus reviews. Found 0 studies without consensus rows
+  step_3_model_dictionary_loading:
+    - Loaded model configuration with 51 generative models and 7 non-generative models from final_cleaning_config.yaml
+  step_4_consensus_model_parsing:
+    - Parsed models from 'models_employed' column ONLY from consensus rows using transform_multi_choice_column_other function to handle 'Other:' format and semicolon separation
+  step_5_consensus_model_counting:
+    - Counted generative and non-generative models for each study based ONLY on consensus reviewer assessments, matching parsed models against configuration dictionaries
+  step_6_column_addition:
+    - Added 'num_generative' and 'num_non_generative' columns to ALL rows based on consensus-derived counts for each study (covidence_id)
+  step_7_study_filtering:
+    - Removed 28 complete studies (all rows per covidence_id) where consensus showed num_generative == 0 or no consensus row existed. This removed studies that employ only non-generative models or have no consensus assessment. Final dataset: 144 studies with 432 rows
+
+SUMMARY STATISTICS:
+  input_studies: 172
+  input_rows: 516
+  input_columns: 103
+  consensus_studies: 172
+  consensus_rows: 172
+  studies_without_consensus: 0
+  output_studies: 144
+  output_rows: 432
+  output_columns: 105
+  studies_removed: 28
+  rows_removed: 84
+  columns_added: 2
+  generative_models_in_config: 51
+  non_generative_models_in_config: 7
+  total_generative_model_instances_consensus: 624
+  total_non_generative_model_instances_consensus: 66
+  filtering_method: consensus_based
+  execution_time_seconds: 0.10578775405883789
+
+================================================================================
+End of Report
+================================================================================

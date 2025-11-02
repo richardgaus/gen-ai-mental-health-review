@@ -1,0 +1,126 @@
+================================================================================
+DATA PROCESSING REPORT: 7_perform_final_cleaning.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:31.762059
+  Execution Time: 0.08 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data_cleaned_generative_only.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/processed/final_data.csv
+
+PROCESSING STEPS:
+  step_1_data_loading:
+    - Loaded dataset with 432 rows and 105 columns
+  step_2_consensus_filtering:
+    - Filtered to keep only 'Consensus' reviewer rows - removed 288 rows from other reviewers (Reviewer Two: 144, Richard Gaus: 144). Final dataset: 144 rows
+  step_3_population_survey_removal:
+    - Removed 12 population survey studies (removed 12 rows). Studies remaining: 132 (down from 144)
+  step_4_column_creation:
+    - Created 'intended_intervention_type' column from 'intervention_type' column. Processed 26 unique original values into 9 transformed values. Applied 23 different transformation rules. Examples: 'Informal counseling (e.g., emotional support conversation)' → 'Non-specific support'; 'CBT: Motivational interviewing; CBT: Cognitive restructuring; Other CBT techniques; Informal counseling (e.g., emotional support conversation)' → 'Multiple therapeutic orientations'; 'Unspecified, might include formal therapy methods' → 'Non-specific support'
+  step_5_inclusion_creation:
+    - Created 'inclusion_criteria' column from 'client_type' column. Processed 10 unique original values into 5 transformed values. Applied 9 different transformation rules. Distribution: Unspecified: 97, No specific criteria: 21, Elevated symptoms: 9, Recruited in in- or outpatient healthcare setting with no specific criteria: 4, Diagnosed mental disorder (ICD/DSM): 1. Examples: 'Patients recruited in hospital or outpatient treatment facility; Patients with disorder explicitly based on ICD or DSM' → 'Diagnosed mental disorder (ICD/DSM)'; 'People with some symptoms but not disorder (determined by symptom scales or questionnaires)' → 'Elevated symptoms'; 'No clients/patients involved' → 'Unspecified'
+  step_6_outcome_creation:
+    - Created 'primary_clinical_outcome' column for client-facing empirical LLM studies with clients involved. Filled 36 rows out of 36 eligible rows. Distribution: User experience assessment: 23, Validated symptom/function scale: 12, Other: 1.
+  step_7_models_cleaning:
+    - Cleaned 'models_employed' column by first removing 22 non-generative models, then parsing 'Other:' entries and mapping them using configuration. Processed 132 entries, mapped 16 models, set 24 unmapped models to 'Other'. Non-generative models removed: BERT family, NLTK VADER, text-embedding-ada-002. Model mappings: 'WenZhong (based on GPT-2)' → 'GPT-2 family', 'Llama 1' → 'Llama 1 family', 'own transformer architecture' → 'unspecified' (and 7 more). Unmapped models set to 'Other': PanGu, Baichuan-7B, Alpaca 1, BlenderBot, Phi-2, GPT-J, GPT-Neo, ERNIE-3.5-8K (and 16 more instances). Final model distribution (top 5): GPT-4 / GPT-4o family: 45, GPT-3.5 family: 35, Other: 24, GPT-2 family: 20, ChatGPT, model unspecified: 15.
+  step_8_approach_cleaning:
+    - Cleaned 'llm_development_approach' column by mapping 12 values, collapsing 8 multi-label entries using priority rules, and final categorizing 4 entries to main categories. Processed 132 entries with 6 mapping rules available. Value mappings: 'Other: Fine-tuning of DialogGPT. This fine-tuned model is integrated into a custom chatbot pipeline, together with ChatGPT 3.5' → 'Fine-tuning + other modules', 'Other: both original training of the transformer model and subsequent fine-tuning' → 'Only fine-tuning', 'Other: They proposed and evaluated two tools in parallel: fine-tuned BERT and ChatGPT prompting-only' → 'Only prompting' (and 7 more). Multi-label collapses: Only fine-tuning; Only prompting → Only fine-tuning, Only fine-tuning; Only prompting → Only fine-tuning, Only fine-tuning; Only prompting → Only fine-tuning (and 5 more). Final categorizations: Any RL → Other, Any RL → Other, Custom full training → Other (and 1 more).
+  step_9_outlet_application_cleaning:
+    - Cleaned outlet and application columns by mapping 298 values and setting 1 unmapped 'Other:' values to 'Other' across 4 columns: outlet_field, application_type, application_subtype_client_facing, application_subtype_therapist_facing. Details: outlet_field (132 mapped), application_type (132 mapped), application_subtype_client_facing (32 mapped, 1 'Other:' unmapped), application_subtype_therapist_facing (2 mapped). Mapping examples: outlet_field: 'Psychiatry / Clinical Mental Health (e.g., Archives of Psychiatry Research, Current Psychiatry Reports)' → 'Psychiatry', outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health', outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health' (and 12 more). Unmapped 'Other:' examples: application_subtype_client_facing: MI reflection generation.
+
+SUMMARY STATISTICS:
+  input_studies: 144
+  input_rows: 432
+  input_columns: 105
+  output_studies: 144
+  output_rows: 144
+  output_columns: 108
+  studies_removed: 0
+  rows_removed: 288
+  columns_added: 3
+  columns_removed: 0
+  index_column: covidence_id
+  execution_time_seconds: 0.08273506164550781
+  intended_intervention_type_created: 1
+  unique_intervention_types_original: 26
+  unique_intervention_types_transformed: 9
+  transformation_rules_applied: 23
+  inclusion_criteria_created: 1
+  unique_client_types_original: 10
+  unique_inclusion_criteria_transformed: 5
+  inclusion_transformation_rules_applied: 9
+  inclusion_criteria_distribution:
+    - Unspecified: 97
+    - No specific criteria: 21
+    - Elevated symptoms: 9
+    - Recruited in in- or outpatient healthcare setting with no specific criteria: 4
+    - Diagnosed mental disorder (ICD/DSM): 1
+  primary_clinical_outcome_created: 1
+  eligible_rows_for_outcome: 36
+  rows_with_outcome_filled: 36
+  outcome_distribution:
+    - : 96
+    - User experience assessment: 23
+    - Validated symptom/function scale: 12
+    - Other: 1
+  studies_with_other_outcome: ['When ELIZA meets therapists: A Turing test for the heart and mind']
+  models_employed_cleaned: 1
+  non_generative_models_removed: 22
+  non_gen_models_removed_list: ['BERT family', 'NLTK VADER', 'text-embedding-ada-002']
+  models_mapped_count: 16
+  mapping_examples_applied: ["'WenZhong (based on GPT-2)' → 'GPT-2 family'", "'Llama 1' → 'Llama 1 family'", "'own transformer architecture' → 'unspecified'", "'Falcon-7B' → 'Falcon family'", "'ChatGLM2-6B' → 'ChatGLM family'", "'ChatGLM2-6B' → 'ChatGLM family'", "'not specified - using LangChain framework' → 'unspecified'", "'ChatGLM' → 'ChatGLM family'", "'ChatGLM' → 'ChatGLM family'", "'DeepSeek-R1' → 'DeepSeek family'"]
+  models_unmapped_count: 24
+  unmapped_models_set_to_other: ['PanGu', 'Baichuan-7B', 'Alpaca 1', 'BlenderBot', 'Phi-2', 'GPT-J', 'GPT-Neo', 'ERNIE-3.5-8K', 'iFlytek Spark V3.0', 'ChatGLM-3-turbo', 'InternLM2-7B-Chat with QLoRA', 'Pi - Noni - Serena - and other commercial chatbots', 'Pi', 'Replika', 'GPT-Neo', 'GPT-J', 'AI21 Jurassic-1', 'ERNIE Bot', 'Qianwen (as model and as judge)', 'BLOOMZ', 'ERNIE Bot', 'SeqGPT', 'Jais-13B', 'Clare (R) by clare&me GmbH']
+  final_models_distribution:
+    - GPT-3.5 family: 35
+    - GPT-4 / GPT-4o family: 45
+    - GPT-2 family: 20
+    - Mistral family: 6
+    - Other: 24
+    - Llama 2 family: 14
+    - GPT-3 family: 3
+    - Qwen family: 3
+    - Llama 1 family: 1
+    - ChatGPT, model unspecified: 15
+    - BART family: 3
+    - T5 family: 7
+    - unspecified: 2
+    - Falcon family: 4
+    - Claude family: 5
+    - ChatGLM family: 5
+    - Llama 3.1 family: 1
+    - Gemini / Bard family: 4
+    - DeepSeek family: 2
+    - Llama 3.2 family: 1
+  unique_models_after_cleaning: 20
+  llm_development_approach_cleaned: 1
+  approach_values_mapped: 12
+  approach_entries_collapsed: 8
+  approach_entries_final_categorized: 4
+  approach_mapping_examples: ["'Other: Fine-tuning of DialogGPT. This fine-tuned model is integrated into a custom chatbot pipeline, together with ChatGPT 3.5' → 'Fine-tuning + other modules'", "'Other: both original training of the transformer model and subsequent fine-tuning' → 'Only fine-tuning'", "'Other: They proposed and evaluated two tools in parallel: fine-tuned BERT and ChatGPT prompting-only' → 'Only prompting'", "'Other: GPT-2 is fine-tuned on PsyQA. GPT-2 generates the intervention text based on crisis call topic identified by a separate BERT model, involving also knowledge graph retrieval.' → 'Fine-tuning + other modules'", "'Other: modular system with encoder for encoding emotion from different modalities, a conversation strategy predictor, and a decoder for producing the text response' → 'Fine-tuning + other modules'", "'Other: complex architecture that consists of RAC (response act classifier), LM (GPT-2 text generation), V (reward for PPO). the system is trained via proximal policy optimization' → 'Any RL'", "'Other: fine-tuning + transfer learning' → 'Fine-tuning + other modules'", "'Other: Fine-tuning plus other elements like clustering' → 'Fine-tuning + other modules'", "'Other: fine-tuning of GPT-2 + reinforcement learning. whole system consists of motivational response generator + empathetic rewriting framework' → 'Any RL'", "'Other: fine-tuning + custom pipeline (see Reflection Generation Training)' → 'Fine-tuning + other modules'"]
+  approach_collapse_examples: ['Only fine-tuning; Only prompting → Only fine-tuning', 'Only fine-tuning; Only prompting → Only fine-tuning', 'Only fine-tuning; Only prompting → Only fine-tuning', 'Fine-tuning + other modules; Prompting + other modules → Fine-tuning + other modules', 'Only fine-tuning; Prompting + other modules → Fine-tuning + other modules', 'Fine-tuning + other modules; Prompting + other modules → Fine-tuning + other modules', 'Fine-tuning + other modules; Prompting + other modules → Fine-tuning + other modules', 'Fine-tuning + other modules; Prompting + other modules → Fine-tuning + other modules']
+  approach_final_categorization_examples: ['Any RL → Other', 'Any RL → Other', 'Custom full training → Other', 'Any RL → Other']
+  final_approach_distribution:
+    - Only prompting: 52
+    - Prompting + other modules: 28
+    - Fine-tuning + other modules: 28
+    - Only fine-tuning: 18
+    - Other: 6
+  unique_approaches_after_cleaning: 5
+  outlet_application_columns_cleaned: 1
+  outlet_app_columns_processed: ['outlet_field', 'application_type', 'application_subtype_client_facing', 'application_subtype_therapist_facing']
+  outlet_app_total_values_mapped: 298
+  outlet_app_total_other_unmapped: 1
+  outlet_app_mapping_examples: ["outlet_field: 'Psychiatry / Clinical Mental Health (e.g., Archives of Psychiatry Research, Current Psychiatry Reports)' → 'Psychiatry'", "outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'", "outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'", "outlet_field: 'Human-Computer Interaction (e.g. CHI conference on Human Factors in Computing Systems)' → 'HCI'", "outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)' → 'Computer Science'", "outlet_field: 'Broader Medicine / Biomedical (e.g., Nature Medicine, Cureus, Annals of Biomedical Engineering)' → 'Medicine'", "outlet_field: 'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'"]
+  outlet_app_other_unmapped_examples: ['application_subtype_client_facing: MI reflection generation']
+  outlet_app_column_details:
+    - outlet_field: {'values_mapped': 132, 'other_unmapped_count': 0, 'mapping_examples': ["'Psychiatry / Clinical Mental Health (e.g., Archives of Psychiatry Research, Current Psychiatry Reports)' → 'Psychiatry'", "'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'", "'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'", "'Human-Computer Interaction (e.g. CHI conference on Human Factors in Computing Systems)' → 'HCI'", "'Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)' → 'Digital Health'"], 'other_unmapped_examples': [], 'mapping_rules_available': 7}
+    - application_type: {'values_mapped': 132, 'other_unmapped_count': 0, 'mapping_examples': ["'Client-facing application' → 'Client-facing application'", "'Client-facing application' → 'Client-facing application'", "'Client-facing application' → 'Client-facing application'", "'Client-facing application' → 'Client-facing application'", "'Client-facing application' → 'Client-facing application'"], 'other_unmapped_examples': [], 'mapping_rules_available': 3}
+    - application_subtype_client_facing: {'values_mapped': 32, 'other_unmapped_count': 1, 'mapping_examples': ["'Chatbot' → 'Multi-turn chatbot'", "'Other: Spoken dialogue system' → 'Spoken dialogue system'", "'Chatbot' → 'Multi-turn chatbot'", "'Chatbot' → 'Multi-turn chatbot'", "'Other: one-turn question answering chatbot. the client poses a question and the model produces a single response. there is no multi-turn conversation.' → 'One-turn chatbot (usually Q&A)'"], 'other_unmapped_examples': ['MI reflection generation'], 'mapping_rules_available': 7}
+    - application_subtype_therapist_facing: {'values_mapped': 2, 'other_unmapped_count': 0, 'mapping_examples': ["'Other: Interactive transcription creation and analysis system. LLMs are used for video captioning and speaker role recognition' → 'Therapy reflection tool'", "'Other: OCD exposure hierarchy generation (therapy material generation)' → 'Therapy material generation'"], 'other_unmapped_examples': [], 'mapping_rules_available': 3}
+
+================================================================================
+End of Report
+================================================================================

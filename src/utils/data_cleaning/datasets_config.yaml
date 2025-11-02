@@ -1,0 +1,175 @@
+dataset_ids:
+  counsel_chat:
+  - 'CounselChat https://github.com/nbertagnolli/counsel-chat
+
+    Partly translated to Kiswahili
+
+    '
+  - CounselChat https://github.com/nbertagnolli/counsel-chat
+  - 'CounselChat: https://huggingface.co/datasets/nbertagnolli/counsel-chat'
+  - |-
+    CounselChat: https://huggingface.co/datasets/nbertagnolli/counsel-chat
+
+    [COUNSELCHAT.COM doesnt work]The model uses scraped data from various credible and legitimate sources facilitating real case-studies. Counsel-Chat is an example of an expert community which offers services by licenced therapists.
+  psy_qa:
+  - 'External: PsyQA
+
+    Derived: CBT QA
+
+    '
+  - PsyQA
+  - 1,000 QA pairs from the PsyQA dataset.  two human annotators inspected and labeled
+    the responses of professional supporters in the PsyQA dataset with the corresponding
+    professional psychological counseling theory categories (Cognitive-Behavioral
+    Therapy labeled as 1, Dialectical Behavior Therapy as 2, Person-Centered Therapy
+    as 3, and Reality Therapy as 4). The original data had quantities of 189, 317,
+    196, and 298 for categories 1, 2, 3, and 4, respectively.
+  - PsyQA, extended by "helping skills" column
+  - PsyQA (+ Yixinly? "Thus we crawled 50K articles (0.1B tokens in total) related to psychology and mental health support from Yixinli (xinli001.com/info) and train a GPT-2 from scratch based on the corpus.")
+  - |-
+    PsyQA is an authoritative Chinese dialogue dataset focused
+    on the field of mental health support. It covers 9 broad
+    topics and multiple subtopics, encompassing various aspects
+    of mental health. PsyQA is presented in a question-answer
+    format, where each example includes a question, a detailed
+    description of the mental issues, and keywords provided by
+    anonymous help-seekers. Responses are asynchronously pro-
+    vided by well-trained volunteers or professional counselors
+    and involve detailed analysis and guidance in response to the
+    help-seekers’ questions, aiming to offer mental health support.
+    Additionally, the answers have been further annotated with
+    seven psychological strategies based on psychological coun-
+    seling theory [12],
+  amod:
+  - 'Huggingface: Mental Health Counseling Conversations
+
+    https://huggingface.co/datasets/Amod/mental_health_counseling_conversations
+
+    '
+  - 'Amod Mental health counseling conversations https://huggingface.co/datasets/Amod/mental_health_counseling_conversations
+    From Huggingface description: This dataset is a collection of real counselling
+    question-and-answer pairs taken from two public mental-health platforms.'
+  - 'Amod Mental health counseling conversations https://huggingface.co/datasets/Amod/mental_health_counseling_conversations
+    From Huggingface description: This dataset is a collection of real counselling
+    question-and-answer pairs taken from two public mental-health platforms. It is
+    intended for training and evaluating language models that provide safer, context-aware
+    mental-health responses.'
+  alexander_street_press:
+  - 'fine-tuned on the 2 volumes of published counseling and psychotherapy data from
+
+    Alexander Street Press. The volumes are searchable collections of transcripts
+    containing real counseling and therapy sessions
+
+    and first-person narratives illuminating the experience of mental illness and
+    treatment. The 2 volumes contain 3500 session transcripts and >700,000 utterances
+    between a counselor and a
+
+    patient.
+
+    '
+  - Alexander Street Press therapy transcripts
+  - 'https://www.lib.montana.edu/resources/about/677 (accessed on 10 March 2025),
+    the
+
+    \"Counseling and Psychotherapy Transcripts, Volume II\" dataset.
+
+    '
+  - '
+
+    https://www.lib.montana.edu/resources/about/677 (accessed on 10 March 2025), the
+
+    “Counseling and Psychotherapy Transcripts, Volume II” dataset. '
+  - |-
+    The primary dataset used in this study consists of psychotherapy transcripts from
+    https://www.lib.montana.edu/resources/about/677 (accessed on 10 March 2025), the
+    “Counseling and Psychotherapy Transcripts, Volume II” dataset.
+  empathetic_dialogues:
+  - EmpatheticDialogues https://github.com/facebookresearch/EmpatheticDialogues
+  - EmpatheticDialogues https://github.com/facebookresearch/EmpatheticDialogues From
+    Rashkin et al. [52], containing around 25,000 conversations rooted in emotional
+    situations, with labels for various emotions like sadness, anxiety, and anger.
+  - |-
+    EmpatheticDialogues https://github.com/facebookresearch/EmpatheticDialogues
+
+    From Rashkin et al. [52], containing around 25,000 conversations rooted in emotional situations, with labels for various emotions like sadness, anxiety, and anger.
+  perez_rosa_motivational_interviewing:
+  - 'Motivational Interviewing counseling dataset (Perez-Rosas 2016)
+
+
+    The dataset contains a total of 22,719 counselor utterances extracted from 277
+    motivational interviewing sessions that are annotated with 10 counselor behavioral
+    codes. The dataset is derived from a collection of 284 video recordings of counseling
+    encounters using MI. The recordings were collected from various sources, including
+    two clinical trials, students’ counseling sessions from a graduate level MI course,
+    wellness coaching phone calls, and demonstrations of MI strategies in brief medical
+    encounters.
+
+    '
+  - 'Original dataset: Perez-Rosas motivational interviewing dataset.
+
+    Modification: Added custom annnotations
+
+    Also extended with their own MI prompts.
+
+    We thus obtained 4,365 client prompt-counselor reflection pairs, including 2,429
+    prompt-CR and 1,636 prompt-SR pairs.
+
+
+    public under https://lit.eecs.umich.edu/downloads.html#PAIR
+
+    '
+  hope:
+  - 'HOPE
+    212 multi-turn English psychotherapy sessions (≈ 12.9 K utterances) between therapist and patient, transcribed from YouTube videos
+
+    HOPE;
+    Switchboard Dialogue-act Corpus; (also mentions a “Dialog-act corpus”). Description: Counseling conversations with dialogue-act labels (HOPE) and a general telephone dialogue-act corpus (Switchboard) used for evaluation/generalizability. Derived: Not indicated.'
+  - HOPE (Mental Health cOunselling of PatiEnts)
+  - |-
+    We use the HOPE (Mental Health cOunselling of PatiEnts) [8]
+    dataset for our experiments. The dataset is specifically designed
+    for mental health counseling and dialogue-act classification tasks.
+    The HOPE dataset includes approximately 12,800 utterances ex-
+    tracted from 212 mental health counseling sessions, sourced from
+    publicly available YouTube videos.
+  - HOPE (Malhotra, 2022)
+  - |-
+    HOPE
+    212 multi-turn English psychotherapy sessions (≈ 12.9 K utterances) between therapist and patient, transcribed from YouTube videos
+
+    HOPE;
+    Switchboard Dialogue-act Corpus; (also mentions a “Dialog-act corpus”). Description: Counseling conversations with dialogue-act labels (HOPE) and a general telephone dialogue-act corpus (Switchboard) used for evaluation/generalizability. Derived: Not indicated.
+  jigsaw_toxic_comments:
+  - Jigsaw Toxic Comment Classification Dataset
+
+
+dataset_types_mapping:
+  Thought records:
+  - automatic thought-feeling pairs
+  - thought records
+  - automatic thought records
+  Cognitive distortion records:
+  - labeled cognitive distortions
+  - Labeled examples of cognitive distortions
+  - Labeled dataset of cognitive distortions
+  - descriptions of cognitive distortions
+  Motivational interviewing reflections:
+  - Motivational interviewing reflections
+
+dataset_types_mapping_high_level:
+  Psychotherapy dialogue\nrecords (multi-turn):
+  - Psychotherapy -- speech transcripts
+  - Psychotherapy -- chat logs
+  Non-specific supportive\ndialogue records (multi-turn):
+  - Emotional support dialogue -- speech transcripts
+  - Emotional support dialogue -- chat logs
+  Mental health Q&A\nrecords (single-turn):
+  - Internet data -- mental health Q&A
+  Internet forum threads:
+  - Internet data -- mental health forum
+  Automatic thought records:
+  - Thought records
+  - Cognitive distortion records
+  Unspecified:
+  - "Other: unknown"
+  - "Other: unclear"

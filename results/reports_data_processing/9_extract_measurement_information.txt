@@ -1,0 +1,137 @@
+Measurement Extraction Report
+==================================================
+
+Output file: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/processed/measurements_file.csv
+Total measurements extracted: 173
+
+Column summary:
+  reference_title: 173 non-null, 0 null, 173 non-empty
+  metric_name: 173 non-null, 0 null, 173 non-empty
+  metric_category: 173 non-null, 0 null, 173 non-empty
+  metric_supercategory: 173 non-null, 0 null, 173 non-empty
+  benchmark_quality: 170 non-null, 3 null, 173 non-empty
+  performance_vs_benchmark: 171 non-null, 2 null, 173 non-empty
+  benchmark_notes: 166 non-null, 7 null, 173 non-empty
+
+Metric supercategory distribution:
+  reference_similarity: 75
+  human_rating: 38
+  linguistic_analysis: 25
+  automatic_rating_empathy_or_sentiment: 10
+  automatic_rating_other_response_quality: 7
+  automatic_rating_safety_or_bias: 7
+  bartscore: 1
+  consistency ratio: 1
+  behavior sensitivity index: 1
+  bleurt: 1
+  various text analyses: 1
+  fluency: 1
+  network centrality (distance from depression terms): 1
+  expert rating 2: 1
+  perplexity, diversity, sentence coherence, edit rate: 1
+  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1
+  unclear metrics: relevance, empathy, conciseness, context: 1
+
+Metric category distribution:
+  expert_rating: 32
+  lexical_overlap: 26
+  classification: 23
+  embedding_similarity: 20
+  lexical_diversity: 12
+  perplexity: 7
+  automatic_response_quality: 7
+  automatic_empathy_rating: 7
+  safety_or_bias_testing: 7
+  linguistic_analysis: 6
+  non_expert_rating: 6
+  continuous_metrics: 6
+  sentiment_analysis: 3
+  behavior sensitivity index: 1
+  consistency ratio: 1
+  bartscore: 1
+  bleurt: 1
+  perplexity, diversity, sentence coherence, edit rate: 1
+  fluency: 1
+  network centrality (distance from depression terms): 1
+  various text analyses: 1
+  expert rating 2: 1
+  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1
+  unclear metrics: relevance, empathy, conciseness, context: 1
+
+Metric name distribution:
+  expert_rating: 32
+  lexical_overlap: 26
+  classification: 22
+  embedding_similarity: 20
+  lexical_diversity: 7
+  perplexity: 7
+  continuous_metrics: 6
+  automatic response quality: 3
+  automatic safety rating: 2
+  psychobench emotional intelligence scale: 1
+  average tone (sentiment score): 1
+  stress test metrics: 1
+  avg. of stigma questions: 1
+  user rating: 1
+  llm-as-a-judge emotional resonance and understanding: 1
+  llm-as-a-judge professionalism etc.: 1
+  empathy rating unequality: 1
+  liwc score domains and linguistic marker scores: 1
+  behavior sensitivity index: 1
+  automatic empathy rating: 1
+  coherence, informativeness, fluency: 1
+  llm-as-a-judge mi_adherence: 1
+  consistency ratio: 1
+  cross-entropy loss: 1
+  unclear metrics: relevance, empathy, conciseness, context: 1
+  user satisfaction score: 1
+  siri-2 z-score: 1
+  automatic "perceived information quality" (piq) rating via ml model (prompted chatgpt): 1
+  various linguistic factors: 1
+  llm-as-a-judge approval and reassurance: 1
+  psychobench empathy scale: 1
+  lexical diversity and richness: 1
+  bleurt: 1
+  shap values of words in classifier that classifies human vs. chatgpt responses: 1
+  distinct 1: 1
+  distinct 2: 1
+  human rating, not sure by whom: 1
+  human rating (unclear if expert or not): 1
+  lexical diversity: 1
+  average length: 1
+  diversity: 1
+  sentiment polarity: 1
+  change of empathy scores for the erf module: 1
+  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1
+  empathy classification (sharma et al): 1
+  bartscore: 1
+  perplexity, diversity, sentence coherence, edit rate: 1
+  expert rating 2: 1
+  sentiment analysis score: 1
+  response quality rated by non experts: 1
+  word analysis/ count: 1
+  safety (number of conversations turns until initial referral/shutdown of chatbot): 1
+  various text analyses: 1
+  network centrality (distance from depression terms): 1
+  linguistic features as mentioned under 3.3: 1
+  fluency: 1
+  llm-as-a-judge general response quality: 1
+
+Benchmark quality distribution:
+  l: 78
+  no benchmark: 67
+  h: 25
+
+Performance vs benchmark distribution:
+  no benchmark: 67
+  b: 65
+  w: 21
+  s: 9
+  unclear: 5
+  no benckmark: 1
+  more words: 1
+  unknown: 1
+  mixed (table 9): 1
+
+Unique references:
+  Total unique reference titles: 78

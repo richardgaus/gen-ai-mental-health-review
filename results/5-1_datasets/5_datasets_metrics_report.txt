@@ -1,0 +1,71 @@
+DATASETS METRICS REPORT
+==================================================
+
+BASIC STATISTICS
+--------------------
+Total studies: 90
+
+HIGH-LEVEL DATASET TYPE DISTRIBUTION
+-----------------------------------
+Datasets with high-level type information: 90
+Datasets without high-level type information: 0
+
+High-level dataset type breakdown:
+  Other: 26 (28.9%)
+  Mental health Q&A\nrecords (single-turn): 19 (21.1%)
+  Non-specific supportive\ndialogue records (multi-turn): 17 (18.9%)
+  Psychotherapy dialogue\nrecords (multi-turn): 8 (8.9%)
+  Automatic thought records: 8 (8.9%)
+  Unspecified: 6 (6.7%)
+  Internet forum threads: 6 (6.7%)
+
+OTHER DATASET CHARACTERISTICS
+------------------------------
+dataset_id: 90 studies have information
+
+dataset_source: 90 studies have information
+  Distribution:
+    External data set: 46
+    Self-collected data: 23
+    External data set, modified: 14
+    Self-collected data but derived from external data set: 4
+    Other: External data set, but completely unknown: 1
+    Other: unclear: 1
+    Other: some dataset was used, but completely unknown characteristics: 1
+
+dataset_notes: 88 studies have information
+
+dataset_language: 87 studies have information
+
+dataset_contains_synthetic_data: 87 studies have information
+
+dataset_is_public: 87 studies have information
+  Distribution:
+    No: 56
+    Yes: 30
+    Other: unspecified: 1
+
+dataset_user_psychopathology_status: 87 studies have information
+  Distribution:
+    Unknown: 35
+    Unselected: 28
+    Other: not applicable: 8
+    Psychopathology: 5
+    n.a.: 4
+    Other: n.a.: 3
+    Other: unknown: 2
+    Other: Not applicable, data is not on users: 1
+    Other: mixed: 1
+
+dataset_responder_type: 87 studies have information
+
+dataset_type_high_level: 90 studies have information
+  Distribution:
+    Other: 26
+    Mental health Q&A\nrecords (single-turn): 19
+    Non-specific supportive\ndialogue records (multi-turn): 17
+    Psychotherapy dialogue\nrecords (multi-turn): 8
+    Automatic thought records: 8
+    Unspecified: 6
+    Internet forum threads: 6
+

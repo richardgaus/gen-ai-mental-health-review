@@ -1,0 +1,27 @@
+color_palette:
+  navy: "#003a7d"
+  sky: "#008dff"
+  rose: "#ff73b6"
+  purple: "#c701ff"
+  mint: "#4ecb8d"
+  amber: "#ff9d3a"
+  lemon: "#f9e858"
+  crimson: "#d83034"
+  grey: "#c3c3c3"
+  dark_grey: "#737373"
+
+sample_size_categories:
+  "Case studies": "N = 1"
+  "Very small": "2 - 20"
+  "Small": "21 - 100"
+  "Medium": "101 - 500"
+  "Large": "501 - 2000"
+  "Very large": "> 2000"
+  "Unknown": "-"
+
+readi_only_human_participants:
+  - g1_early_discontinuation_considered
+  - g2_overuse_considered
+  - f1_validated_outcomes_considered
+  - f2_control_condition_considered
+  - i1_multilevel_feasibility_considered

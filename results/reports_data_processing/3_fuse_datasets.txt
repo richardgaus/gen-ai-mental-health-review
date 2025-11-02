@@ -1,0 +1,46 @@
+================================================================================
+DATA PROCESSING REPORT: 3_fuse_datasets.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:26.331253
+  Execution Time: 0.04 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/1st_search_data_transformed_for_fusion.csv + /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/2nd_search_data_preprocessed.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/fused_data.csv
+
+PROCESSING STEPS:
+  step_1_data_loading:
+    - Loaded 1st search data (147 rows, 109 columns) and 2nd search data (371 rows, 110 columns)
+  step_2_deduplication:
+    - Removed 1 duplicate studies from 2nd search (studies with same titles as 1st search). Duplicate study titles removed from 2nd search: Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study
+  step_3_prefix_addition:
+    - Added search type prefixes ('1st_search_' and '2nd_search_') to ID columns (study_id, covidence_id) to prevent conflicts during fusion
+  step_4_column_alignment:
+    - Aligned columns between datasets - added 2 columns to 1st search data and 1 columns to 2nd search data (filled with NA values). Columns added to 1st search: Automatic metrics:, Notes on development approach. Columns added to 2nd search: READI P-1/2:
+  step_5_dataset_fusion:
+    - Concatenated datasets vertically to create fused dataset with 517 total rows and 111 columns
+  step_6_validation:
+    - Validated fusion results - confirmed row count preservation (True) and column preservation (True)
+
+SUMMARY STATISTICS:
+  first_search_studies: 49
+  first_search_rows: 147
+  first_search_columns: 109
+  second_search_studies_original: 125
+  second_search_rows_original: 371
+  second_search_columns: 110
+  duplicate_studies_removed: 1
+  second_search_rows_after_dedup: 370
+  fused_studies: 173
+  fused_rows: 517
+  fused_columns: 111
+  columns_added_to_first: 2
+  columns_added_to_second: 1
+  fusion_successful: 1
+  execution_time_seconds: 0.03720498085021973
+
+================================================================================
+End of Report
+================================================================================

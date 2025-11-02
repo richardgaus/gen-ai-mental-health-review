@@ -1,0 +1,97 @@
+metric_columns:
+  - lexical_overlap_used
+  - embedding_similarity_used
+  - classification_used
+  - continuous_metrics_used
+  - expert_rating_used
+  - llm_judge_used
+  - perplexity_used
+  - lexical_diversity_used
+  - metric1_name
+  - metric2_name
+  - metric3_name
+
+metric_categories:
+  lexical_diversity:
+    - lexical_diversity
+    - lexical diversity and richness
+    - distinct 1
+    - distinct 2
+    - lexical diversity
+    - diversity
+  perplexity:
+    - perplexity
+  expert_rating:
+    - expert_rating
+  non_expert_rating:
+    - human rating, not sure by whom
+    - human rating (unclear if expert or not)
+    - response quality rated by non experts
+    - empathy rating unequality
+    - user rating
+    - user satisfaction score
+  llm_judge:
+    - llm_judge
+  classification:
+    - classification
+    - cross-entropy loss
+  continuous_metrics:
+    - continuous_metrics
+  lexical_overlap:
+    - lexical_overlap
+    - fuzzy matching confidence
+  embedding_similarity:
+    - embedding_similarity
+  safety_or_bias_testing:
+    - safety (number of conversations turns until initial referral/shutdown of chatbot)
+    - stress test metrics
+    - avg. of stigma questions
+    - liwc score domains and linguistic marker scores
+    - siri-2 z-score
+    - automatic safety rating
+  sentiment_analysis:
+    - sentiment polarity
+    - sentiment analysis score
+    - average tone (sentiment score)
+  linguistic_analysis:
+    - linguistic features as mentioned under 3.3
+    - average length
+    - word analysis/ count
+    - various linguistic factors
+    - shap values of words in classifier that classifies human vs. chatgpt responses
+    - coherence, informativeness, fluency
+  automatic_empathy_rating:
+    - empathy classification (sharma et al)
+    - psychobench empathy scale
+    - psychobench emotional intelligence scale
+    - automatic empathy rating
+    - change of empathy scores for the erf module
+    - llm-as-a-judge emotional resonance and understanding
+    - llm-as-a-judge approval and reassurance
+  automatic_response_quality:
+    - automatic response quality
+    - llm-as-a-judge professionalism etc.
+    - llm-as-a-judge general response quality
+    - automatic "perceived information quality" (piq) rating via ml model (prompted chatgpt)
+    - llm-as-a-judge mi_adherence
+
+metric_supercategories:
+  reference_similarity:
+    - lexical_overlap
+    - embedding_similarity
+    - classification
+    - continuous_metrics
+  human_rating:
+    - expert_rating
+    - non_expert_rating
+  linguistic_analysis:
+    - linguistic_analysis
+    - lexical_diversity
+    - perplexity
+  automatic_rating_empathy_or_sentiment:
+    - sentiment_analysis
+    - automatic_empathy_rating
+  automatic_rating_safety_or_bias:
+    - safety_or_bias_testing
+  automatic_rating_other_response_quality:
+    - automatic_response_quality

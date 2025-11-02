@@ -1,0 +1,178 @@
+columns_to_clean:
+  - study_type
+  - models_employed
+
+non_generative_models:
+  - BERT family
+  - NLTK VADER
+  - text-embedding-ada-002
+  - text-embedding-3-small
+  - all-MiniLM-L6-v2 (for embedding)
+  - Not clear. Authors just write The transformer model was fine-tuned on the pre-processed dataset with hyperparameter tuning performed to optimize model performance.
+  - not sure - it just says transformer model
+
+generative_models:
+  - BART family
+  - T5 family
+  - GPT-2 family
+  - GPT-3 family
+  - GPT-3.5 family
+  - GPT-4 / GPT-4o family
+  - GPT o1 family
+  - ChatGPT, model unspecified
+  - Llama 2 family
+  - Llama 3 family
+  - Llama 3.1 family
+  - Gemini / Bard family
+  - Claude family
+  - Mistral family
+  - Qwen family
+  - ChatGLM-6B
+  - BlenderBot
+  - type of LLM not specified
+  - Baichuan-7B
+  - Llama 1
+  - Alpaca 1
+  - Phi-2
+  - GPT-J
+  - GPT-Neo
+  - various LLM-based chatbots (Replika - Snapchat My AI - Chai - Character.ai - Anima - Paradot - Kuki)
+  - own transformer architecture
+  - own architecture
+  - not specified - using LangChain framework
+  - all types of chatbots e.g. ChatGPT
+  - different "AI conversational agents"
+  - InternLM2-7B-Chat with QLoRA
+  - Pi - Noni - Serena - and other commercial chatbots
+  - Pi
+  - Replika
+  - ChatGLM
+  - MiniMax 6.5s(245K)
+  - ERNIE Bot
+  - Qianwen (as model and as judge)
+  - BLOOMZ
+  - various GenAI chatbots
+  - various LLMs
+  - DeepSeek-R1
+  - Falcon-7B
+  - AI in general, mostly ChatGPT
+  - DeepSeek
+  - SeqGPT
+  - just general "generative AI application"
+  - Jais-13B
+  - Llama 3.2 family
+  - Clare (R) by clare&me GmbH
+  - ChatGLM2-6B
+
+column_cleaning_mapping:
+  models_employed:
+    unspecified:
+      - Not clear. Authors just write "The transformer model was fine-tuned on the pre-processed dataset, with hyperparameter tuning performed to optimize model performance."
+      - type of LLM not specified
+      - own transformer architecture
+      - own architecture
+      - not sure - it just says transformer model
+      - not specified - using LangChain framework
+      - unknown
+    ChatGLM family:
+      - ChatGLM
+      - ChatGLM-6B
+      - ChatGLM2-6B
+    Llama 3.2 family:
+      - Llama 3.2 family
+    ChatGPT, model unspecified:
+      - ChatGPT
+    Llama 1 family:
+      - Llama 1
+    DeepSeek family:
+      - DeepSeek
+      - DeepSeek-R1
+    GPT-2 family:
+      - WenZhong (based on GPT-2)
+    Falcon family:
+      - Falcon-7B
+
+  llm_development_approach:
+    "Only fine-tuning":
+      - "both original training of the transformer model and subsequent fine-tuning"
+    "Only prompting":
+      - "They proposed and evaluated two tools in parallel: fine-tuned BERT and ChatGPT prompting-only"
+    "Fine-tuning + other modules":
+      - "GPT-2 is fine-tuned on PsyQA. GPT-2 generates the intervention text based on crisis call topic identified by a separate BERT model, involving also knowledge graph retrieval."
+      - "fine-tuning + custom pipeline (see Reflection Generation Training)"
+      - "Fine-tuning plus other elements like clustering"
+      - "fine-tuning + transfer learning"
+      - "modular system with encoder for encoding emotion from different modalities, a conversation strategy predictor, and a decoder for producing the text response"
+      - "Fine-tuning of DialogGPT. This fine-tuned model is integrated into a custom chatbot pipeline, together with ChatGPT 3.5"
+    "Prompting + other modules":
+      - |
+        multiple different:
+        selection of thinking traps: fine-tuning
+        writing of reframes: retrieval-enhanced in-context learning
+    "Any RL":
+      - "custom architecture incorporating GPT-2. DialoGPT (based on GPT-2) is both fine-tuned and trained via RL."
+      - "fine-tuning of GPT-2 + reinforcement learning. whole system consists of motivational response generator + empathetic rewriting framework"
+      - "complex architecture that consists of RAC (response act classifier), LM (GPT-2 text generation), V (reward for PPO). the system is trained via proximal policy optimization"
+    "Custom full training":
+      - "Other: self-developed and trained transformer architecture"
+
+  outlet_field:
+    Psychology:
+      - Psychotherapy / Counseling (e.g., Psychotherapy Research, Cognitive Therapy and Research)
+    Psychiatry:
+      - Psychiatry / Clinical Mental Health (e.g., Archives of Psychiatry Research, Current Psychiatry Reports)
+    Medicine:
+      - Public Health (e.g., Journal of Public Health)
+      - Broader Medicine / Biomedical (e.g., Nature Medicine, Cureus, Annals of Biomedical Engineering)
+    Digital Health:
+      - Digital Health / Medical Informatics (e.g., JMIR Mental Health, NPJ Digital Medicine, Frontiers in Digital Health)
+    Computer Science:
+      - Computer Science, AI, Engineering (e.g., ACM, IEEE, SIGIR, BigComp proceedings)
+    HCI:
+      - Human-Computer Interaction (e.g. CHI conference on Human Factors in Computing Systems)
+    Other:
+      - Other (e.g., Humanities & Social Sciences Communications, generalist outlets)
+
+  application_type:
+    Client-facing application:
+      - Client-facing application
+    Therapist guidance application:
+      - Therapist-facing application
+    Text-based prediction:
+      - Analysis of conversation transcripts
+      - Analysis of CBT diary data
+
+  application_subtype_client_facing:
+    Multi-turn chatbot:
+      - Chatbot
+    One-turn chatbot (usually Q&A):
+      - one-turn recommendations generated by LLM
+      - One-turn chatbot
+      - one-turn question answering chatbot. the client poses a question and the model produces a single response. there is no multi-turn conversation.
+      - '"one turn chatbot", i.e., user inputs "feelings and confusion" and system makes analysis and outputs intervention text once. There is no turn-based interaction with the tool.'
+      - one-turn Q&A Chatbot
+    Spoken dialogue system:
+      - Spoken dialog system
+      - Spoken dialogue system
+      - speech-based conversation system
+    Multi-modal dialogue system:
+      - Multi-modal dialogue system
+      - conversation system with video, audio, and text input
+      - Multimodal dialog system
+    Reflection generation:
+      - Emotional reflection generation
+      - reflection generation
+      - reflection generator
+    Reframed thought generation:
+      - reframed thought generator
+    Various different:
+      - No specific subtype (AI use in general)
+
+  application_subtype_therapist_facing:
+    Therapy material generation:
+      - OCD exposure hierarchy generation (therapy material generation)
+    Therapy reflection tool:
+      - Interactive transcription creation and analysis system. LLMs are used for video captioning and speaker role recognition
+    Various different:
+      - No specific subtyp
+      - Exploration of therapist perceptions and (e.g. emotional) responses to LLMs. No one particular application type.

@@ -1,0 +1,214 @@
+Dataset Extraction, Merging, and Reduction Report
+==================================================
+
+Output file: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/processed/datasets_file.csv
+Total unique datasets: 90
+
+Column summary:
+  dataset_id (index): 90 non-null, 0 null
+  dataset_source: 90 non-null, 0 null
+  dataset_notes: 88 non-null, 2 null
+  dataset_type: 90 non-null, 0 null
+  dataset_language: 87 non-null, 3 null
+  dataset_contains_synthetic_data: 87 non-null, 3 null
+  dataset_is_public: 87 non-null, 3 null
+  dataset_user_psychopathology_status: 87 non-null, 3 null
+  dataset_responder_type: 87 non-null, 3 null
+  references: 90 non-null, 0 null
+  reference_count: 90 non-null, 0 null
+  row_ids: 90 non-null, 0 null
+  dataset_type_high_level: 90 non-null, 0 null
+
+Dataset source distribution:
+  External data set: 46
+  Self-collected data: 23
+  External data set, modified: 14
+  Self-collected data but derived from external data set: 4
+  Other: External data set, but completely unknown: 1
+  Other: unclear: 1
+  Other: some dataset was used, but completely unknown characteristics: 1
+
+Dataset ID distribution (all unique):
+  alexander_street_press: 1
+  amod: 1
+  counsel_chat: 1
+  dataset_1: 1
+  dataset_10: 1
+  dataset_11: 1
+  dataset_12: 1
+  dataset_13: 1
+  dataset_14: 1
+  dataset_15: 1
+  dataset_16: 1
+  dataset_17: 1
+  dataset_18: 1
+  dataset_19: 1
+  dataset_2: 1
+  dataset_20: 1
+  dataset_21: 1
+  dataset_22: 1
+  dataset_23: 1
+  dataset_24: 1
+  dataset_25: 1
+  dataset_26: 1
+  dataset_27: 1
+  dataset_28: 1
+  dataset_29: 1
+  dataset_3: 1
+  dataset_30: 1
+  dataset_31: 1
+  dataset_32: 1
+  dataset_33: 1
+  dataset_34: 1
+  dataset_35: 1
+  dataset_36: 1
+  dataset_37: 1
+  dataset_38: 1
+  dataset_39: 1
+  dataset_4: 1
+  dataset_40: 1
+  dataset_41: 1
+  dataset_42: 1
+  dataset_43: 1
+  dataset_44: 1
+  dataset_45: 1
+  dataset_46: 1
+  dataset_47: 1
+  dataset_48: 1
+  dataset_49: 1
+  dataset_5: 1
+  dataset_50: 1
+  dataset_51: 1
+  dataset_52: 1
+  dataset_53: 1
+  dataset_54: 1
+  dataset_55: 1
+  dataset_56: 1
+  dataset_57: 1
+  dataset_58: 1
+  dataset_59: 1
+  dataset_6: 1
+  dataset_60: 1
+  dataset_61: 1
+  dataset_62: 1
+  dataset_63: 1
+  dataset_64: 1
+  dataset_65: 1
+  dataset_66: 1
+  dataset_67: 1
+  dataset_68: 1
+  dataset_69: 1
+  dataset_7: 1
+  dataset_70: 1
+  dataset_71: 1
+  dataset_72: 1
+  dataset_73: 1
+  dataset_74: 1
+  dataset_75: 1
+  dataset_76: 1
+  dataset_77: 1
+  dataset_78: 1
+  dataset_79: 1
+  dataset_8: 1
+  dataset_80: 1
+  dataset_81: 1
+  dataset_82: 1
+  dataset_9: 1
+  empathetic_dialogues: 1
+  hope: 1
+  jigsaw_toxic_comments: 1
+  perez_rosa_motivational_interviewing: 1
+  psy_qa: 1
+
+References summary:
+  Total studies referenced: 118
+  alexander_street_press: 6 studies
+  amod: 5 studies
+  counsel_chat: 9 studies
+  dataset_1: 1 studies
+  dataset_10: 1 studies
+  dataset_11: 1 studies
+  dataset_12: 1 studies
+  dataset_13: 1 studies
+  dataset_14: 1 studies
+  dataset_15: 1 studies
+  dataset_16: 1 studies
+  dataset_17: 1 studies
+  dataset_18: 1 studies
+  dataset_19: 1 studies
+  dataset_2: 1 studies
+  dataset_20: 1 studies
+  dataset_21: 1 studies
+  dataset_22: 1 studies
+  dataset_23: 1 studies
+  dataset_24: 1 studies
+  dataset_25: 1 studies
+  dataset_26: 1 studies
+  dataset_27: 1 studies
+  dataset_28: 1 studies
+  dataset_29: 1 studies
+  dataset_3: 1 studies
+  dataset_30: 1 studies
+  dataset_31: 1 studies
+  dataset_32: 1 studies
+  dataset_33: 1 studies
+  dataset_34: 1 studies
+  dataset_35: 1 studies
+  dataset_36: 1 studies
+  dataset_37: 1 studies
+  dataset_38: 1 studies
+  dataset_39: 1 studies
+  dataset_4: 1 studies
+  dataset_40: 1 studies
+  dataset_41: 1 studies
+  dataset_42: 1 studies
+  dataset_43: 1 studies
+  dataset_44: 1 studies
+  dataset_45: 1 studies
+  dataset_46: 1 studies
+  dataset_47: 1 studies
+  dataset_48: 1 studies
+  dataset_49: 1 studies
+  dataset_5: 1 studies
+  dataset_50: 1 studies
+  dataset_51: 1 studies
+  dataset_52: 1 studies
+  dataset_53: 1 studies
+  dataset_54: 1 studies
+  dataset_55: 1 studies
+  dataset_56: 1 studies
+  dataset_57: 1 studies
+  dataset_58: 1 studies
+  dataset_59: 1 studies
+  dataset_6: 1 studies
+  dataset_60: 1 studies
+  dataset_61: 1 studies
+  dataset_62: 1 studies
+  dataset_63: 1 studies
+  dataset_64: 1 studies
+  dataset_65: 1 studies
+  dataset_66: 1 studies
+  dataset_67: 1 studies
+  dataset_68: 1 studies
+  dataset_69: 1 studies
+  dataset_7: 1 studies
+  dataset_70: 1 studies
+  dataset_71: 1 studies
+  dataset_72: 1 studies
+  dataset_73: 1 studies
+  dataset_74: 1 studies
+  dataset_75: 1 studies
+  dataset_76: 1 studies
+  dataset_77: 1 studies
+  dataset_78: 1 studies
+  dataset_79: 1 studies
+  dataset_8: 1 studies
+  dataset_80: 1 studies
+  dataset_81: 1 studies
+  dataset_82: 1 studies
+  dataset_9: 1 studies
+  empathetic_dialogues: 2 studies
+  hope: 3 studies
+  jigsaw_toxic_comments: 2 studies
+  perez_rosa_motivational_interviewing: 2 studies
+  psy_qa: 7 studies

@@ -1,0 +1,131 @@
+MEASUREMENTS METRICS REPORT
+==================================================
+
+BASIC STATISTICS
+--------------------
+Total measurements: 173
+Unique articles: 78
+
+METRIC SUPERCATEGORY DISTRIBUTION
+-----------------------------------
+Measurements with supercategory information: 173
+Measurements without supercategory information: 0
+
+Metric supercategory breakdown by measurements:
+  reference_similarity: 75 measurements (43.4%)
+  human_rating: 38 measurements (22.0%)
+  linguistic_analysis: 25 measurements (14.5%)
+  automatic_rating_empathy_or_sentiment: 10 measurements (5.8%)
+  automatic_rating_other_response_quality: 7 measurements (4.0%)
+  automatic_rating_safety_or_bias: 7 measurements (4.0%)
+  bartscore: 1 measurements (0.6%)
+  consistency ratio: 1 measurements (0.6%)
+  behavior sensitivity index: 1 measurements (0.6%)
+  bleurt: 1 measurements (0.6%)
+  various text analyses: 1 measurements (0.6%)
+  fluency: 1 measurements (0.6%)
+  network centrality (distance from depression terms): 1 measurements (0.6%)
+  expert rating 2: 1 measurements (0.6%)
+  perplexity, diversity, sentence coherence, edit rate: 1 measurements (0.6%)
+  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1 measurements (0.6%)
+  unclear metrics: relevance, empathy, conciseness, context: 1 measurements (0.6%)
+
+Metric supercategory breakdown by articles:
+  reference_similarity: 45 articles (57.7%)
+  human_rating: 37 articles (47.4%)
+  linguistic_analysis: 19 articles (24.4%)
+  automatic_rating_empathy_or_sentiment: 8 articles (10.3%)
+  automatic_rating_other_response_quality: 7 articles (9.0%)
+  automatic_rating_safety_or_bias: 6 articles (7.7%)
+  unclear metrics: relevance, empathy, conciseness, context: 1 articles (1.3%)
+  perplexity, diversity, sentence coherence, edit rate: 1 articles (1.3%)
+  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1 articles (1.3%)
+  network centrality (distance from depression terms): 1 articles (1.3%)
+  fluency: 1 articles (1.3%)
+  expert rating 2: 1 articles (1.3%)
+  consistency ratio: 1 articles (1.3%)
+  bleurt: 1 articles (1.3%)
+  behavior sensitivity index: 1 articles (1.3%)
+  bartscore: 1 articles (1.3%)
+  various text analyses: 1 articles (1.3%)
+
+METRIC CATEGORY ANALYSIS
+-------------------------
+Measurements with category information: 173
+Unique metric categories: 24
+Top 10 metric categories by measurement count:
+  expert_rating: 32
+  lexical_overlap: 26
+  classification: 23
+  embedding_similarity: 20
+  lexical_diversity: 12
+  perplexity: 7
+  automatic_response_quality: 7
+  automatic_empathy_rating: 7
+  safety_or_bias_testing: 7
+  linguistic_analysis: 6
+
+BENCHMARK QUALITY ANALYSIS
+---------------------------
+Measurements with benchmark quality information: 170
+Benchmark quality distribution:
+  l: 78 (45.9%)
+  no benchmark: 67 (39.4%)
+  h: 25 (14.7%)
+
+PERFORMANCE VS BENCHMARK ANALYSIS
+-----------------------------------
+Measurements with performance comparison information: 171
+Performance vs benchmark distribution:
+  no benchmark: 67 (39.2%)
+  b: 65 (38.0%)
+  w: 21 (12.3%)
+  s: 9 (5.3%)
+  unclear: 5 (2.9%)
+  no benckmark: 1 (0.6%)
+  more words: 1 (0.6%)
+  unknown: 1 (0.6%)
+  mixed (table 9): 1 (0.6%)
+
+BENCHMARK QUALITY BY STUDY ANALYSIS
+-------------------------------------
+Studies with benchmark quality information: 77
+Studies without benchmark quality information: 1
+
+Benchmark quality aggregation logic per study:
+  - High quality: if study has at least one measurement with high quality benchmark
+  - Low quality: if study has at least one low quality benchmark but no high quality
+  - No benchmark: if study has no benchmarks (all measurements marked as 'no benchmark')
+
+Aggregated benchmark quality distribution by study:
+  No benchmark: 33 studies (42.9%)
+  Low quality: 27 studies (35.1%)
+  High quality: 17 studies (22.1%)
+
+Raw benchmark quality distribution by measurements:
+  l: 78 measurements (45.9%)
+  no benchmark: 67 measurements (39.4%)
+  h: 25 measurements (14.7%)
+
+PERFORMANCE VS BENCHMARK BY QUALITY GROUP
+------------------------------------------
+Performance aggregation logic per study:
+  - For high quality group: select measurements with high quality benchmarks, show best performance
+  - For low quality group: select measurements with low quality benchmarks, show best performance
+  - Performance ranking: better > similar > worse
+
+HIGH QUALITY BENCHMARKS GROUP:
+Studies in high quality group: 17
+Studies with performance data: 16
+Performance distribution:
+  worse than benchmark: 9 studies (52.9%)
+  better than benchmark: 5 studies (29.4%)
+  similar than benchmark: 2 studies (11.8%)
+
+LOW QUALITY BENCHMARKS GROUP:
+Studies in low quality group: 27
+Studies with performance data: 27
+Performance distribution:
+  better than benchmark: 23 studies (85.2%)
+  worse than benchmark: 3 studies (11.1%)
+  similar than benchmark: 1 studies (3.7%)

@@ -1,0 +1,45 @@
+================================================================================
+DATA PROCESSING REPORT: 1_transform_1st_search_data.py
+================================================================================
+
+EXECUTION METADATA:
+  Timestamp: 2025-10-31T01:28:24.550934
+  Execution Time: 0.04 seconds
+
+FILES:
+  Input:  /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/unprocessed/covidence_export_1st_search_20251030.csv
+  Output: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/intermediate/1st_search_data_transformed_for_fusion.csv
+
+PROCESSING STEPS:
+  step_1_id_assignment:
+    - Assigned unique study IDs and cleaned ID columns (renamed 'Covidence #' to 'covidence_id', removed 'Study ID' column)
+  step_2_drop_study_type_ii:
+    - Dropped the 'Study Type II' column as it's not needed in the final dataset
+  step_3_transform_study_type:
+    - Transformed Study Type values: 'Tool Development and Evaluation' and 'Direct LLM performance evaluation' → 'Empirical research involving an LLM'. Filtered out 0 studies where the Consensus reviewer marked them as non-empirical types: 'Opinion, commentary, perspective, correspondence', 'Conceptual or theoretical work (e.g. on ethics or safety)', or 'Review (systematic or other)' from 49 total studies, keeping 49 studies. Individual reviewer assessments (Richard Gaus, Reviewer Two) do not trigger study removal - only Consensus decisions. This removed 0 rows (including all reviewer entries for filtered studies). No studies were dropped.
+  step_4_transform_development_approach:
+    - Renamed Development Approach column from 'If Study Type == Tool Development and Evaluation: Development Approach' to 'If Study Type == Empirical research involving an LLM: Development Approach' to match 2nd search format
+  step_5_rename_application_type:
+    - Renamed 'If Experimental Research or Population Survey: Application Type' to 'Application Type' for consistency
+  step_6_drop_unwanted_columns:
+    - Removed 4 columns: 'Main Safety-Related Discussion Contents', 'P-1 Protection of user information Considered in tool design? (Y/N)', 'P-1 Protection of user information if YES: Notes (paste text passage)', 'Safety-Related Discussion'
+  step_7_add_missing_columns:
+    - Added 8 new empty columns that exist in 2nd search data: 'Perplexity Used (Y/N)', 'Perplexity How it compares against benchmark (B/S/W)', 'Perplexity Benchmark quality (H/L)', 'Perplexity Notes on benchmark quality', 'Lexical diversity Used (Y/N)', 'Lexical diversity How it compares against benchmark (B/S/W)', 'Lexical diversity Benchmark quality (H/L)', 'Lexical diversity Notes on benchmark quality'
+  step_8_validation:
+    - Validated transformation results to ensure data integrity and proper column structure
+
+SUMMARY STATISTICS:
+  input_studies: 49
+  input_rows: 147
+  input_columns: 106
+  output_studies: 49
+  output_rows: 147
+  output_columns: 109
+  studies_removed: 0
+  rows_removed: 0
+  columns_added: 3
+  execution_time_seconds: 0.03521609306335449
+
+================================================================================
+End of Report
+================================================================================

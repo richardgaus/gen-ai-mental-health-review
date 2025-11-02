@@ -1,0 +1,513 @@
+================================================================================
+CONTROLLED CLINICAL STUDIES REPORT
+Empirical LLM Studies with Validated Outcomes & Control Conditions
+================================================================================
+
+OVERVIEW
+--------------------------------------------------------------------------------
+Total studies found: 7
+
+Selection criteria:
+  ✓ Empirical research involving an LLM
+  ✓ Client-facing application
+  ✓ Validated outcomes considered
+  ✓ Control condition considered
+
+================================================================================
+DETAILED STUDY INFORMATION
+================================================================================
+
+STUDY 1
+--------------------------------------------------------------------------------
+Study ID: 1st_search_6
+Covidence ID: 1st_search_214
+
+Title: Chatgpt: A pilot study on a promising tool for mental health support in psychiatric inpatient care
+
+Publication Date: 2024.0-2.0-9.0
+Outlet Type: Journal paper
+Outlet Field: Psychiatry
+Author Country: Other: Portugal
+
+PARTICIPANT INFORMATION:
+  Client Type: Patients recruited in hospital or outpatient treatment facility; Patients with disorder explicitly based on ICD or DSM
+  Sample Size: 12
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: Informal counseling (e.g., emotional support conversation)
+  Intended Intervention Type: Non-specific support
+  Models Employed: GPT-3.5 family
+
+DATASET INFORMATION:
+  Dataset Source: No dataset used for development or evaluation
+  Dataset Type: nan
+  Dataset Language: nan
+  Dataset Is Public: nan
+  Dataset User Psychopathology Status: nan
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: World Health Organization Quality of Life Questionnaire – Brief Version (WHOQOL-BREF)
+  Control Condition: y
+  Control Condition Notes: control group that received standard care
+
+UX ASSESSMENT:
+  UX Assessment Present: Yes
+  Standard Instrument Used: n
+  Qualitative Assessment: n
+  Quantitative Assessment: y
+  Results Reported: y
+  Assessment Instrument: nan
+
+EVALUATION METRICS:
+  No standard metrics reported
+
+CUSTOM METRICS:
+  • Metric 1: whoqol-bref score change (vs benchmark: b)
+  • Metric 2: n (vs benchmark: nan)
+  • Metric 3: n (vs benchmark: nan)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  • Risk Detection: Yes - n contrast, the intervention group consisted of seven
+patients who participated in 3 to 6 semi-structured sessions
+with ChatGPT (version 3.5) each, under the facilitation of
+their attending psychiatrist
+
+attending psychiatrist was checking responses
+  • Privacy Awareness: Yes - Another concern with chatbots is the potential misuse of
+personal data shared.10 As these chatbots collect and store
+data about a user’s mental health and emotional state, the
+risk of unauthorized access to this information is not triv-
+ial.11 Such breaches could lead to serious repercussions, in-
+cluding discrimination based on the user’s mental health
+status. Therefore, user privacy and security must be a top
+concern, requiring secure data storage and transmission,
+along with adherence to relevant data protection regula-
+tions.
+
+GENERAL NOTES:
+  intervention group did not use chatgbt, but rather discussed the chatgbt answers with their therapists--> potential, to distort outcomes
+
+
+STUDY 2
+--------------------------------------------------------------------------------
+Study ID: 1st_search_24
+Covidence ID: 1st_search_194
+
+Title: Application of Artificial Intelligence in Mental Healthcare: Generative Pre-trained Transformer 3 (GPT-3) and Cognitive Distortions - Proceedings of the Future Technologies Conference
+
+Publication Date: 2023.0-11.0-2.0
+Outlet Type: Conference paper
+Outlet Field: Computer Science
+Author Country: Other: Kyrgyzstan
+
+PARTICIPANT INFORMATION:
+  Client Type: General population
+  Sample Size: 68
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: CBT: Cognitive restructuring; Other CBT techniques
+  Intended Intervention Type: CBT: Cognitive restructuring
+  Models Employed: GPT-3 family
+
+DATASET INFORMATION:
+  Dataset Source: Self-collected data
+  Dataset Type: Other: descriptions of cognitive distortions
+  Dataset Language: Other: unknown
+  Dataset Is Public: No
+  Dataset User Psychopathology Status: Other: not applicable
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: unclear: Each group’s progress was measured by two questionnaires one of which evaluated the test taker’s relationship with their thoughts, and the other estimated their
+level of cognitive distortions. These assessments were conducted three times: twice
+before the intervention itself and once after the experiment was over. After that, the
+gathered data was analyzed using the statistical software JASP.
+
+AAQ, CDS are actually validated clinical measures
+  Control Condition: y
+  Control Condition Notes: After the recruitment was done,
+participants were randomly divided into two groups: control and experimental. The
+experimental group received intervention in the form of interaction with TeaBot and
+was asked to use a manual for learning more about the therapeutic approach used. The
+control group received no intervention with only a manual available to learn more about
+distortions. 
+
+UX ASSESSMENT:
+  UX Assessment Present: No
+
+EVALUATION METRICS:
+  • Classification (vs benchmark: no benchmark)
+
+CUSTOM METRICS:
+  • Metric 1: aaq + cds (vs benchmark: s)
+  • Metric 2: n (vs benchmark: nan)
+  • Metric 3: n (vs benchmark: nan)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  No specific safety/ethical considerations documented
+
+
+STUDY 3
+--------------------------------------------------------------------------------
+Study ID: 2nd_search_6
+Covidence ID: 2nd_search_251
+
+Title: Healme: Harnessing cognitive reframing in large language models for psychotherapy
+
+Publication Date: 2024.0-8.0-11.0
+Outlet Type: Conference paper
+Outlet Field: Computer Science
+Author Country: China
+
+PARTICIPANT INFORMATION:
+  Client Type: General population
+  Sample Size: 8
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: CBT: Cognitive restructuring
+  Intended Intervention Type: CBT: Cognitive restructuring
+  Models Employed: Llama 2 family
+
+DATASET INFORMATION:
+  Dataset Source: External data set, modified
+  Dataset Type: Emotional support dialogue -- chat logs
+  Dataset Language: English
+  Dataset Is Public: Yes
+  Dataset User Psychopathology Status: Other: not applicable
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: PANAS
+  Control Condition: y
+  Control Condition Notes: two people not undergoing intervention
+
+UX ASSESSMENT:
+  UX Assessment Present: No
+
+EVALUATION METRICS:
+  • Expert Rating (vs benchmark: b)
+  • LLM Judge (vs benchmark: no benchmark)
+
+CUSTOM METRICS:
+  • Metric 1: n (vs benchmark: nan)
+  • Metric 2: n (vs benchmark: nan)
+  • Metric 3: n (vs benchmark: nan)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  • On-Premise Model: Yes - nan
+
+
+STUDY 4
+--------------------------------------------------------------------------------
+Study ID: 2nd_search_197
+Covidence ID: 2nd_search_96
+
+Title: Computational Psychotherapy System for Mental Health Prediction and Behavior Change with a Conversational Agent
+
+Publication Date: 2024.0-12.0-12.0
+Outlet Type: Journal paper
+Outlet Field: Psychiatry
+Author Country: Other: Slovenia
+
+PARTICIPANT INFORMATION:
+  Client Type: General population
+  Sample Size: 42
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: Other CBT techniques; Unspecified, might include formal therapy methods
+  Intended Intervention Type: CBT: Other techniques
+  Models Employed: GPT-3 family; Other; Other; Other
+
+DATASET INFORMATION:
+  Dataset Source: Self-collected data
+  Dataset Type: Other:  Psychotherapy-related (diagnostic questionnaires + daily diaries) 
+  Dataset Language: Other: unknown
+  Dataset Is Public: No
+  Dataset User Psychopathology Status: Unknown
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: Instead of PANAS, the study collected data by combining items from several symptom inventories related to SAD, consisting of standardized screening questions used by mental health professionals in the process of mental health diagnosis. Depression Anxiety and Stress Scale,  Beck Anxiety Inventory,
+Beck Depression Inventory,
+and 
+Ratcliffe’s Depression Questionnaire
+were used to compile the questionnair
+  Control Condition: y
+  Control Condition Notes: nan
+
+UX ASSESSMENT:
+  UX Assessment Present: Yes
+  Standard Instrument Used: y
+  Qualitative Assessment: n
+  Quantitative Assessment: y
+  Results Reported: y
+  Assessment Instrument: One of the ICAs on the 
+7-point Likert scale using two measures from UEQ
+
+EVALUATION METRICS:
+  • Classification (vs benchmark: b)
+  • Continuous Metrics (vs benchmark: b)
+
+CUSTOM METRICS:
+  • Metric 1: n (vs benchmark: nan)
+  • Metric 2: n (vs benchmark: nan)
+  • Metric 3: n (vs benchmark: nan)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  • Risk Detection: Yes - The SAD state submodule contains several ML models, including DT, BagDT, BoostDT, RF, CNB, kNN, MLP, LOG, 
+and SVM (see Section Machine Learning Algorithms). They are trained to detect and forecast SAD levels and symptoms, 
+described in Table 3, including the following: levels of stress, anxiety, depression; and symptoms of inability to relax, 
+nervousness, fear, tightness in chest, lightheadedness, feeling hot or cold, trembling, pounding heart, sadness, self-hatred, 
+anhedonia, hopelessness, indecisiveness, fatigue, emotional detachment, and suicidality. The submodule keeps track of 
+the users’ mental health. It informs how the system should act in its support of the user, and whether strategy dispatch is 
+necessary.
+  • Content Safety: Yes - Language generation humanizer decides whether the added text generated in the previous module is acceptable in 
+terms of risk for the user. It rejects the text if it is detected as risky.
+
+
+STUDY 5
+--------------------------------------------------------------------------------
+Study ID: 2nd_search_305
+Covidence ID: 2nd_search_32
+
+Title: Randomized trial of a generative AI chatbot for mental health treatment
+
+Publication Date: 2025.0-3.0-27.0
+Outlet Type: Journal paper
+Outlet Field: Digital Health
+Author Country: USA
+
+PARTICIPANT INFORMATION:
+  Client Type: People with some symptoms but not disorder (determined by symptom scales or questionnaires)
+  Sample Size: 210
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: Other CBT techniques
+  Intended Intervention Type: CBT: Other techniques
+  Models Employed: Llama 2 family; Falcon family
+
+DATASET INFORMATION:
+  Dataset Source: Self-collected data
+  Dataset Type: Psychotherapy -- chat logs
+  Dataset Language: English
+  Dataset Is Public: No
+  Dataset User Psychopathology Status: Unknown
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: Patient Health 
+Questionnaire 9(PHQ-9), the Generalized Anxiety 
+Disorder Questionnaire for the Diagnostic and Statistical 
+Manual of Mental Disorders, Fourth Edition (DSM-IV)
+(GAD-Q-IV), and the Weight Concerns Scale (WCS) within 
+the Stanford–Washington University Eating Disorder
+(SWED), as measures of depression, anxiety, and weight 
+concerns, respectively. Therapeutic alliance 
+(Working Alliance Inventory — Short Revised [WAI-SR]).
+  Control Condition: y
+  Control Condition Notes: To examine the effectiveness of Therabot relative to the waitlist control group, we examined the effect of time and treatment assignment on depression, anxiety, and weight concerns among participants at a clinical level of MDD, 
+GAD, and CHR-FED at baseline.
+
+UX ASSESSMENT:
+  UX Assessment Present: Yes
+  Standard Instrument Used: n
+  Qualitative Assessment: n
+  Quantitative Assessment: y
+  Results Reported: y
+  Assessment Instrument: nan
+
+EVALUATION METRICS:
+  No standard metrics reported
+
+CUSTOM METRICS:
+  • Metric 1: patient health questionnaire 927 (phq-9), the generalized anxiety disorder questionnaire for the diagnostic and statistical manual of mental disorders, fourth edition (dsm-iv) (gad-q-iv), and the weight concerns scale (wcs) within the stanford–washington university eating disorder (swed) (vs benchmark: b)
+  • Metric 2: n (vs benchmark: nan)
+  • Metric 3: n (vs benchmark: nan)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  • Risk Detection: Yes - In the event of a par-
+ticipant raising safety concerns (e.g., suicidal ideation), we 
+contacted the participant to provide safety guidance and 
+emergency resources.; Given the potential risks associated with Gen-AI, we added multiple guard rails, including a crisis classification model
+  • On-Premise Model: Yes - Llama 2, Falcon-7B
+  • Demographics Reporting: Yes - Table 2
+
+
+STUDY 6
+--------------------------------------------------------------------------------
+Study ID: 2nd_search_323
+Covidence ID: 2nd_search_25
+
+Title: Generative AI-Enabled Therapy Support Tool for Improved Clinical Outcomes and Patient Engagement in Group Therapy: Real-World Observational Study
+
+Publication Date: 2025.0-3.0-10.0
+Outlet Type: Journal paper
+Outlet Field: Digital Health
+Author Country: UK
+
+PARTICIPANT INFORMATION:
+  Client Type: Patients recruited in hospital or outpatient treatment facility
+  Sample Size: 244
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: CBT: Motivational interviewing; CBT: Cognitive restructuring; Other CBT techniques; Unspecified, might include formal therapy methods
+  Intended Intervention Type: Multiple therapeutic orientations
+  Models Employed: GPT-4 / GPT-4o family
+
+DATASET INFORMATION:
+  Dataset Source: No dataset used for development or evaluation
+  Dataset Type: nan
+  Dataset Language: nan
+  Dataset Is Public: nan
+  Dataset User Psychopathology Status: nan
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: Reliable improvement refers to a clinically significant
+improvement in symptoms following a course of treatment and
+is calculated as the score difference between the first and the
+last validated clinical questionnaire completed. The types of
+questionnaires patients complete are tailored to their specific
+condition. For example, the Patient Health Questionnaire-9
+(PHQ-9) [30] is used to measure depression symptom severity,
+and the Generalized Anxiety Disorder-7 (GAD-7) [31] is used
+to measure anxiety symptom severity. A clinically significant
+improvement in symptoms is considered a change score ≥6 for
+PHQ-9 or ≥4 for GAD-7 [26]
+  Control Condition: y
+  Control Condition Notes: comparing 150 … patients who used the AI-enabled therapy support tool to 94 … who used the standard delivery of CBT exercises” (
+
+UX ASSESSMENT:
+  UX Assessment Present: Yes
+  Standard Instrument Used: n
+  Qualitative Assessment: y
+  Quantitative Assessment: y
+  Results Reported: y
+  Assessment Instrument: nan
+
+EVALUATION METRICS:
+  No standard metrics reported
+
+CUSTOM METRICS:
+  • Metric 1: n (vs benchmark: nan)
+  • Metric 2: n (vs benchmark: nan)
+  • Metric 3: n (vs benchmark: nan)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  • Risk Detection: Yes - All conversations were constantly monitored using several
+machine learning safety modules to ensure appropriateness,
+prevent harmful responses, monitor risks, and ensure regulatory
+compliance [27]. The conversations as well as these machine
+learning models were monitored and continuously improved
+by the company’s research team.
+  • Content Safety: Yes - All conversations were constantly monitored using several
+machine learning safety modules to ensure appropriateness,
+prevent harmful responses, monitor risks, and ensure regulatory
+compliance [27]. The conversations as well as these machine
+learning models were monitored and continuously improved
+by the company’s research team.
+  • Demographics Reporting: Yes - Table 1
+
+
+STUDY 7
+--------------------------------------------------------------------------------
+Study ID: 2nd_search_362
+Covidence ID: 2nd_search_4
+
+Title: Investigating the key success factors of chatbot-based positive psychology intervention with retrieval-and generative pre-trained transformer (GPT)-based chatbots
+
+Publication Date: 2024.0-1.0-8.0
+Outlet Type: Journal paper
+Outlet Field: HCI
+Author Country: China
+
+PARTICIPANT INFORMATION:
+  Client Type: General population
+  Sample Size: 48
+
+APPLICATION DETAILS:
+  Application Subtype (Client-Facing): Multi-turn chatbot
+  Intervention Type: Other: positive psychology intervention
+  Intended Intervention Type: Other
+  Models Employed: GPT-3.5 family
+
+DATASET INFORMATION:
+  Dataset Source: No dataset used for development or evaluation
+  Dataset Type: nan
+  Dataset Language: nan
+  Dataset Is Public: nan
+  Dataset User Psychopathology Status: nan
+
+VALIDATION & CONTROL:
+  Validated Outcomes: y
+  Validated Outcomes Notes: PHQ-9, GAD-7, PANAS-P, PANAS-N, SWLS, SVS
+  Control Condition: y
+  Control Condition Notes: Evident in whole study (e.g., Finally, it is worth noting that our choice of an active control group (that is, a non-trivial control group)...)
+
+UX ASSESSMENT:
+  UX Assessment Present: Yes
+  Standard Instrument Used: n
+  Qualitative Assessment: y
+  Quantitative Assessment: n
+  Results Reported: y
+  Assessment Instrument: nan
+
+EVALUATION METRICS:
+  No standard metrics reported
+
+CUSTOM METRICS:
+  • Metric 1: phq-9, panas-p, satisfaction with life scale (swls) (vs benchmark: b)
+  • Metric 2: scales of psychological well-being (pwb) (vs benchmark: unknown)
+  • Metric 3: gad-7, panas-n (vs benchmark: s)
+
+SAFETY & ETHICAL CONSIDERATIONS:
+  No specific safety/ethical considerations documented
+
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+Sample Size Statistics:
+  Studies with numeric sample sizes: 7
+  Total participants: 632
+  Range: 8 - 244
+  Mean: 90.3
+  Median: 48
+
+Intervention Types:
+  CBT: Cognitive restructuring: 2
+  CBT: Other techniques: 2
+  Non-specific support: 1
+  Multiple therapeutic orientations: 1
+  Other: 1
+
+Models Employed (top 10):
+  GPT-3.5 family: 2
+  GPT-3 family: 1
+  Llama 2 family: 1
+  GPT-3 family; Other; Other; Other: 1
+  Llama 2 family; Falcon family: 1
+  GPT-4 / GPT-4o family: 1
+
+Client Types (top 10):
+  General population: 4
+  Patients recruited in hospital or outpatient treatment facility; Patie...: 1
+  People with some symptoms but not disorder (determined by symptom scal...: 1
+  Patients recruited in hospital or outpatient treatment facility: 1
+
+Publication Years:
+  2023.0: 1
+  2024.0: 4
+  2025.0: 2
+
+================================================================================
+END OF REPORT
+================================================================================

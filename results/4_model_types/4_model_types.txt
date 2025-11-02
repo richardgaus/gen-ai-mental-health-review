@@ -1,0 +1,214 @@
+================================================================================
+LANGUAGE MODELS EMPLOYED IN EMPIRICAL LLM STUDIES
+Model Usage Analysis for Psychotherapy Research
+================================================================================
+
+Report generated: 2025-10-31 01:29:14
+
+OVERVIEW
+--------------------------------------------------------------------------------
+Total studies analyzed: 132
+Studies with model information: 132
+Total model mentions: 176
+Unique models identified: 19
+Average models per study: 1.33
+
+Note: 'Other' category models excluded from analysis
+
+TOP 8 MOST FREQUENTLY USED MODELS
+--------------------------------------------------------------------------------
+ 1. GPT-4 / GPT-4o family
+    Studies: 45 (25.6% of all model mentions)
+
+ 2. GPT-3.5 family
+    Studies: 35 (19.9% of all model mentions)
+
+ 3. GPT-2 family
+    Studies: 20 (11.4% of all model mentions)
+
+ 4. ChatGPT, model unspecified
+    Studies: 15 (8.5% of all model mentions)
+
+ 5. Llama 2 family
+    Studies: 14 (8.0% of all model mentions)
+
+ 6. T5 family
+    Studies: 7 (4.0% of all model mentions)
+
+ 7. Mistral family
+    Studies: 6 (3.4% of all model mentions)
+
+ 8. Claude family
+    Studies: 5 (2.8% of all model mentions)
+
+MODEL FAMILY ANALYSIS
+--------------------------------------------------------------------------------
+GPT-4 Family: 45 mentions (25.6%)
+GPT-3.5 Family: 35 mentions (19.9%)
+Other Models: 28 mentions (15.9%)
+GPT-2 Family: 20 mentions (11.4%)
+Llama Family: 17 mentions (9.7%)
+ChatGPT (unspecified): 15 mentions (8.5%)
+T5 Family: 7 mentions (4.0%)
+Mistral Family: 6 mentions (3.4%)
+GPT-3 Family: 3 mentions (1.7%)
+
+COMPLETE MODEL INVENTORY
+--------------------------------------------------------------------------------
+All models mentioned in the dataset (ordered by frequency):
+
+ 1. GPT-4 / GPT-4o family (45 studies, 25.6%)
+ 2. GPT-3.5 family (35 studies, 19.9%)
+ 3. GPT-2 family (20 studies, 11.4%)
+ 4. ChatGPT, model unspecified (15 studies, 8.5%)
+ 5. Llama 2 family (14 studies, 8.0%)
+ 6. T5 family (7 studies, 4.0%)
+ 7. Mistral family (6 studies, 3.4%)
+ 8. Claude family (5 studies, 2.8%)
+ 9. ChatGLM family (5 studies, 2.8%)
+10. Falcon family (4 studies, 2.3%)
+11. Gemini / Bard family (4 studies, 2.3%)
+12. GPT-3 family (3 studies, 1.7%)
+13. Qwen family (3 studies, 1.7%)
+14. BART family (3 studies, 1.7%)
+15. unspecified (2 studies, 1.1%)
+16. DeepSeek family (2 studies, 1.1%)
+17. Llama 1 family (1 studies, 0.6%)
+18. Llama 3.1 family (1 studies, 0.6%)
+19. Llama 3.2 family (1 studies, 0.6%)
+
+STUDIES USING MULTIPLE MODELS
+--------------------------------------------------------------------------------
+Number of studies using multiple models: 29
+
+Study ID: 1st_search_12
+Title: An experimental study of integrating fine-tuned LLMs and pro...
+Models: GPT-2 family; GPT-3.5 family
+
+Study ID: 1st_search_18
+Title: Supporting the Demand on Mental Health Services with AI-Base...
+Models: GPT-2 family; GPT-2 family
+
+Study ID: 1st_search_30
+Title: CBT-LLM: A Chinese Large Language Model for Cognitive Behavi...
+Models: GPT-3.5 family; Qwen family; Llama 1 family
+
+Study ID: 1st_search_57
+Title: Exploring the Efficacy of Large Language Models in Summarizi...
+Models: BART family; T5 family; GPT-2 family; Llama 2 family; Mistral family
+
+Study ID: 1st_search_81
+Title: Efficacy of ChatGPT in Cantonese Sentiment Analysis: Compara...
+Models: GPT-3.5 family; GPT-4 / GPT-4o family
+
+Study ID: 1st_search_90
+Title: Advancing Tinnitus Therapeutics: GPT-2 Driven Clustering Ana...
+Models: T5 family; GPT-2 family
+
+Study ID: 2nd_search_9
+Title: Chain-of-Interaction: Enhancing Large Language Models for Ps...
+Models: GPT-3.5 family; Llama 2 family; Mistral family; Falcon family
+
+Study ID: 2nd_search_12
+Title: Introducing CounseLLMe: A dataset of simulated mental health...
+Models: GPT-3.5 family; Llama 2 family; Claude family
+
+Study ID: 2nd_search_23
+Title: Empowering Psychotherapy with Large Language Models: Cogniti...
+Models: GPT-3.5 family; GPT-4 / GPT-4o family; Llama 2 family
+
+Study ID: 2nd_search_26
+Title: Domain-Specific Improvement on Psychotherapy Chatbot Using A...
+Models: GPT-4 / GPT-4o family; Llama 2 family; ChatGLM family
+
+... and 19 more studies
+
+TEMPORAL TRENDS
+--------------------------------------------------------------------------------
+2020: 1 model mentions
+  • GPT-2 family: 1
+
+2021: 2 model mentions
+  • GPT-2 family: 2
+
+2022: 3 model mentions
+  • GPT-2 family: 3
+
+2023: 20 model mentions
+  • GPT-2 family: 5
+  • GPT-3.5 family: 4
+  • ChatGPT, model unspecified: 4
+
+2024: 91 model mentions
+  • GPT-3.5 family: 21
+  • GPT-4 / GPT-4o family: 20
+  • Llama 2 family: 8
+
+2025: 59 model mentions
+  • GPT-4 / GPT-4o family: 23
+  • GPT-3.5 family: 10
+  • Llama 2 family: 4
+
+LLM DEVELOPMENT APPROACH ANALYSIS
+--------------------------------------------------------------------------------
+Total studies with approach information: 132
+
+Top development approaches:
+ 1. Only prompting
+    Studies: 52 (39.4%)
+
+ 2. Prompting + other modules
+    Studies: 28 (21.2%)
+
+ 3. Fine-tuning + other modules
+    Studies: 28 (21.2%)
+
+ 4. Only fine-tuning
+    Studies: 18 (13.6%)
+
+ 5. Other
+    Studies: 6 (4.5%)
+
+Approach categories:
+  • Prompting only: 52 studies (39.4%)
+  • Fine-tuning only: 18 studies (13.6%)
+  • Fine-tuning + other modules: 28 studies (21.2%)
+  • Prompting + other modules: 28 studies (21.2%)
+  • Other/Custom approaches: 6 studies (4.5%)
+
+CHATGPT MODELS ANALYSIS
+--------------------------------------------------------------------------------
+Studies employing any ChatGPT model: 88 out of 132 studies (66.7%)
+Total ChatGPT model mentions: 95 out of 176 mentions (54.0%)
+
+Breakdown by ChatGPT model type:
+  • GPT-4 / GPT-4o family: 45 mentions (25.6%)
+  • GPT-3.5 family: 35 mentions (19.9%)
+  • ChatGPT, model unspecified: 15 mentions (8.5%)
+
+OPEN VS CLOSED WEIGHT MODELS ANALYSIS
+--------------------------------------------------------------------------------
+Studies with weight classification: 132
+Open-weight models: 44 studies (33.3%)
+Closed-weight models: 88 studies (66.7%)
+
+Temporal trends (open vs closed weight models):
+  2020: 1 open-weight, 0 closed-weight (100% open)
+  2021: 2 open-weight, 0 closed-weight (100% open)
+  2022: 3 open-weight, 0 closed-weight (100% open)
+  2023: 6 open-weight, 11 closed-weight (35% open)
+  2024: 23 open-weight, 44 closed-weight (34% open)
+  2025: 9 open-weight, 33 closed-weight (21% open)
+
+SUMMARY INSIGHTS
+--------------------------------------------------------------------------------
+• GPT-4 / GPT-4o family is the most frequently used model (45 studies, 25.6%)
+• 88 studies (66.7%) employed any ChatGPT model
+• OpenAI models account for 118 mentions (67.0% of total)
+• Open-source models account for 30 mentions (17.0% of total)
+• 29 studies used multiple different models
+• Studies tend to use multiple models for comparison or different tasks
+
+================================================================================
+END OF REPORT
+================================================================================
