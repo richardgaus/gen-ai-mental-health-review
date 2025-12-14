@@ -518,7 +518,7 @@ def create_dataset_public_chart(
     # Simplify public status labels - bin everything that's not "Yes" into "Not public"
     def simplify_public_status(value):
         if pd.isna(value) or str(value).strip() == '' or str(value).strip().lower() == 'nan':
-            return "Private or gated"
+            return "Private or restricted"
         
         value_str = str(value).strip()
         
@@ -526,7 +526,7 @@ def create_dataset_public_chart(
             return "Publicly available"
         else:
             # Everything else (including "No", "Other:" entries, etc.) goes to "Not public"
-            return "Private or gated"
+            return "Private or restricted"
     
     # Apply transformations to all rows
     df_copy = df.copy()
@@ -541,12 +541,12 @@ def create_dataset_public_chart(
     for category in public_counts.index:
         if category == "Publicly available":
             color_mapping[category] = color_palette["mint"]  # Green for public
-        elif category == "Private or gated":
+        elif category == "Private or restricted":
             color_mapping[category] = color_palette["crimson"]  # Red for not public
     
     # Create category order: Public first, then Not public
     category_order = []
-    for cat in ["Publicly available", "Private or gated"]:
+    for cat in ["Publicly available", "Private or restricted"]:
         if cat in public_counts.index:
             category_order.append(cat)
     category_order = list(reversed(category_order))

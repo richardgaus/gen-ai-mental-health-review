@@ -15,6 +15,7 @@ from .utils import create_horizontal_bar_chart, get_color_palette
 def create_metric_supercategories_chart(
     df: pd.DataFrame,
     save_dir: str,
+    total_studies_without_participants: int,
     filename: str = "metric_supercategories_distribution.svg"
 ) -> str:
     """
@@ -26,6 +27,8 @@ def create_metric_supercategories_chart(
         DataFrame containing the measurements information with 'metric_supercategory' and 'reference_title' columns
     save_dir : str
         Directory to save the chart
+    total_studies_without_participants : int
+        Total number of studies without human participants (for percentage calculation denominator)
     filename : str, default="metric_supercategories_distribution.svg"
         Filename for the saved chart
         
@@ -76,12 +79,13 @@ def create_metric_supercategories_chart(
     # Create the chart
     save_path = os.path.join(save_dir, filename)
     
-    # Get total unique articles for percentage calculation
-    total_unique_articles = df['reference_title'].nunique()
+    # Use the provided total studies count for percentage calculation
+    # This includes studies without any measurements
+    title = f"How were applications evaluated in studies\nwithout human participants (n = {total_studies_without_participants})?"
     
     fig = create_horizontal_bar_chart(
         data=supercategory_article_counts,
-        title="How were applications evaluated in\nstudies without human participants?",
+        title=title,
         xlabel="Number of Articles",
         ylabel="",
         figsize=(6, 6),
@@ -93,7 +97,7 @@ def create_metric_supercategories_chart(
         max_label_length=50,
         label_fontsize=12,
         title_fontsize=16,
-        percentage_total=total_unique_articles
+        percentage_total=total_studies_without_participants
     )
     
     return save_path
@@ -102,6 +106,7 @@ def create_metric_supercategories_chart(
 def create_benchmark_quality_chart(
     df: pd.DataFrame,
     save_dir: str,
+    total_studies_without_participants: int,
     filename: str = "benchmark_quality_distribution.svg"
 ) -> str:
     """
@@ -118,6 +123,8 @@ def create_benchmark_quality_chart(
         DataFrame containing the measurements information with 'benchmark_quality' and 'reference_title' columns
     save_dir : str
         Directory to save the chart
+    total_studies_without_participants : int
+        Total number of studies without human participants (for percentage calculation denominator)
     filename : str, default="benchmark_quality_distribution.svg"
         Filename for the saved chart
         
@@ -190,12 +197,11 @@ def create_benchmark_quality_chart(
             category_order.append(cat)
     category_order = list(reversed(category_order))
     
-    # Get total unique articles for percentage calculation
-    total_unique_articles = df['reference_title'].nunique()
-    
     # Create the chart
     save_path = os.path.join(save_dir, filename)
     
+    # Use the provided total studies count for percentage calculation
+    # This includes studies without any measurements
     fig = create_horizontal_bar_chart(
         data=quality_counts,
         title="Comparison methods that studies used\nto benchmark their applications",
@@ -210,7 +216,7 @@ def create_benchmark_quality_chart(
         max_label_length=50,
         label_fontsize=12,
         title_fontsize=16,
-        percentage_total=total_unique_articles
+        percentage_total=total_studies_without_participants
     )
     
     return save_path
@@ -219,6 +225,7 @@ def create_benchmark_quality_chart(
 def create_benchmark_quality_stacked_chart(
     df: pd.DataFrame,
     save_dir: str,
+    total_studies_without_participants: int,
     filename: str = "benchmark_quality_distribution_stacked.svg"
 ) -> str:
     """
@@ -233,6 +240,8 @@ def create_benchmark_quality_stacked_chart(
         DataFrame containing the measurements information
     save_dir : str
         Directory to save the chart
+    total_studies_without_participants : int
+        Total number of studies without human participants (for percentage calculation denominator)
     filename : str, default="benchmark_quality_distribution_stacked.svg"
         Filename for the saved chart
         
@@ -325,10 +334,11 @@ def create_benchmark_quality_stacked_chart(
     # Calculate total studies shown in this chart
     total_high = worse_high + similar_high + better_high
     total_low = worse_low + similar_low + better_low
-    total_studies_in_chart = total_high + total_low + no_benchmark_count
     
+    # Use the provided total studies count for percentage calculation
+    # This includes studies without any measurements
     # Add value label for No comparison method (now at position 0)
-    pct_no = round(no_benchmark_count / total_studies_in_chart * 100)
+    pct_no = round(no_benchmark_count / total_studies_without_participants * 100)
     ax.text(no_benchmark_count + 1, y_positions[0], f"{int(no_benchmark_count)} ({pct_no}%)", 
             ha='left', va='center', fontsize=10)
     
@@ -344,7 +354,7 @@ def create_benchmark_quality_stacked_chart(
                 ha='center', va='center', fontsize=10)
     
     # Add total and percentage for Another technical application
-    pct_low = round(total_low / total_studies_in_chart * 100)
+    pct_low = round(total_low / total_studies_without_participants * 100)
     ax.text(total_low + 1, y_positions[1], f"{int(total_low)} ({pct_low}%)", 
             ha='left', va='center', fontsize=10)
     
@@ -360,7 +370,7 @@ def create_benchmark_quality_stacked_chart(
                 ha='center', va='center', fontsize=10)
     
     # Add total and percentage for Human support-provider
-    pct_high = round(total_high / total_studies_in_chart * 100)
+    pct_high = round(total_high / total_studies_without_participants * 100)
     ax.text(total_high + 1, y_positions[2], f"{int(total_high)} ({pct_high}%)", 
             ha='left', va='center', fontsize=10)
     
@@ -370,8 +380,8 @@ def create_benchmark_quality_stacked_chart(
     ax.set_xlabel("Number of articles", fontsize=12)
     
     # Set title centered on the figure instead of just the axes
-    fig.suptitle("Comparison methods that studies used\nto benchmark their applications", 
-                fontsize=14, y=0.95, ha='center')
+    title = f"Comparison methods that studies without human participants\n(n = {total_studies_without_participants}) used to benchmark their applications"
+    fig.suptitle(title, fontsize=14, y=0.95, ha='center')
     
     # Styling
     ax.spines['top'].set_visible(False)
@@ -697,6 +707,7 @@ def create_performance_low_quality_chart(
 def create_combined_performance_chart(
     df: pd.DataFrame,
     save_dir: str,
+    total_studies_without_participants: int,
     filename: str = "performance_combined_quality_benchmarks.svg"
 ) -> str:
     """
@@ -709,6 +720,8 @@ def create_combined_performance_chart(
         DataFrame containing the measurements information
     save_dir : str
         Directory to save the chart
+    total_studies_without_participants : int
+        Total number of studies without human participants (for percentage calculation denominator)
     filename : str, default="performance_combined_quality_benchmarks.svg"
         Filename for the saved chart
         
@@ -1065,6 +1078,7 @@ def _get_low_quality_study_count(df: pd.DataFrame) -> int:
 def generate_measurements_metrics_report(
     df: pd.DataFrame,
     save_dir: str,
+    total_studies_without_participants: int,
     filename: str = "5-2_measurements_metrics_report.txt"
 ) -> str:
     """
@@ -1076,6 +1090,8 @@ def generate_measurements_metrics_report(
         DataFrame containing the measurements information
     save_dir : str
         Directory to save the report
+    total_studies_without_participants : int
+        Total number of studies without human participants (for percentage calculation denominator)
     filename : str, default="5-2_measurements_metrics_report.txt"
         Filename for the saved report
         
@@ -1096,8 +1112,10 @@ def generate_measurements_metrics_report(
         # Basic measurements statistics
         f.write("BASIC STATISTICS\n")
         f.write("-" * 20 + "\n")
+        f.write(f"Total studies without human participants: {total_studies_without_participants}\n")
+        f.write(f"Articles with measurements: {df['reference_title'].nunique()}\n")
+        f.write(f"Articles without measurements: {total_studies_without_participants - df['reference_title'].nunique()}\n")
         f.write(f"Total measurements: {len(df)}\n")
-        f.write(f"Unique articles: {df['reference_title'].nunique()}\n")
         
         # Metric supercategory analysis
         f.write("\nMETRIC SUPERCATEGORY DISTRIBUTION\n")
@@ -1128,9 +1146,9 @@ def generate_measurements_metrics_report(
                 f.write(f"  {supercategory}: {count} measurements ({percentage}%)\n")
             
             f.write(f"\nMetric supercategory breakdown by articles:\n")
+            f.write(f"(Percentages calculated using total studies without participants: n={total_studies_without_participants})\n")
             for supercategory, count in supercategory_article_counts.items():
-                total_articles = df['reference_title'].nunique()
-                percentage = round(count / total_articles * 100, 1)
+                percentage = round(count / total_studies_without_participants * 100, 1)
                 f.write(f"  {supercategory}: {count} articles ({percentage}%)\n")
         
         # Metric category analysis
@@ -1365,7 +1383,8 @@ def generate_measurements_metrics_report(
 
 def create_measurements_metrics_panel(
     measurements_file: str,
-    output_dir: str
+    output_dir: str,
+    total_studies_without_participants: int
 ) -> Dict[str, Any]:
     """
     Create a complete measurements metrics panel with charts and reports.
@@ -1376,6 +1395,8 @@ def create_measurements_metrics_panel(
         Path to the CSV file containing measurements information
     output_dir : str
         Directory to save all outputs
+    total_studies_without_participants : int
+        Total number of studies without human participants (for percentage calculation denominator)
         
     Returns
     -------
@@ -1386,19 +1407,19 @@ def create_measurements_metrics_panel(
     df = pd.read_csv(measurements_file)
     
     # Create the metric supercategories chart
-    chart_path = create_metric_supercategories_chart(df, output_dir)
+    chart_path = create_metric_supercategories_chart(df, output_dir, total_studies_without_participants)
     
     # Create the benchmark quality chart
-    benchmark_chart_path = create_benchmark_quality_chart(df, output_dir)
-    benchmark_stacked_chart_path = create_benchmark_quality_stacked_chart(df, output_dir)
+    benchmark_chart_path = create_benchmark_quality_chart(df, output_dir, total_studies_without_participants)
+    benchmark_stacked_chart_path = create_benchmark_quality_stacked_chart(df, output_dir, total_studies_without_participants)
     
     # Create the performance charts
     performance_high_chart_path = create_performance_high_quality_chart(df, output_dir)
     performance_low_chart_path = create_performance_low_quality_chart(df, output_dir)
-    performance_combined_chart_path = create_combined_performance_chart(df, output_dir)
+    performance_combined_chart_path = create_combined_performance_chart(df, output_dir, total_studies_without_participants)
     
     # Generate the report
-    report_path = generate_measurements_metrics_report(df, output_dir)
+    report_path = generate_measurements_metrics_report(df, output_dir, total_studies_without_participants)
     
     # Calculate summary statistics
     filtered_df = df.dropna(subset=['metric_supercategory'])
@@ -1417,6 +1438,8 @@ def create_measurements_metrics_panel(
     summary = {
         'total_measurements': len(df),
         'unique_articles': df['reference_title'].nunique(),
+        'total_studies_without_participants': total_studies_without_participants,
+        'articles_without_measurements': total_studies_without_participants - df['reference_title'].nunique(),
         'unique_supercategories': len(supercategory_article_counts),
         'most_common_supercategory': supercategory_article_counts.index[0] if len(supercategory_article_counts) > 0 else None,
         'chart_path': chart_path,

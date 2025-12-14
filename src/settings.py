@@ -1,10 +1,3 @@
-"""
-Project settings and configuration.
-
-This module contains standard paths and configuration variables
-for the LLMs in Psychotherapy research project.
-"""
-
 from pathlib import Path
 
 # Project root directory (parent of src/)

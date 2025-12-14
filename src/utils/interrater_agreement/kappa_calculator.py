@@ -374,6 +374,10 @@ def calculate_gwets_ac1(reviewer1_data: pd.Series, reviewer2_data: pd.Series) ->
     Gwet's AC1 is less sensitive to trait prevalence than Cohen's kappa and
     provides a more stable measure of interrater agreement.
     
+    Uses the standard Gwet's AC1 formula with marginal-based chance agreement:
+    Pe = 2 * Σ πk(1-πk) / (q-1)
+    where πk is the pooled proportion for category k.
+    
     Args:
         reviewer1_data (pd.Series): Data from reviewer 1
         reviewer2_data (pd.Series): Data from reviewer 2
@@ -392,23 +396,32 @@ def calculate_gwets_ac1(reviewer1_data: pd.Series, reviewer2_data: pd.Series) ->
     r2_str = reviewer2_data.astype(str)
     
     # Get all unique categories
-    all_categories = set(r1_str) | set(r2_str)
+    all_categories = list(set(r1_str) | set(r2_str))
     n_categories = len(all_categories)
     n_pairs = len(r1_str)
     
     if n_categories <= 1:
         return 1.0  # Perfect agreement if only one category
     
-    # Calculate observed agreement
+    # Calculate observed agreement (Po)
     observed_agreement = (r1_str == r2_str).sum() / n_pairs
     
-    # Calculate expected agreement by chance (Gwet's approach)
-    # For AC1, the chance agreement is based on uniform distribution
-    # across categories, not marginal probabilities
-    chance_agreement = 1.0 / n_categories
+    # Calculate expected agreement by chance using Gwet's AC1 formula
+    # Pe = 2 * Σ πk(1-πk) / (q-1)
+    # where πk is the pooled proportion for category k
+    pk_sum = 0.0
+    for cat in all_categories:
+        # Pooled proportion: average of both raters' proportions
+        r1_prop = (r1_str == cat).sum() / n_pairs
+        r2_prop = (r2_str == cat).sum() / n_pairs
+        pk = (r1_prop + r2_prop) / 2
+        pk_sum += pk * (1 - pk)
+    
+    # Gwet's chance agreement formula
+    chance_agreement = 2 * pk_sum / (n_categories - 1)
     
     # Calculate AC1
-    if chance_agreement == 1.0:
+    if chance_agreement >= 1.0:
         return 1.0 if observed_agreement == 1.0 else 0.0
     
     ac1 = (observed_agreement - chance_agreement) / (1.0 - chance_agreement)
@@ -1085,16 +1098,6 @@ def generate_kappa_report(results: Dict[str, Dict], overall_stats: Dict,
     report_lines.append("  0.41-0.60: Moderate agreement")
     report_lines.append("  0.61-0.80: Substantial agreement")
     report_lines.append("  0.81-1.00: Almost perfect agreement")
-    report_lines.append("")
-    report_lines.append("Notes:")
-    report_lines.append("- Percent agreement is often more intuitive and represents raw agreement.")
-    report_lines.append("- Gwet's AC1 is generally preferred over Cohen's kappa as it's less affected")
-    report_lines.append("  by trait prevalence and marginal probability imbalances.")
-    report_lines.append("- Cohen's kappa adjusts for chance agreement based on marginal probabilities.")
-    report_lines.append("- Gwet's AC1 adjusts for chance agreement assuming uniform distribution.")
-    report_lines.append("- Pairs where both reviewers selected 'Other:' responses are excluded")
-    report_lines.append("  from agreement calculations (shown in 'Excl' column).")
-    report_lines.append("- Conditional columns only include pairs where reviewers agreed on parent column.")
     
     report_content = "\n".join(report_lines)
     

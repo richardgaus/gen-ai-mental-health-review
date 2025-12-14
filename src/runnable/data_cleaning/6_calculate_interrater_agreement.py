@@ -23,8 +23,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import pandas as pd
 import numpy as np
-from interrater_agreement import calculate_kappa_for_columns
-from interrater_agreement.kappa_calculator import load_kappa_config, generate_kappa_report
+from utils.interrater_agreement import calculate_kappa_for_columns, load_kappa_config, generate_kappa_report
 from utils.data_cleaning.report_generator import generate_processing_report, save_report_to_file
 
 

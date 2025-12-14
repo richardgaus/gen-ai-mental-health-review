@@ -131,7 +131,8 @@ fi
 echo -e "${BLUE}5-2. Running: 5-2_create_panel_measurements.py${NC}"
 echo "----------------------------------------"
 mamba run -n llm_psychotherapy_review python "$FIGURE_CREATION_DIR/5-2_create_panel_measurements.py" \
-    --input "data/processed/measurements_file.csv"
+    --input "data/processed/measurements_file.csv" \
+    --final-data "data/processed/final_data.csv"
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✓ Successfully completed: 5-2_create_panel_measurements.py${NC}"
@@ -157,6 +158,24 @@ else
     exit 1
 fi
 
+# Script 7: Create summary table
+echo -e "${BLUE}7. Running: 7_create_summary_table.py${NC}"
+echo "----------------------------------------"
+mamba run -n llm_psychotherapy_review python "$FIGURE_CREATION_DIR/7_create_summary_table.py" \
+    --input "data/processed/final_data.csv" \
+    --input_covidence_export "data/unprocessed/covidence_export_1st_search_20251030.csv,data/unprocessed/covidence_export_2nd_search_20251030.csv" \
+    --output "results/full_literature_table.csv" \
+    --verbose
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Successfully completed: 7_create_summary_table.py${NC}"
+    echo ""
+else
+    echo -e "${RED}✗ Error running: 7_create_summary_table.py${NC}"
+    echo -e "${RED}Pipeline stopped.${NC}"
+    exit 1
+fi
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${GREEN}Figure Creation Pipeline Completed!${NC}"
 echo -e "${BLUE}========================================${NC}"
@@ -169,7 +188,9 @@ echo -e "  4. ✓ Created panel model types"
 echo -e "  5-1. ✓ Created panel datasets"
 echo -e "  5-2. ✓ Created panel measurements"
 echo -e "  6. ✓ Created panel READI"
+echo -e "  7. ✓ Created study characteristics summary table"
 echo ""
 echo -e "${GREEN}All figures and reports saved to: results/${NC}"
 echo -e "${GREEN}Individual panel outputs saved to their respective subdirectories${NC}"
+echo -e "${GREEN}Study summary table saved to: results/summary_table.csv${NC}"
 

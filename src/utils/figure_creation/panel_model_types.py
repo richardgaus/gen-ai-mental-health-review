@@ -246,7 +246,7 @@ def create_open_vs_closed_weight_time_series(
         save_path=save_path,
         show_counts=True,
         show_totals=True,
-        trend_line_start_year=2020,
+        trend_line_start_year=None,  # No trend line
         legend_fontsize=14,
         label_fontsize=14,
         title_fontsize=16

@@ -126,7 +126,7 @@ def main():
         
         fig = create_readi_panel(
             df=filtered_df,
-            title="Adoption of responsible development practices\n(READI framework) in client-facing applications",
+            title="Adoption of responsible evaluation practices\n(READI framework) in client-facing applications",
             figsize=(12, 10),
             save_path=str(figure_path)
         )
