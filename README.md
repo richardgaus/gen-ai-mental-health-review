@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the code and data for **Gaus et al.: A Scoping Review of Generative AI in Mental Health Support**.
+This repository contains the code and data for the paper _A Scoping Review of Generative AI in Mental Health Support_.
 
 ## Installation
 
