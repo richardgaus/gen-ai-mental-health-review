@@ -122,7 +122,7 @@ Additionally, `full_literature_table.csv` contains all study characteristics for
 
 If you use this code or data, please cite:
 
-> Gaus, R., Gross, F., Korman, M., Klaassen, F., Maspero, S., Martignoni, L., Urquijo, M., Boger, S., Jebrini, T., Wolf, J., Hager, P., Stade, E.C., Terhorst, Y., Volkert, J., Kambeitz, J., Stubbe, H.C., Padberg, F., Wiltsey Stirman, S., Koutsouleris, N.\*, & Eichstaedt, J.\* (2025). A Scoping Review of Generative AI in Mental Health Support. *[Journal TBD]*.
+> Gaus, R., Gross, F., Korman, M., Klaassen, F., Maspero, S., Martignoni, L., Urquijo, M., Boger, S., Jebrini, T., Wolf, J., Hager, P., Stade, E.C., Terhorst, Y., Volkert, J., Kambeitz, J., Stubbe, H.C., Padberg, F., Wiltsey Stirman, S., Koutsouleris, N.\*, & Eichstaedt, J.C.\* (2025). A Scoping Review of Generative AI in Mental Health Support. *[Journal TBD]*.
 
 ## License
 
@@ -133,4 +133,4 @@ If you use this code or data, please cite:
 
 **Corresponding authors:**
 - Richard Gaus (richardgaus@outlook.de) - University Hospital LMU Munich / Stanford University
-- Johannes Eichstaedt ([email TBD]) - Stanford University
+- Johannes C. Eichstaedt ([email TBD]) - Stanford University
