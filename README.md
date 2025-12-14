@@ -8,8 +8,8 @@ This repository contains the code and data for the paper _A Scoping Review of Ge
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/gen_ai_mh_review.git
-cd gen_ai_mh_review
+git clone https://github.com/richardgaus/gen-ai-mental-health-review.git
+cd gen-ai-mental-health-review
 ```
 
 2. Create the conda environment:
