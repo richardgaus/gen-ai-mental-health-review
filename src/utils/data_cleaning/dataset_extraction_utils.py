@@ -462,7 +462,7 @@ def extract_and_merge_datasets(input_large_path: str, input_small_path: str,
     
     # Merge with common datasets to overwrite columns
     data_root = Path(output_path).parent.parent  # This gives us the data/ directory
-    common_datasets_path = data_root / "auxillary" / "common_datasets.csv"
+    common_datasets_path = data_root / "auxiliary" / "common_datasets.csv"
     
     if common_datasets_path.exists():
         print("Merging with common datasets...")

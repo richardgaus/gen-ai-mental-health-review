@@ -38,7 +38,7 @@ conda activate gen_ai_mh_review
 │   ├── unprocessed/                 # Raw input data
 │   ├── intermediate/                # Data between processing steps
 │   ├── processed/                   # Final cleaned datasets
-│   └── auxillary/                   # Reference data (common datasets)
+│   └── auxiliary/                   # Reference data (common datasets)
 ├── results/                         # Output files (figures, reports)
 └── environment.yml                  # Conda environment specification
 ```
@@ -59,7 +59,7 @@ The `src/` module is organized into **runnable scripts** and their supporting **
 - `datasets_file.csv` - Extracted information about datasets used in the reviewed studies
 - `measurements_file.csv` - Extracted information about measurement outcomes and evaluation metrics used
 
-### Reference Data (`data/auxillary/`)
+### Reference Data (`data/auxiliary/`)
 - `common_datasets.csv` - Reference list of commonly used mental health datasets
 
 ## Usage
