@@ -3,7 +3,7 @@ READI FRAMEWORK ADOPTION REPORT
 Client-Facing Empirical LLM Studies in Psychotherapy Research
 ================================================================================
 
-Report generated: 2025-10-31 01:29:20
+Report generated: 2025-12-09 01:04:10
 
 OVERVIEW
 --------------------------------------------------------------------------------

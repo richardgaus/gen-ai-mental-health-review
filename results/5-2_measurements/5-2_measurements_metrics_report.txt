@@ -3,8 +3,10 @@ MEASUREMENTS METRICS REPORT
 
 BASIC STATISTICS
 --------------------
+Total studies without human participants: 93
+Articles with measurements: 78
+Articles without measurements: 15
 Total measurements: 173
-Unique articles: 78
 
 METRIC SUPERCATEGORY DISTRIBUTION
 -----------------------------------
@@ -31,23 +33,24 @@ Metric supercategory breakdown by measurements:
   unclear metrics: relevance, empathy, conciseness, context: 1 measurements (0.6%)
 
 Metric supercategory breakdown by articles:
-  reference_similarity: 45 articles (57.7%)
-  human_rating: 37 articles (47.4%)
-  linguistic_analysis: 19 articles (24.4%)
-  automatic_rating_empathy_or_sentiment: 8 articles (10.3%)
-  automatic_rating_other_response_quality: 7 articles (9.0%)
-  automatic_rating_safety_or_bias: 6 articles (7.7%)
-  unclear metrics: relevance, empathy, conciseness, context: 1 articles (1.3%)
-  perplexity, diversity, sentence coherence, edit rate: 1 articles (1.3%)
-  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1 articles (1.3%)
-  network centrality (distance from depression terms): 1 articles (1.3%)
-  fluency: 1 articles (1.3%)
-  expert rating 2: 1 articles (1.3%)
-  consistency ratio: 1 articles (1.3%)
-  bleurt: 1 articles (1.3%)
-  behavior sensitivity index: 1 articles (1.3%)
-  bartscore: 1 articles (1.3%)
-  various text analyses: 1 articles (1.3%)
+(Percentages calculated using total studies without participants: n=93)
+  reference_similarity: 45 articles (48.4%)
+  human_rating: 37 articles (39.8%)
+  linguistic_analysis: 19 articles (20.4%)
+  automatic_rating_empathy_or_sentiment: 8 articles (8.6%)
+  automatic_rating_other_response_quality: 7 articles (7.5%)
+  automatic_rating_safety_or_bias: 6 articles (6.5%)
+  unclear metrics: relevance, empathy, conciseness, context: 1 articles (1.1%)
+  perplexity, diversity, sentence coherence, edit rate: 1 articles (1.1%)
+  part-of-speech (pos) analysis; dependency-syntactic-parsing (dep) analysis; semantic-dependency-parsing (sdp) analysis; sentiment analysis: 1 articles (1.1%)
+  network centrality (distance from depression terms): 1 articles (1.1%)
+  fluency: 1 articles (1.1%)
+  expert rating 2: 1 articles (1.1%)
+  consistency ratio: 1 articles (1.1%)
+  bleurt: 1 articles (1.1%)
+  behavior sensitivity index: 1 articles (1.1%)
+  bartscore: 1 articles (1.1%)
+  various text analyses: 1 articles (1.1%)
 
 METRIC CATEGORY ANALYSIS
 -------------------------
