@@ -133,4 +133,4 @@ If you use this code or data, please cite:
 
 **Corresponding authors:**
 - Richard Gaus (richardgaus@outlook.de) - University Hospital LMU Munich / Stanford University
-- Johannes C. Eichstaedt ([email TBD]) - Stanford University
+- Johannes C. Eichstaedt (eichstaedt@stanford.edu) - Stanford University
