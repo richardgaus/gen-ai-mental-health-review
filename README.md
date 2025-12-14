@@ -1,4 +1,4 @@
-# Generative AI in Mental Health: A Systematic Review
+# A Scoping Review of Generative AI in Mental Health Support
 
 ## Overview
 
