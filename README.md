@@ -27,8 +27,10 @@ conda activate gen_ai_mh_review
 ```
 ├── src/
 │   ├── runnable/                    # Executable scripts
-│   │   ├── data_cleaning/           # Data preprocessing pipeline (steps 1-9)
-│   │   └── figure_creation/         # Visualization scripts
+│   │   ├── data_cleaning/           # Data preprocessing pipeline (steps 1-10)
+│   │   ├── design_purpose/          # Companion search and agreement for the design purpose classification
+│   │   ├── figure_creation/         # Visualization scripts
+│   │   └── fulltext_exclusions/     # Reasons for the full-text exclusions (Figure 1)
 │   ├── utils/                       # Helper modules
 │   │   ├── data_cleaning/           # Data processing utilities
 │   │   ├── figure_creation/         # Plotting utilities
@@ -44,8 +46,10 @@ conda activate gen_ai_mh_review
 ```
 
 The `src/` module is organized into **runnable scripts** and their supporting **utility functions**:
-- `runnable/data_cleaning/` contains numbered scripts (1-9) that form the data preprocessing pipeline
+- `runnable/data_cleaning/` contains numbered scripts (1-10) that form the data preprocessing pipeline
+- `runnable/design_purpose/` contains the scripts for the design purpose classification added during peer review (see below)
 - `runnable/figure_creation/` contains scripts for generating publication figures
+- `runnable/fulltext_exclusions/` contains the scripts for the reasons for the full-text exclusions in Figure 1, added during peer review (see below)
 - `utils/` provides helper functions used by the runnable scripts
 
 ## Data
@@ -53,6 +57,10 @@ The `src/` module is organized into **runnable scripts** and their supporting **
 ### Input Data (`data/unprocessed/`)
 - `covidence_export_1st_search_*.csv` - Extraction data from the first literature search
 - `covidence_export_2nd_search_*.csv` - Extraction data from the second (updated) literature search
+- `participation_mode_human_participants.xlsx` - Participation mode of the articles with human participants (added during peer review)
+- `covidence_export_design_purpose_20261016.csv` - Dual coding of design purpose for 44 articles (added during peer review)
+- `companion_screen_coding.xlsx` - Verification of the full-text search for companion applications (added during peer review)
+- `fulltext_exclusion_reasons_assigned_20261018.xlsx` - Full-text exclusion reasons assigned during peer review for records without a recorded reason (added during peer review)
 
 ### Processed Data (`data/processed/`)
 - `final_data.csv` - Main analysis dataset with all extracted variables per study
@@ -61,12 +69,13 @@ The `src/` module is organized into **runnable scripts** and their supporting **
 
 ### Reference Data (`data/auxiliary/`)
 - `common_datasets.csv` - Reference list of commonly used mental health datasets
+- `companion_screen_terms.yaml` - Search terms for the full-text search for companion applications, with sources
 
 ## Usage
 
 ### Data Cleaning Pipeline
 
-Run the full data preprocessing pipeline (steps 1-9):
+Run the full data preprocessing pipeline (steps 1-10):
 
 ```bash
 cd src/runnable/data_cleaning
@@ -83,6 +92,7 @@ This executes:
 7. Perform final cleaning (keep only consensus data, derive new variables, map values to categories)
 8. Extract dataset information
 9. Extract measurement information
+10. Add classifications made during peer review (participation mode, design purpose)
 
 ### Figure Creation Pipeline
 
@@ -100,6 +110,57 @@ This creates figures for:
 4. Datasets panel
 5. Measurements panel
 6. READI framework panel
+7. Summary table of all included studies
+8. Sensitivity analysis by participation mode (Supplementary Table S5)
+9. READI-derived criteria by human participation (Results, Figure 4 paragraph)
+
+## Classifications added during peer review
+
+Two classifications were added after data charting, in response to peer review. Both are merged into `final_data.csv` in data cleaning step 10; all other columns are left unchanged.
+
+**Participation mode** (Supplementary Notes S5.3; column `participation_mode`). For the 36 articles evaluating client-facing applications with human participants: whether participants used the application (`used`) or only rated LLM-generated outputs (`rated`). Classified by RG and verified by FG in `data/unprocessed/participation_mode_human_participants.xlsx`.
+
+**Design purpose** (Supplementary Notes S5.2; columns `design_purpose` and `design_purpose_basis`). For the 114 articles evaluating client-facing applications, one of three mutually exclusive groups: `General-purpose only`, `Purpose-built` or `Companion`. Empty for the other application types. The classification combines three steps:
+
+1. Articles whose charted development approach (`llm_development_approach`) was "Only fine-tuning", "Fine-tuning + other modules" or "Prompting + other modules" (n = 70) are purpose-built (`design_purpose_basis` = `development approach`).
+2. The remaining articles ("Only prompting" or "Other", n = 44) were coded independently by two reviewers (RG, SM) in Covidence on three yes/no items (`design_purpose_basis` = `dual coding`). Input: `data/unprocessed/covidence_export_design_purpose_20261016.csv` (reviewers anonymized as Reviewer 1 and Reviewer 2, with consensus).
+3. The full texts of all 114 articles were searched for companion applications (terms: `data/auxiliary/companion_screen_terms.yaml`; hits: `data/intermediate/companion_screen_hits.csv`), and every article with a hit was verified by two reviewers (`data/unprocessed/companion_screen_coding.xlsx`).
+
+Articles evaluating a companion application are assigned to `Companion`, other articles evaluating a purpose-built application to `Purpose-built`, and the remaining articles to `General-purpose only`.
+
+Scripts in `src/runnable/design_purpose/` (run from the repository root):
+
+```bash
+# Full-text search (requires a local copy of the full-text PDFs, which are not distributed for copyright reasons)
+python src/runnable/design_purpose/1_search_companion_terms.py --pdf-dir PDF_FOLDER --pdf-index PDF_INDEX.csv
+
+# Percentage agreement and Cohen's kappa for Steps 2 and 3
+python src/runnable/design_purpose/2_calculate_design_purpose_agreement.py
+```
+
+The agreement report is saved to `results/reports_data_processing/design_purpose_agreement.txt`; the counts per group (overall and by human participants) are in `results/reports_data_processing/10_add_peer_review_classifications.txt`.
+
+## Full-text exclusion reasons (Figure 1)
+
+Figure 1 reports 258 full texts screened and 172 records retained, so 86 records were excluded at the full-text stage. The reasons shown in Figure 1 were added during peer review and are derived as follows:
+
+1. Full-text exclusions recorded in Covidence (n = 83). The excluded records were later moved back to screening in Covidence, which removed the recorded reasons. Before that, the Covidence page "Excluded - Full text review" was saved as HTML (30 September 2025; 81 records); two further excluded records, not on the saved page, were exported separately (Covidence CSV export, 18 October 2026). Both files contain personal account data and are not distributed; script 1 extracts the records and their reasons into `data/intermediate/covidence_fulltext_excluded.csv`. SHA-256 of the inputs:
+   - `Excluded - Full text review _ LLMs in Psychotherapy 2nd database search _ Covidence.html`: `640d54adffb9b1c2d0bcbb6ee0315b16de0a10b255803462baf8e7e51230cc4c`
+   - `review_628555_excluded_csv_20261019033848.csv`: `746e1ea3c36139ac33fede9f4156301a7bdd56e7cd5cab2982a7df40bc39fad7`
+2. Reasons assigned from the full texts on 18 October 2026 (RG; `data/unprocessed/fulltext_exclusion_reasons_assigned_20261018.xlsx`, n = 7): five Covidence exclusions without a recorded reason, one excluded record missing from both Covidence files, and one record without completed data charting (removed in data cleaning step 4).
+3. One record charted in both Covidence reviews; the 2nd search copy was removed as a duplicate in data cleaning step 3.
+
+Script 2 combines these sources, checks that every record has exactly one reason and that the total equals 258 - 172 = 86, and groups the Covidence reasons into the reasons shown in Figure 1.
+
+Scripts in `src/runnable/fulltext_exclusions/` (run from the repository root):
+
+```bash
+# Extraction from Covidence (requires local copies of the saved page and the export, which are not distributed)
+python src/runnable/fulltext_exclusions/1_extract_fulltext_exclusions.py --html SAVED_PAGE.html --export EXPORT.csv
+
+# Exclusion reasons per record and the counts shown in Figure 1
+python src/runnable/fulltext_exclusions/2_summarize_fulltext_exclusions.py
+```
 
 ## Results
 
@@ -114,6 +175,9 @@ Generated outputs are saved to `results/`:
 | `5-1_datasets/` | Dataset characteristics (type, language, availability) |
 | `5-2_measurements/` | Evaluation metrics and benchmark quality |
 | `6_readi/` | READI framework compliance |
+| `8_sensitivity_participation_mode/` | Sensitivity analysis by participation mode (Supplementary Table S5) |
+| `9_readi_by_human_participation/` | READI-derived criteria for articles with and without human participants (Results, Figure 4 paragraph) |
+| `fulltext_exclusions/` | Full-text exclusion reasons per record and per Figure 1 reason |
 | `reports_data_processing/` | Logs from each data cleaning step |
 
 Additionally, `full_literature_table.csv` contains all study characteristics for the supplementary materials.
