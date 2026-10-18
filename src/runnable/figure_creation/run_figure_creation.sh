@@ -176,6 +176,38 @@ else
     exit 1
 fi
 
+# Script 8: Sensitivity analysis by participation mode
+echo -e "${BLUE}8. Running: 8_sensitivity_participation_mode.py${NC}"
+echo "----------------------------------------"
+mamba run -n llm_psychotherapy_review python "$FIGURE_CREATION_DIR/8_sensitivity_participation_mode.py" \
+    --input "data/processed/final_data.csv" \
+    --output "results/8_sensitivity_participation_mode"
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Successfully completed: 8_sensitivity_participation_mode.py${NC}"
+    echo ""
+else
+    echo -e "${RED}✗ Error running: 8_sensitivity_participation_mode.py${NC}"
+    echo -e "${RED}Pipeline stopped.${NC}"
+    exit 1
+fi
+
+# Script 9: READI-derived criteria by human participation
+echo -e "${BLUE}9. Running: 9_readi_by_human_participation.py${NC}"
+echo "----------------------------------------"
+mamba run -n llm_psychotherapy_review python "$FIGURE_CREATION_DIR/9_readi_by_human_participation.py" \
+    --input "data/processed/final_data.csv" \
+    --output "results/9_readi_by_human_participation"
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Successfully completed: 9_readi_by_human_participation.py${NC}"
+    echo ""
+else
+    echo -e "${RED}✗ Error running: 9_readi_by_human_participation.py${NC}"
+    echo -e "${RED}Pipeline stopped.${NC}"
+    exit 1
+fi
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${GREEN}Figure Creation Pipeline Completed!${NC}"
 echo -e "${BLUE}========================================${NC}"
@@ -189,6 +221,8 @@ echo -e "  5-1. ✓ Created panel datasets"
 echo -e "  5-2. ✓ Created panel measurements"
 echo -e "  6. ✓ Created panel READI"
 echo -e "  7. ✓ Created study characteristics summary table"
+echo -e "  8. ✓ Created sensitivity analysis by participation mode"
+echo -e "  9. ✓ Created READI-derived criteria by human participation"
 echo ""
 echo -e "${GREEN}All figures and reports saved to: results/${NC}"
 echo -e "${GREEN}Individual panel outputs saved to their respective subdirectories${NC}"
