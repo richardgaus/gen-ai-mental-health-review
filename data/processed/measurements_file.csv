@@ -35,7 +35,7 @@ Exploring the Efficacy of Large Language Models in Summarizing Mental Health Cou
 Exploring the Efficacy of Large Language Models in Summarizing Mental Health Counseling Sessions: Benchmark Study,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,"no benchmark. metrics: affective attitude, burden, ethicality, coherence, opportunity costs, perceived effectiveness, extent of hallucination"
 Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,lexical_overlap,lexical_overlap,reference_similarity,l,b,benchmark are human responses
 Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,embedding_similarity,embedding_similarity,reference_similarity,l,w,benchmark are human responses.
-Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,expert_rating,expert_rating,human_rating,,no benchmark,
+Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,expert_rating,expert_rating,human_rating,no benchmark,no benchmark,
 Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,lexical diversity,lexical_diversity,linguistic_analysis,l,w,
 Conversational Bots for Psychotherapy: A Study of Generative Transformer Models Using Domain-specific Dialogues,average length,linguistic_analysis,linguistic_analysis,l,unclear,
 Efficacy of ChatGPT in Cantonese Sentiment Analysis: Comparative Study,classification,classification,reference_similarity,l,b,"benchmark are other NLP classifiers (LR, SVM, LSTM). metric is sentiment classification accuracy and F1 score. ground truth are human scores. better benchmark would have been other human rater. Task: Classify sentiment into positive/neutral/negative"
@@ -63,7 +63,7 @@ Can Large Language Models Replace Therapists? Evaluating Performance at Simple C
 Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,sentiment analysis score,sentiment_analysis,automatic_rating_empathy_or_sentiment,h,b,benchmark are responses in the kaggle dataset
 Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,response quality rated by non experts,non_expert_rating,human_rating,h,b,"benchmark are responses in the kaggle dataset, but author rated himself (vested interests???)"
 Can ChatGPT provide a better support: a comparative analysis of ChatGPT and dataset responses in mental health dialogues,word analysis/ count,linguistic_analysis,linguistic_analysis,h,more words,
-Safety of Large Language Models in Addressing Depression.,safety (number of conversations turns until initial referral/shutdown of chatbot),safety_or_bias_testing,automatic_rating_safety_or_bias,,,no benchmark
+Safety of Large Language Models in Addressing Depression.,safety (number of conversations turns until initial referral/shutdown of chatbot),safety_or_bias_testing,automatic_rating_safety_or_bias,no benchmark,,no benchmark
 Chain-of-Interaction: Enhancing Large Language Models for Psychiatric Behavior Understanding by Dyadic Contexts,classification,classification,reference_similarity,l,b,"Metric: Micro- and macro-F1. Benchmark: zero- and few-shot prompting with the same LLMs.
 
 Quantitative F1 decrease in ablation study shows impact of each stage.

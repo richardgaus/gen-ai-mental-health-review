@@ -70,11 +70,11 @@ Top 10 metric categories by measurement count:
 
 BENCHMARK QUALITY ANALYSIS
 ---------------------------
-Measurements with benchmark quality information: 170
+Measurements with benchmark quality information: 172
 Benchmark quality distribution:
-  l: 78 (45.9%)
-  no benchmark: 67 (39.4%)
-  h: 25 (14.7%)
+  l: 78 (45.3%)
+  no benchmark: 69 (40.1%)
+  h: 25 (14.5%)
 
 PERFORMANCE VS BENCHMARK ANALYSIS
 -----------------------------------
@@ -92,8 +92,8 @@ Performance vs benchmark distribution:
 
 BENCHMARK QUALITY BY STUDY ANALYSIS
 -------------------------------------
-Studies with benchmark quality information: 77
-Studies without benchmark quality information: 1
+Studies with benchmark quality information: 78
+Studies without benchmark quality information: 0
 
 Benchmark quality aggregation logic per study:
   - High quality: if study has at least one measurement with high quality benchmark
@@ -101,14 +101,14 @@ Benchmark quality aggregation logic per study:
   - No benchmark: if study has no benchmarks (all measurements marked as 'no benchmark')
 
 Aggregated benchmark quality distribution by study:
-  No benchmark: 33 studies (42.9%)
-  Low quality: 27 studies (35.1%)
-  High quality: 17 studies (22.1%)
+  No benchmark: 34 studies (43.6%)
+  Low quality: 27 studies (34.6%)
+  High quality: 17 studies (21.8%)
 
 Raw benchmark quality distribution by measurements:
-  l: 78 measurements (45.9%)
-  no benchmark: 67 measurements (39.4%)
-  h: 25 measurements (14.7%)
+  l: 78 measurements (45.3%)
+  no benchmark: 69 measurements (40.1%)
+  h: 25 measurements (14.5%)
 
 PERFORMANCE VS BENCHMARK BY QUALITY GROUP
 ------------------------------------------

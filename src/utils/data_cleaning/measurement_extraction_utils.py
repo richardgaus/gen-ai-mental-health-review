@@ -6,7 +6,7 @@ This module contains utility functions for extracting measurement/metric informa
 
 import sys
 from pathlib import Path
-from typing import List
+from typing import List, Tuple
 import pandas as pd
 import yaml
 
@@ -184,6 +184,31 @@ def extract_measurements_from_row(row: pd.Series, metric_columns: List[str]) -> 
     return measurements
 
 
+def fill_missing_benchmark_quality(measurements_df: pd.DataFrame) -> Tuple[pd.DataFrame, int]:
+    """
+    Record "no benchmark" as benchmark quality where it was left blank in the consensus coding
+    although the comparison or notes field of the same metric states "no benchmark".
+
+    Added during peer review: without this, such metrics were not counted in any comparison
+    method category of Figure 3B. All other values are left unchanged.
+
+    Args:
+        measurements_df (pd.DataFrame): Measurements with benchmark_quality,
+                                        performance_vs_benchmark and benchmark_notes columns
+
+    Returns:
+        Tuple[pd.DataFrame, int]: Measurements with filled benchmark quality and number of filled rows
+    """
+    def states_no_benchmark(column: str) -> pd.Series:
+        return measurements_df[column].fillna('').astype(str).str.strip().str.lower() == 'no benchmark'
+
+    blank_quality = measurements_df['benchmark_quality'].fillna('').astype(str).str.strip() == ''
+    to_fill = blank_quality & (states_no_benchmark('performance_vs_benchmark') | states_no_benchmark('benchmark_notes'))
+    measurements_df = measurements_df.copy()
+    measurements_df.loc[to_fill, 'benchmark_quality'] = 'no benchmark'
+    return measurements_df, int(to_fill.sum())
+
+
 def extract_measurements(input_path: str, output_path: str,
                         include_human_participant_studies: bool = False,
                         include_non_empirical_studies: bool = False) -> str:
@@ -284,7 +309,11 @@ def extract_measurements(input_path: str, output_path: str,
     if filtered_measurement_count > 0:
         print(f"Filtered out {filtered_measurement_count} 'llm_judge' measurements")
     print(f"Remaining measurements after filtering: {len(measurements_df)}")
-    
+
+    # Fill benchmark quality left blank although "no benchmark" is stated for the same metric
+    measurements_df, filled_count = fill_missing_benchmark_quality(measurements_df)
+    print(f"Filled missing benchmark quality with 'no benchmark' for {filled_count} measurements")
+
     # Add metric categories
     print("Adding metric categories...")
     measurements_df = add_metric_categories(measurements_df, config)

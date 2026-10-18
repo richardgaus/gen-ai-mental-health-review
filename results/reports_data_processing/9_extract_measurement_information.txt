@@ -1,7 +1,7 @@
 Measurement Extraction Report
 ==================================================
 
-Output file: /Users/richardgaus/Desktop/Stanford MIMI/llms_in_psychotherapy/data/processed/measurements_file.csv
+Output file: /Users/richardgaus/Desktop/Gaus_et_al_GenAI_Mental_Health/npj Digital Medicine/rebuttal 2/gen-ai-mental-health-review/data/processed/measurements_file.csv
 Total measurements extracted: 173
 
 Column summary:
@@ -9,7 +9,7 @@ Column summary:
   metric_name: 173 non-null, 0 null, 173 non-empty
   metric_category: 173 non-null, 0 null, 173 non-empty
   metric_supercategory: 173 non-null, 0 null, 173 non-empty
-  benchmark_quality: 170 non-null, 3 null, 173 non-empty
+  benchmark_quality: 172 non-null, 1 null, 173 non-empty
   performance_vs_benchmark: 171 non-null, 2 null, 173 non-empty
   benchmark_notes: 166 non-null, 7 null, 173 non-empty
 
@@ -119,7 +119,7 @@ Metric name distribution:
 
 Benchmark quality distribution:
   l: 78
-  no benchmark: 67
+  no benchmark: 69
   h: 25
 
 Performance vs benchmark distribution:
