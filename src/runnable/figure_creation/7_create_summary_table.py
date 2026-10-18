@@ -9,6 +9,7 @@ The table includes:
 - Study identification (first author + year)
 - Study title
 - Application type
+- Design purpose (client-facing applications; added during peer review, see Supplementary Notes S5.2)
 - Intervention type (intended)
 - Models employed
 - Population characteristics
@@ -251,6 +252,7 @@ def create_summary_table(df: pd.DataFrame, covidence_df: pd.DataFrame = None) ->
         'Study': df.apply(lambda row: format_study_id(row['author_year_id'], row['year']), axis=1),
         'Title': df['title'],
         'Application': df['application_type'].apply(format_application_type),
+        'Design purpose': df['design_purpose'].replace('', 'n/a'),
         'Intervention': df['intended_intervention_type'].apply(format_intervention_type),
         'Model': df['models_employed'].apply(format_models),
         'Population': formatted_population,
