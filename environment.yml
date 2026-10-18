@@ -284,6 +284,7 @@ dependencies:
       - pydantic==2.12.5
       - pydantic-core==2.41.5
       - pyjwt==2.10.1
+      - pymupdf==1.28.2
       - pyrfc3339==2.1.0
       - python-json-logger==2.0.4
       - pytokens==0.3.0

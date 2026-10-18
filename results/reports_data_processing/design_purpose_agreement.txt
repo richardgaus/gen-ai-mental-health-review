@@ -1,0 +1,50 @@
+DESIGN PURPOSE CLASSIFICATION: INTER-RATER AGREEMENT
+================================================================================
+
+Step 2: independent coding of 44 articles (Covidence export: data/unprocessed/covidence_export_design_purpose_20261016.csv)
+
+General-purpose LLM
+  Agreement: 42 of 44 (95.5%)
+  Cohen's kappa: 0.89
+  Coded yes: Reviewer 1 31, Reviewer 2 33
+  Disagreements: 1st_search_42 (Response-act Guided Reinforced Dialogue Generation for Menta); 1st_search_93 (Towards Motivational and Empathetic Response Generation in O)
+
+Purpose-built application
+  Agreement: 43 of 44 (97.7%)
+  Cohen's kappa: 0.95
+  Coded yes: Reviewer 1 14, Reviewer 2 15
+  Disagreements: 2nd_search_224 (Can AI relate: Testing large language model response for men)
+
+Companion application
+  Agreement: 44 of 44 (100.0%)
+  Cohen's kappa: 1.00
+  Coded yes: Reviewer 1 1, Reviewer 2 1
+  Note: kappa is not reported for this item in the supplement (at most one article coded yes)
+  Disagreements: none
+
+Pooled over the three items: 129 of 132 (97.7%), Cohen's kappa 0.95
+Articles with identical codes on all three items: 41 of 44
+
+Consensus combinations:
+  General-purpose LLM: 29
+  Purpose-built application: 12
+  General-purpose LLM + Purpose-built application: 2
+  General-purpose LLM + Purpose-built application + Companion application: 1
+
+Step 3: verification of 24 articles with hits in the full-text search (data/unprocessed/companion_screen_coding.xlsx)
+
+Evaluates a companion application
+  Agreement: 24 of 24 (100.0%)
+  Cohen's kappa: 1.00
+  Coded yes: Reviewer 1 1, Reviewer 2 1
+  Note: kappa is not reported for this item in the supplement (at most one article coded yes)
+  Disagreements: none
+
+Consensus yes: Moore 2025
+
+Step 3 vs Step 2: companion item of the 44 dual-coded articles
+  Search result (consensus; no hit = no) vs Step 2 consensus
+  Agreement: 44 of 44 (100.0%)
+  Companion in both: 2nd_search_149 (Expressing stigma and inappropriate responses prevents LLMs )
+  Disagreements: none
+  Of the 44, articles with search hits: 7

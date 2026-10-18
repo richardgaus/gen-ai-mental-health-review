@@ -1,0 +1,51 @@
+Peer Review Classifications Report
+==================================================
+
+Input/output file: /Users/richardgaus/Desktop/Gaus_et_al_GenAI_Mental_Health/npj Digital Medicine/rebuttal 2/gen-ai-mental-health-review/data/processed/final_data.csv
+Participation mode coding: /Users/richardgaus/Desktop/Gaus_et_al_GenAI_Mental_Health/npj Digital Medicine/rebuttal 2/gen-ai-mental-health-review/data/unprocessed/participation_mode_human_participants.xlsx
+Design purpose coding: /Users/richardgaus/Desktop/Gaus_et_al_GenAI_Mental_Health/npj Digital Medicine/rebuttal 2/gen-ai-mental-health-review/data/unprocessed/covidence_export_design_purpose_20261016.csv, /Users/richardgaus/Desktop/Gaus_et_al_GenAI_Mental_Health/npj Digital Medicine/rebuttal 2/gen-ai-mental-health-review/data/unprocessed/companion_screen_coding.xlsx, /Users/richardgaus/Desktop/Gaus_et_al_GenAI_Mental_Health/npj Digital Medicine/rebuttal 2/gen-ai-mental-health-review/data/intermediate/companion_screen_hits.csv
+
+Participation mode (articles evaluating client-facing applications with human participants)
+  Articles coded: 36
+  used: 33
+  rated: 3
+  Classified by: RG; verified by: FG
+
+  Articles with participation_mode = rated:
+    1st_search_78 (Uglova 2023): 236 young adults (mostly students) rated psychologist- vs ChatGPT-written recommendations. no use of an application
+    2nd_search_161 (Giri 2024): 70 university students rated GPT-4 vs book-derived advice on stress management. no use of an application
+    2nd_search_314 (Hatch 2025): 830 US online panel members rated therapist- vs ChatGPT-written responses to couple-therapy vignettes. no use of an application
+
+Design purpose (articles evaluating client-facing applications)
+  Group                      All   With human participants   Without human participants
+  General-purpose only        29                         9                           20
+  Purpose-built               84                        27                           57
+  Companion                    1                         0                            1
+  Total                      114                        36                           78
+  Basis: development approach 70, dual coding 44
+
+  Design purpose by development approach:
+    design_purpose               General-purpose only  Purpose-built  Companion  Total
+    llm_development_approach                                                          
+    Fine-tuning + other modules                     0             27          0     27
+    Only fine-tuning                                0             16          0     16
+    Only prompting                                 29             10          1     40
+    Other                                           0              4          0      4
+    Prompting + other modules                       0             27          0     27
+    Total                                          29             84          1    114
+
+  Design purpose by client-facing application subtype (interaction format):
+    design_purpose                     General-purpose only  Purpose-built  Companion  Total
+    application_subtype_client_facing                                                       
+    (not specified)                                       0              1          0      1
+    Multi-modal dialogue system                           0              3          0      3
+    Multi-turn chatbot                                   18             68          1     87
+    One-turn chatbot (usually Q&A)                        9              8          0     17
+    Other                                                 0              1          0      1
+    Reflection generation                                 1              0          0      1
+    Reframed thought generation                           1              1          0      2
+    Spoken dialogue system                                0              2          0      2
+    Total                                                29             84          1    114
+
+  Articles classified as companion:
+    2nd_search_149: Expressing stigma and inappropriate responses prevents LLMs from safely replacing mental health providers.

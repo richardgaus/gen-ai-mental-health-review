@@ -1,0 +1,30 @@
+# Search terms for the full-text search for companion applications
+# (Supplementary Notes S5.2.3; used by src/runnable/design_purpose/1_search_companion_terms.py).
+#
+# Application names: all applications named as companion applications in the main text of
+#   Diel et al. (2026), npj Digital Medicine 9:644, doi:10.1038/s41746-026-03054-x
+#     (Character.AI, Replika, Soulmate)
+#   De Freitas et al. (2026), Journal of Consumer Research 52(6):1126-1148, doi:10.1093/jcr/ucaf040
+#     (Chai, Cleverbot, iGirl, Replika, SimSimi, XiaoIce)
+# Generic terms: capture companion applications not on this list or described without a product name.
+#
+# Patterns are Python regular expressions, matched case-insensitively except where
+# case_sensitive is true ("Chai", to avoid matching "CHAI", Coalition for Health AI).
+
+application_names:
+  Character.AI: {pattern: 'character[\s.\-]?ai'}
+  Chai: {pattern: '\bChai\b', case_sensitive: true}
+  Cleverbot: {pattern: 'cleverbot'}
+  iGirl: {pattern: '\bigirl\b'}
+  Replika: {pattern: 'replika'}
+  SimSimi: {pattern: 'simsimi'}
+  Soulmate: {pattern: 'soulmate'}
+  XiaoIce: {pattern: 'xiao\s?ice'}
+
+generic_terms:
+  AI companion: {pattern: '\bAI[\s\-]companion'}
+  companion app/chatbot: {pattern: 'companion[\s\-](app|application|chatbot|chat\s?bot|bot|AI)s?\b'}
+  virtual/digital companion: {pattern: '(virtual|digital)[\s\-]companion'}
+  social chatbot: {pattern: 'social[\s\-](chat\s?bot|bot)s?\b'}
+  AI friend: {pattern: '\bAI[\s\-]friend'}
+  companionship: {pattern: 'companionship'}

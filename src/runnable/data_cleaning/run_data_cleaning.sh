@@ -205,6 +205,25 @@ else
     exit 1
 fi
 
+# Script 10: Add classifications made during peer review
+echo -e "${BLUE}10. Running: 10_add_peer_review_classifications.py${NC}"
+echo "----------------------------------------"
+mamba run -n llm_psychotherapy_review python "$DATA_CLEANING_DIR/10_add_peer_review_classifications.py" \
+    --input "data/processed/final_data.csv" \
+    --participation-mode "data/unprocessed/participation_mode_human_participants.xlsx" \
+    --design-purpose-coding "data/unprocessed/covidence_export_design_purpose_20261016.csv" \
+    --companion-coding "data/unprocessed/companion_screen_coding.xlsx" \
+    --companion-hits "data/intermediate/companion_screen_hits.csv"
+
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓ Successfully completed: 10_add_peer_review_classifications.py${NC}"
+    echo ""
+else
+    echo -e "${RED}✗ Error running: 10_add_peer_review_classifications.py${NC}"
+    echo -e "${RED}Pipeline stopped.${NC}"
+    exit 1
+fi
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${GREEN}Data Cleaning Pipeline Completed!${NC}"
 echo -e "${BLUE}========================================${NC}"
@@ -219,6 +238,7 @@ echo -e "  6. ✓ Calculated interrater agreement"
 echo -e "  7. ✓ Performed final cleaning"
 echo -e "  8. ✓ Extracted dataset information"
 echo -e "  9. ✓ Extracted measurement information"
+echo -e "  10. ✓ Added peer review classifications"
 echo ""
 echo -e "${GREEN}All processing reports saved to: results/reports_data_processing/${NC}"
 echo -e "${GREEN}Final outputs saved to: data/processed/${NC}"
