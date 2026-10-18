@@ -233,7 +233,11 @@ def create_benchmark_quality_stacked_chart(
     
     For Human support-provider and Another technical application, the bars are split
     by performance (better, similar, worse). No comparison method remains as a single bar.
-    
+    Two further single bars account for all remaining articles without human participants:
+    No quantitative metric (articles without any charted quantitative metric) and
+    Comparison unclear (articles with metrics whose comparison method or direction of
+    performance was not coded), so that the bars add up to total_studies_without_participants.
+
     Parameters
     ----------
     df : pd.DataFrame
@@ -286,21 +290,32 @@ def create_benchmark_quality_stacked_chart(
             no_benchmark_studies.add(study)
     
     no_benchmark_count = len(no_benchmark_studies)
-    
+
     # Prepare data for plotting (reversed order - top to bottom)
-    categories = ['No comparison method', 'Another technical application', 'Human support-provider']
-    
+    categories = ['No quantitative metric', 'Comparison unclear', 'No comparison method',
+                  'Another technical application', 'Human support-provider']
+
     # Extract performance counts
     better_high = high_quality_data.get('Better than benchmark', 0)
     similar_high = high_quality_data.get('Similar to benchmark', 0)
     worse_high = high_quality_data.get('Worse than benchmark', 0)
-    
+
     better_low = low_quality_data.get('Better than benchmark', 0)
     similar_low = low_quality_data.get('Similar to benchmark', 0)
     worse_low = low_quality_data.get('Worse than benchmark', 0)
-    
-    # Create figure
-    fig, ax = plt.subplots(figsize=(7, 3))
+
+    # Articles not shown in the three comparison bars: without any charted metric, or with
+    # metrics but without a coded comparison method or direction of performance
+    articles_with_metrics = df['reference_title'].nunique()
+    no_metric_count = total_studies_without_participants - articles_with_metrics
+    shown_count = (worse_high + similar_high + better_high + worse_low + similar_low + better_low
+                   + no_benchmark_count)
+    unclear_count = articles_with_metrics - shown_count
+    if no_metric_count < 0 or unclear_count < 0:
+        raise ValueError(f"Comparison method counts exceed {total_studies_without_participants} articles")
+
+    # Create figure (height grows with the number of bars, keeping bar thickness and spacing)
+    fig, ax = plt.subplots(figsize=(7, 3 + 0.51 * (len(categories) - 3)))
     
     # Get color palette
     color_palette = get_color_palette()
@@ -312,23 +327,26 @@ def create_benchmark_quality_stacked_chart(
     
     # Y positions (reversed)
     y_positions = np.arange(len(categories))
+    pos_no_metric, pos_unclear, pos_no_comparison, pos_low, pos_high = y_positions
     bar_height = 0.6
     
-    # Plot single bar for No comparison method (now at position 0, bottom)
-    ax.barh(y_positions[0], no_benchmark_count, bar_height, color=color_palette["grey"], alpha=0.8)
+    # Plot single bars for No quantitative metric, Comparison unclear and No comparison method
+    for pos, count in [(pos_no_metric, no_metric_count), (pos_unclear, unclear_count),
+                       (pos_no_comparison, no_benchmark_count)]:
+        ax.barh(pos, count, bar_height, color=color_palette["grey"], alpha=0.8)
     
-    # Plot stacked bars for Another technical application (now at position 1, middle)
-    ax.barh(y_positions[1], worse_low, bar_height, color=colors_performance['worse'], alpha=0.8)
-    ax.barh(y_positions[1], similar_low, bar_height, left=worse_low, 
+    # Plot stacked bars for Another technical application
+    ax.barh(pos_low, worse_low, bar_height, color=colors_performance['worse'], alpha=0.8)
+    ax.barh(pos_low, similar_low, bar_height, left=worse_low, 
             color=colors_performance['similar'], alpha=0.8)
-    ax.barh(y_positions[1], better_low, bar_height, left=worse_low + similar_low, 
+    ax.barh(pos_low, better_low, bar_height, left=worse_low + similar_low, 
             color=colors_performance['better'], alpha=0.8)
     
-    # Plot stacked bars for Human support-provider (now at position 2, top)
-    ax.barh(y_positions[2], worse_high, bar_height, color=colors_performance['worse'], alpha=0.8)
-    ax.barh(y_positions[2], similar_high, bar_height, left=worse_high, 
+    # Plot stacked bars for Human support-provider (top)
+    ax.barh(pos_high, worse_high, bar_height, color=colors_performance['worse'], alpha=0.8)
+    ax.barh(pos_high, similar_high, bar_height, left=worse_high, 
             color=colors_performance['similar'], alpha=0.8)
-    ax.barh(y_positions[2], better_high, bar_height, left=worse_high + similar_high, 
+    ax.barh(pos_high, better_high, bar_height, left=worse_high + similar_high, 
             color=colors_performance['better'], alpha=0.8)
     
     # Calculate total studies shown in this chart
@@ -337,41 +355,42 @@ def create_benchmark_quality_stacked_chart(
     
     # Use the provided total studies count for percentage calculation
     # This includes studies without any measurements
-    # Add value label for No comparison method (now at position 0)
-    pct_no = round(no_benchmark_count / total_studies_without_participants * 100)
-    ax.text(no_benchmark_count + 1, y_positions[0], f"{int(no_benchmark_count)} ({pct_no}%)", 
-            ha='left', va='center', fontsize=10)
+    # Add value labels for the single bars
+    for pos, count in [(pos_no_metric, no_metric_count), (pos_unclear, unclear_count),
+                       (pos_no_comparison, no_benchmark_count)]:
+        pct = round(count / total_studies_without_participants * 100)
+        ax.text(count + 1, pos, f"{int(count)} ({pct}%)", ha='left', va='center', fontsize=10)
     
-    # Add value labels for Another technical application (now at position 1)
+    # Add value labels for Another technical application
     if worse_low > 0:
-        ax.text(worse_low / 2, y_positions[1], str(int(worse_low)), 
+        ax.text(worse_low / 2, pos_low, str(int(worse_low)), 
                 ha='center', va='center', fontsize=10)
     if similar_low > 0:
-        ax.text(worse_low + similar_low / 2, y_positions[1], str(int(similar_low)), 
+        ax.text(worse_low + similar_low / 2, pos_low, str(int(similar_low)), 
                 ha='center', va='center', fontsize=10)
     if better_low > 0:
-        ax.text(worse_low + similar_low + better_low / 2, y_positions[1], str(int(better_low)), 
+        ax.text(worse_low + similar_low + better_low / 2, pos_low, str(int(better_low)), 
                 ha='center', va='center', fontsize=10)
     
     # Add total and percentage for Another technical application
     pct_low = round(total_low / total_studies_without_participants * 100)
-    ax.text(total_low + 1, y_positions[1], f"{int(total_low)} ({pct_low}%)", 
+    ax.text(total_low + 1, pos_low, f"{int(total_low)} ({pct_low}%)", 
             ha='left', va='center', fontsize=10)
     
-    # Add value labels for Human support-provider (now at position 2, top)
+    # Add value labels for Human support-provider
     if worse_high > 0:
-        ax.text(worse_high / 2, y_positions[2], str(int(worse_high)), 
+        ax.text(worse_high / 2, pos_high, str(int(worse_high)), 
                 ha='center', va='center', fontsize=10)
     if similar_high > 0:
-        ax.text(worse_high + similar_high / 2, y_positions[2], str(int(similar_high)), 
+        ax.text(worse_high + similar_high / 2, pos_high, str(int(similar_high)), 
                 ha='center', va='center', fontsize=10)
     if better_high > 0:
-        ax.text(worse_high + similar_high + better_high / 2, y_positions[2], str(int(better_high)), 
+        ax.text(worse_high + similar_high + better_high / 2, pos_high, str(int(better_high)), 
                 ha='center', va='center', fontsize=10)
     
     # Add total and percentage for Human support-provider
     pct_high = round(total_high / total_studies_without_participants * 100)
-    ax.text(total_high + 1, y_positions[2], f"{int(total_high)} ({pct_high}%)", 
+    ax.text(total_high + 1, pos_high, f"{int(total_high)} ({pct_high}%)", 
             ha='left', va='center', fontsize=10)
     
     # Set labels and title
@@ -379,9 +398,12 @@ def create_benchmark_quality_stacked_chart(
     ax.set_yticklabels(categories, fontsize=11)
     ax.set_xlabel("Number of articles", fontsize=12)
     
+    # Spacing below is specified for a figure height of 3 inches and scaled to keep it constant
+    scale = 3 / fig.get_figheight()
+    
     # Set title centered on the figure instead of just the axes
     title = f"Comparison methods that studies without human participants\n(n = {total_studies_without_participants}) used to benchmark their applications"
-    fig.suptitle(title, fontsize=14, y=0.95, ha='center')
+    fig.suptitle(title, fontsize=14, y=1 - 0.05 * scale, ha='center')
     
     # Styling
     ax.spines['top'].set_visible(False)
@@ -390,7 +412,7 @@ def create_benchmark_quality_stacked_chart(
     ax.grid(axis='y', visible=False)
     
     # Set x-axis limits
-    max_x = max(total_high, total_low, no_benchmark_count)
+    max_x = max(total_high, total_low, no_benchmark_count, no_metric_count, unclear_count)
     ax.set_xlim(0, max_x * 1.15)
     
     # Add legend below the figure
@@ -401,13 +423,13 @@ def create_benchmark_quality_stacked_chart(
         Patch(facecolor=colors_performance['worse'], alpha=0.8, label='Worse')
     ]
     fig.legend(handles=legend_elements, loc='lower center', ncol=3, 
-              bbox_to_anchor=(0.5, -0.05), fontsize=10, frameon=True,
+              bbox_to_anchor=(0.5, -0.05 * scale), fontsize=10, frameon=True,
               title='Performance of application', title_fontsize=10,
               fancybox=True, shadow=True, framealpha=0.9)
     
     # Adjust layout with space for legend
     plt.tight_layout()
-    plt.subplots_adjust(bottom=0.32)
+    plt.subplots_adjust(bottom=0.32 * scale)
     
     # Save figure
     save_path = os.path.join(save_dir, filename)
