@@ -1,0 +1,40 @@
+FULL-TEXT EXCLUSION REASONS (Figure 1)
+================================================================================
+
+Full texts screened: 258
+Records retained (data cleaning step 4): 172
+Records excluded: 86
+
+Sources of the excluded records:
+  covidence_page_20250930: 81
+  covidence_export_20261018: 2
+  assigned_20261018: 2
+  covidence_export_2nd_search_20251030: 1
+
+Sources of the exclusion reasons:
+  covidence: 78
+  assigned_20261018: 7
+  data_cleaning_step_3: 1
+
+Reasons by Figure 1 group:
+                figure_1_group  group_n                                     exclusion_reason  n
+      Preprint, thesis or book       43                                         book chapter  2
+      Preprint, thesis or book       43                                             preprint 26
+      Preprint, thesis or book       43                                               thesis 15
+       No empirical evaluation       23                                        No evaluation 19
+       No empirical evaluation       23                                   opinion/conceptual  4
+No mental health support focus       11 not specifically psychotherapy/mental health support 11
+                   No LLM used        4                                          no LLM used  4
+                Not in English        3                                          non-english  3
+     Full text not retrievable        1                                        not retrieved  1
+              Duplicate record        1                                     duplicate record  1
+
+Figure 1 box:
+Records excluded (n = 86):
+• Preprint, thesis or book (n = 43)
+• No empirical evaluation (n = 23)
+• No mental health support focus (n = 11)
+• No LLM used (n = 4)
+• Not in English (n = 3)
+• Full text not retrievable (n = 1)
+• Duplicate record (n = 1)

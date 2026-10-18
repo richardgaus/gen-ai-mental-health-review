@@ -1,0 +1,11 @@
+figure_1_group,group_n,exclusion_reason,n
+"Preprint, thesis or book",43,book chapter,2
+"Preprint, thesis or book",43,preprint,26
+"Preprint, thesis or book",43,thesis,15
+No empirical evaluation,23,No evaluation,19
+No empirical evaluation,23,opinion/conceptual,4
+No mental health support focus,11,not specifically psychotherapy/mental health support,11
+No LLM used,4,no LLM used,4
+Not in English,3,non-english,3
+Full text not retrievable,1,not retrieved,1
+Duplicate record,1,duplicate record,1
