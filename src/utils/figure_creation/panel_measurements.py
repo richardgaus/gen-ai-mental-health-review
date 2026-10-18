@@ -330,10 +330,12 @@ def create_benchmark_quality_stacked_chart(
     pos_no_metric, pos_unclear, pos_no_comparison, pos_low, pos_high = y_positions
     bar_height = 0.6
     
-    # Plot single bars for No quantitative metric, Comparison unclear and No comparison method
-    for pos, count in [(pos_no_metric, no_metric_count), (pos_unclear, unclear_count),
-                       (pos_no_comparison, no_benchmark_count)]:
-        ax.barh(pos, count, bar_height, color=color_palette["grey"], alpha=0.8)
+    # Plot single bars: dark grey for the coded category No comparison method, light grey for
+    # missing information (No quantitative metric, Comparison unclear), as in the dataset panels
+    for pos, count, color in [(pos_no_metric, no_metric_count, color_palette["grey"]),
+                              (pos_unclear, unclear_count, color_palette["grey"]),
+                              (pos_no_comparison, no_benchmark_count, color_palette["dark_grey"])]:
+        ax.barh(pos, count, bar_height, color=color, alpha=0.8)
     
     # Plot stacked bars for Another technical application
     ax.barh(pos_low, worse_low, bar_height, color=colors_performance['worse'], alpha=0.8)
